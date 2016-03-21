@@ -1,3 +1,21 @@
+(function($) {
+  var _old = $.fn.attr;
+  $.fn.attri = function() {
+    var a, aLength, attributes, map;
+    if (this[0] && arguments.length === 0) {
+      map = {};
+      attributes = this[0].attributes;
+      aLength = attributes.length;
+      for (a = 0; a < aLength; a++) {
+        map[attributes[a].name.toLowerCase()] = attributes[a].value;
+      }
+      return map;
+    } else {
+      return _old.apply(this, arguments);
+    }
+  }
+}(jQuery));
+
 jQuery(document).ready(function($) {
   $(window).load(function() {
     var $body = $('body');
@@ -331,6 +349,13 @@ jQuery(document).ready(function($) {
   $(document).on('click', '.lightbox_btn', function() {
     var $lightbox = $($(this).attr('href'));
     if(!$lightbox.hasClass('lightbox_visible')) {
+      if(!$lightbox.find('iframe').length) {
+        var $iframe = $('<iframe />').prependTo($lightbox),
+          attrs = $lightbox.find('.iframe').attri();
+        $.each(attrs, function(ele, key) {
+          $iframe.attr(ele, key);
+        });
+      }
       $('.lightbox_visible').removeClass('lightbox_visible');
       $lightbox.addClass('lightbox_visible');
     }

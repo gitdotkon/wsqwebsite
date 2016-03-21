@@ -1076,7 +1076,8 @@ a.btn:before {
     z-index: 222;
     opacity: 0;
     -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;       
+    transition: all .4s ease-in-out; 
+    background: #fff url(../images/loading.gif) no-repeat 50% 50%;      
 }
 .lightbox_visible {
     opacity: 1;
@@ -1091,11 +1092,14 @@ a.btn:before {
     width: 64px;
     height: 64px;
     position: fixed;
-    top: 0;
     right: 0;    
     background: #de302f url(../images/close.png) no-repeat 50% 50%;
     -webkit-transition: opacity .4s ease-in-out;
-    transition: opacity .4s ease-in-out;      
+    transition: opacity .4s ease-in-out; 
+    top: -9999px;   
+}
+.lightbox_visible .lightbox_close {
+    top: 0;
 }
 .lightbox_close:hover {
     opacity: .6;
@@ -1738,6 +1742,9 @@ a.btn:before {
 }
 
 @media only screen and (max-width: 1023px) {
+    .mobile_br {
+        display: block;
+    }
     html {
         position: fixed;
         width: 100%;
