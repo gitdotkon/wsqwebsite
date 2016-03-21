@@ -64,9 +64,9 @@ jQuery(document).ready(function($) {
           }, 600 * index); 
         });  
 
-          setTimeout(function() {
-            $('.slide_animating').removeClass('slide_animating');
-          }, 1500);                     
+        setTimeout(function() {
+          $('.slide_animating').removeClass('slide_animating');
+        }, 1500);                     
       }
       //首屏按钮动画
       setTimeout(function() {
@@ -77,7 +77,7 @@ jQuery(document).ready(function($) {
     }
 
     function animate(current_index) {
-      if(!$('.slide_animating').length && !$('.screen_slide_animating').length && !$body.hasClass('footer_animating')) {
+      if(!$('.slide_animating').length && !$('.screen_slide_animating').length && !$body.hasClass('footer_animating') && !$('.lightbox_visible').length) {
         if(0 == current_index) {
           $('.nav_container').removeClass('nav_container_visible');
         } else {
