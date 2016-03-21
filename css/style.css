@@ -945,7 +945,8 @@ a.back_top {
 }
 .logo:hover,
 .menu_btn:hover,
-.livechat_btn:hover {
+.livechat_btn:hover,
+.all_view_wrapper .lightbox_btn:hover {
     opacity: .6;
 }
 .nav_container,
@@ -1427,7 +1428,7 @@ a.btn:before {
     }
     .screen {
         width: 1200px;
-        padding: 0 0 0 292px;
+        margin: 0 0 0 15.625%;
         position: relative;
         -webkit-transition: all 1.4s ease-in-out;
         transition: all 1.4s ease-in-out;
@@ -1475,17 +1476,17 @@ a.btn:before {
     .screen_tile {
         position: absolute;
         top: 50%;
-        left: 254px;
-        width: 118px;
+        left: 13.17%;
+        width: 6.145%;
         height: 674px;
         margin: -337px 0 0 0;
         border-radius: 60px;
-        -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
-        transition: all 1s cubic-bezier(.19,1,.22,1);
+        -webkit-transition: opacity 1.5s cubic-bezier(.19,1,.22,1);
+        transition: opacity 1.5s cubic-bezier(.19,1,.22,1);
         opacity: 0;     
     }
     .slide_start .screen_tile {
-        z-index: -1 !important;
+        left: -9999px;  
     }
     .screen_tile_ed {
         opacity: .5;    
@@ -1672,8 +1673,9 @@ a.btn:before {
 }
 
 @media only screen and (max-width: 1650px) {
-    .screen {
-        padding-left: 160px;
+    .screen_tile {
+        height: 520px;
+        margin-top: -260px;
     }
     .side {
         padding-right: 120px;
@@ -1688,10 +1690,7 @@ a.btn:before {
     body {
         font-size: 15px;
         line-height: 20px;
-    }
-    .screen {
-        padding-left: 90px;
-    }
+    } 
     .side {
         padding-right: 50px;
     }
@@ -1732,9 +1731,6 @@ a.btn:before {
     }
     .foot_share a {
         margin-left: 12px;
-    }
-    .screen {
-        padding-left: 60px;
     }
     .side {
         padding-right: 20px;
