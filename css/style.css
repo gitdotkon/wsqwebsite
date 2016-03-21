@@ -1739,12 +1739,25 @@ a.btn:before {
 
 @media only screen and (max-width: 1023px) {
     html {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;      
         overflow: hidden;
+    } 
+    .mobile_wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;      
+        overflow: hidden;        
     }
     body {
         font-size: 12px;
         font-family: 'avenir_lt_35_lightlight';        
-        line-height: 14px;            
+        line-height: 14px;       
     }
     h2 {
         font-size: 24px;
@@ -1765,8 +1778,8 @@ a.btn:before {
         left: 0;
         width: 100%;
         height: 500%;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;          
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;          
     }
     .wrapper_0 {
         top: 0;
@@ -1873,6 +1886,8 @@ a.btn:before {
     .all_view_wrapper {
         width: 55px;
         margin: 24px auto 0;
+        position: relative;
+        z-index: 11;
     }
     .livechat_btn {
         display: block;
@@ -1999,8 +2014,8 @@ a.btn:before {
         width: 100%;
         height: 100%;
         background: #191919;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;   
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;   
         padding: 0 0 70px;     
     }
     .mobile_footer_visible .footer {
