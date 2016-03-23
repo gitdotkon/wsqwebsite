@@ -322,7 +322,7 @@ jQuery(document).ready(function($) {
       preventDefaultEvents: true
     });  
 
-    $('.social_btns').click(function() {
+    $('.social_btns').bind('click touchstart', function() {
       $(this).toggleClass('social_btns_open');
     });
 
@@ -366,4 +366,6 @@ jQuery(document).ready(function($) {
     $('.lightbox_visible').removeClass('lightbox_visible');
     return false;  
   });  
+
+  //$('#mobile_wrapper_height').text('@media only screen and (max-width: 1024px) { .wrapper {height: ' + (Number($('.slide').size()) - 1) + '00%;} }');
 });

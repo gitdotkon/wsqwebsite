@@ -774,6 +774,9 @@ body {
 .screen_tile_green {
     background: #ccff00;
 }
+.screen_tile_cyan {
+    background: #00dfd0;
+}
 .screen_tile_red {
     background: #d60000;
 }
@@ -1107,6 +1110,9 @@ a.btn:before {
 .text_center {
     text-align: center;
 }
+.br {
+    display: block;
+}
 
 @media only screen and (min-width: 1024px) {
     .wrapper {
@@ -1116,7 +1122,7 @@ a.btn:before {
         top: 0;
         left: 0;    
         -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;    
+        transition: all .4s ease-in-out;   
     }
     .slide,
     .screen_slide,
@@ -1811,7 +1817,19 @@ a.btn:before {
     }  
     .wrapper_6 {
         top: -600%;
-    }                   
+    } 
+    .wrapper_7 {
+        top: -700%;
+    } 
+    .wrapper_8 {
+        top: -800%;
+    } 
+    .wrapper_9 {
+        top: -900%;
+    }  
+    .wrapper_10 {
+        top: -1000%;
+    }                                      
     .slide {
         position: relative;
         height: 20%;
@@ -2122,6 +2140,9 @@ a.btn:before {
     .livechat_btn {
         z-index: 99;
     }    
+    .social_btns {
+        cursor: pointer;
+    }
     .copyright,
     .copyright a {
         font-size: 11px;
