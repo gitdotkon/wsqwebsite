@@ -981,6 +981,9 @@ a.back_top {
     padding: 38px 0 0 0;
     float: left;
 }
+.nav_container ul li {
+    cursor: pointer;
+}
 .mobile_nav_container ul li {
     padding-top: 19px;
 }
@@ -1126,8 +1129,8 @@ a.btn:before {
         height: 100%;
         top: 0;
         left: 0;    
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;   
+        -webkit-transition: all .4s cubic-bezier(.19,1,.22,1);
+        transition: all .4s cubic-bezier(.19,1,.22,1); 
     }
     .slide,
     .screen_slide,
@@ -1543,8 +1546,8 @@ a.btn:before {
         left: 0;
         width: 100%;
         background: #191919;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;    
+        -webkit-transition: all .4s cubic-bezier(.19,1,.22,1);
+        transition: all .4s cubic-bezier(.19,1,.22,1);
     }
     body.footer_visible .wrapper {
         top: -630px;
