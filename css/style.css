@@ -1113,6 +1113,11 @@ a.btn:before {
 .br {
     display: block;
 }
+.image_loader {
+    display: block;
+    position: absolute;
+    left: -99999px;
+}
 
 @media only screen and (min-width: 1024px) {
     .wrapper {
@@ -1750,7 +1755,7 @@ a.btn:before {
     }  
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
     .mobile_br {
         display: block;
     }
@@ -2175,6 +2180,9 @@ a.btn:before {
         height: 32px;
         background-size: 16px 16px;
     }   
+    .image_loader {
+        display: none;
+    }    
 }
 
 @media only screen and (max-width: 1023px), (max-height: 604px){
