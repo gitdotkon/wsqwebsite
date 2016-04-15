@@ -1597,6 +1597,7 @@ body.stage_page .stage_box .stage_screen_tile {
 .stage_box .text_box h2 {
     font-size: 72px;
     line-height: 82px;
+    text-transform: none;
     padding: 0 0 34px;
 }
 .stage_box .text_box h2 sup {
@@ -1939,7 +1940,7 @@ body .normal_slider .flex-direction-nav {
 
 @media only screen and (max-width: 1600px) {
     .specs {
-        width: 1020px;
+        width: 920px;
     }
     .specs_inner {
         padding-right: 20px;
@@ -2638,6 +2639,21 @@ body .normal_slider .flex-direction-nav {
         font-size: 15px;
         line-height: 20px;
     } 
+    body.not_full_screen_page {
+        padding-top: 80px;
+    }
+    .header {
+        height: 80px;
+    }
+    .header .logo {
+        top: 10px;
+    }
+    .header .menu_btn {
+        top: 22px;
+    }
+    .header .livechat_btn_up {
+        top: 18px;
+    }
     .side {
         padding-right: 50px;
     }
