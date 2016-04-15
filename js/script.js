@@ -172,6 +172,10 @@ jQuery(document).ready(function($) {
         $screen_slide_active.find('.side_pic').removeClass('side_pic_ed');
 
         setTimeout(function() {
+          $screen_slide.find('.screen_tile').addClass('screen_tile_ed');
+        }, 900); 
+
+        setTimeout(function() {
           $slide_active.find('.big_pic').removeClass('big_pic_ed');
 
           $slide_active.find('.side_pic').removeClass('side_pic_ed');
@@ -188,7 +192,7 @@ jQuery(document).ready(function($) {
           $('.slide_active').nextAll('.slide').find('.big_pic').removeClass('down').addClass('up');  
 
           
-          $screen_slide.find('.screen_tile').addClass('screen_tile_ed');
+
 
 
           update_nav_container();

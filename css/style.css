@@ -1279,8 +1279,8 @@ body.home_screen_invisible .social_btns {
     background: #d60000;
     opacity: 0;
     border-radius: 100%;
-    -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
-    transition: all 1s cubic-bezier(.19,1,.22,1);     
+    -webkit-transition: all 2s cubic-bezier(.19,1,.22,1);
+    transition: all 2s cubic-bezier(.19,1,.22,1);     
     z-index: 4444;    
 }
 body.home_screen_invisible .stage_screen_tile {
@@ -2416,8 +2416,8 @@ body .normal_slider .flex-direction-nav {
         height: 674px;
         margin: -337px 0 0 0;
         border-radius: 60px;
-        -webkit-transition: opacity 1.5s cubic-bezier(.19,1,.22,1);
-        transition: opacity 1.5s cubic-bezier(.19,1,.22,1);
+        -webkit-transition: opacity 3.5s cubic-bezier(.19,1,.22,1);
+        transition: opacity 3.5s cubic-bezier(.19,1,.22,1);
         opacity: 0;     
     }
     .slide_start .screen_tile {
