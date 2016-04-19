@@ -985,6 +985,17 @@ a.back_top,
 .all_view_wrapper .lightbox_btn:hover {
     opacity: .6;
 }
+body .livechat_btn_up,
+body .livechat_btn_up:hover {
+    z-index: -1;
+}
+body.home_screen_invisible .livechat_btn_up,
+body.home_screen_invisible .livechat_btn_up:hover {
+    z-index: 4444;
+}
+body.home_screen_invisible .livechat_btn_up:hover {
+    opacity: .6;
+}
 .nav_container,
 .mobile_nav_container {
     position: fixed;
