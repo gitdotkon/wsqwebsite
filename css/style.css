@@ -990,11 +990,18 @@ body .livechat_btn_up:hover {
     z-index: -1;
 }
 body.home_screen_invisible .livechat_btn_up,
-body.home_screen_invisible .livechat_btn_up:hover {
+body.home_screen_invisible .livechat_btn_up:hover,
+body.facilities_landing_page .livechat_btn_up,
+body.facilities_landing_page .livechat_btn_up:hover {
     z-index: 4444;
 }
-body.home_screen_invisible .livechat_btn_up:hover {
+body.home_screen_invisible .livechat_btn_up:hover,
+body.facilities_landing_page .livechat_btn_up:hover {
     opacity: .6;
+}
+body.facilities_landing_page .header,
+body.about_us_page .header {
+    display: none;
 }
 .nav_container,
 .mobile_nav_container {
@@ -1129,6 +1136,14 @@ a.hover_btn {
     }
     .stage_screen_btns span {
         overflow: hidden;
+    }
+    .desktop_br {
+        display: block;
+    }
+}
+@media only screen and (max-width: 1025px) {
+    .desktop_br {
+        display: none;
     }
 }
 .btn:hover,
@@ -1948,6 +1963,166 @@ body .normal_slider .flex-direction-nav {
 .mobile_stage_screen_br {
     display: none;
 }
+.landing_grids {
+    position: relative;
+    height: 100%;
+}
+.landing_grid_bg_slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.landing_grid_bg_slider:after {
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .7;
+}
+.landing_grid_bg_slider .flexslider,
+.landing_grid_bg_slider .slides,
+.landing_grid_bg_slider .slides li {
+    position: relative;
+    height: 100%;    
+}
+.landing_grid_bg_slider .slides li {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.landing_grids_inner {
+    position: relative;
+    height: 100%;    
+}
+.landing_grids h2 {
+    color: #fff;
+    font-size: 70px;
+    font-family: 'avenir_lt_65_mediumblack';    
+    line-height: 70px;
+    padding: 0 0 14px;
+}
+.landing_grids .text {
+    padding: 0 15px 22px;
+}
+.landing_grids ul {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'avenir_lt_55_romanroman';    
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    height: 100%;
+}
+.btn_medium,
+a.btn_medium {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'avenir_lt_55_romanroman';    
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 2px solid #fff;   
+    padding: 8px 61px;
+    border-radius: 32px;
+}
+.landing_grids ul li {
+    position: relative;
+    float: left;
+    width: 33.333%;
+    height: 50%;
+}
+.landing_grids ul li:before,
+.landing_grids ul li a:before {
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .2;
+}
+.landing_grids ul li:before {
+    border-right: 1px solid #fff;
+}
+.landing_grids ul li a:before {
+    border-bottom: 1px solid #fff;
+}
+.landing_grids ul li.no_br:before {
+    display: none;
+}
+.landing_grids ul li.no_bb a:before {
+    display: none;
+}
+.landing_grids ul li a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.landing_grids ul li .txt {
+    height: 0;
+    -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
+    transition: all 1s cubic-bezier(.19,1,.22,1);      
+}
+.landing_grids ul li:hover .txt {
+    height: 98px;
+}
+.landing_grids ul li .txt .txt_inner .txt_inner_box {
+    visibility: hidden;
+}
+.landing_grids ul li .txt .txt_inner {
+    position: relative;
+}
+.landing_grids ul li .txt .txt_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
+    transition: all 1s cubic-bezier(.19,1,.22,1);   
+    opacity: 0;
+    top: -10px;    
+}
+.landing_grids ul li:hover .txt .txt_hover {
+    opacity: 1;
+    top: 0;    
+}
+body.facilities_landing_page .logo,
+body.about_us_page .logo {
+    position: absolute;
+}
+.landing_grids_3 ul li {
+    height: 100%;
+}
+.landing_grids_3 ul li a:before {
+    display: none;
+}
+.landing_grids_3 .text {
+    text-transform: none;
+}
+.landing_grids_3 .landing_grid_bg_slider:after {
+    opacity: .5;
+}
+.landing_grid_bg_slider .flex-direction-nav,
+.landing_grid_bg_slider .flex-control-nav {
+    display: none;
+}
+.landing_grids .mobile_bg {
+    display: none;
+}
+
 
 @media only screen and (max-width: 1600px) {
     .specs {
@@ -1967,6 +2142,16 @@ body .normal_slider .flex-direction-nav {
     }
     .stages_slider {
         right: 47px;
+    }
+    .landing_grids h2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    .landing_grids ul,
+    .btn_medium,
+    a.btn_medium {
+        font-size: 18px;
+        line-height: 24px;
     }
 }
 
@@ -2003,6 +2188,16 @@ body .normal_slider .flex-direction-nav {
         font-size: 38px;
         line-height: 52px;
     }
+    .landing_grids h2 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .landing_grids ul,
+    .btn_medium,
+    a.btn_medium {
+        font-size: 15px;
+        line-height: 21px;
+    }    
 }
 
 @media only screen and (max-width: 1130px) {
@@ -2251,7 +2446,8 @@ body .normal_slider .flex-direction-nav {
         -webkit-transition: all 1s ease-out;  
         transition: all 1s ease-out;     
     }
-    body.stages_page .next_screen {
+    body.stages_page .next_screen,
+    body.about_us_page .next_screen {
         background-image: url(../images/dark_next_screen.png);
     }
     .next_screen_ed {
@@ -2325,10 +2521,12 @@ body .normal_slider .flex-direction-nav {
         bottom: auto;
         right: 132px;
     }
-    body.home_screen_invisible .livechat_btn {
+    body.home_screen_invisible .livechat_btn,
+    body.facilities_landing_page .livechat_btn {
         opacity: 0;
     }    
-    body.home_screen_invisible .livechat_btn_up {
+    body.home_screen_invisible .livechat_btn_up,
+    body.facilities_landing_page .livechat_btn_up {
         opacity: 1;
     }
     .big_pic {
@@ -2483,6 +2681,9 @@ body .normal_slider .flex-direction-nav {
     }
     body.footer_visible .wrapper {
         top: -630px;
+    }
+    body.facilities_landing_page .wrapper {
+        top: 0;
     }
     body.footer_visible .footer {
         bottom: 0;
@@ -2714,6 +2915,12 @@ body .normal_slider .flex-direction-nav {
 @media only screen and (max-width: 1190px) {
     .screen .text {
         max-width: 600px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    body.facilities_landing_page .footer {
+        display: none;
     }
 }
 
@@ -3083,6 +3290,7 @@ body .normal_slider .flex-direction-nav {
         top: 100%;
         right: 0;
         margin: 33px 20px 0 0;
+        z-index: 6666;
     }
     .mobile_back_top .back_top_bg {
         background-size: 9px auto;
@@ -3442,7 +3650,7 @@ body .normal_slider .flex-direction-nav {
     }
     body.stages_page .wrapper .qrcode,
     body.stage_page .qrcode {
-        margin-bottom: 41px;
+        /*margin-bottom: 41px;*/
     }
     .mobile_stages_slider .flex-direction-nav,
     .mobile_stages_slider .flex-control-nav {
@@ -3591,6 +3799,119 @@ body .normal_slider .flex-direction-nav {
         position: relative;
         z-index: 1111;
     }
+    .landing_grids .mobile_bg {
+        display: block;
+        position: relative;
+    }
+    .landing_grids .mobile_bg:before {
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: .5;
+    }
+    .landing_grids .mobile_bg img {
+        display: block;
+        width: 100%;
+    }
+    .landing_grid_bg_slider {
+        display: none;
+    }
+    .landing_grids ul li {
+        float: none;
+        width: auto;
+        height: auto;
+    }
+    .landing_grids ul,
+    .btn_medium,
+    a.btn_medium {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .btn_medium,
+    a.btn_medium {
+        border-width: 1px;
+        padding: 3px 30px;
+    }    
+    .landing_grids h2 {
+        font-size: 30px;
+        line-height: 35px;
+        padding-bottom: 7px;
+    }
+    .landing_grids .text {
+        padding-bottom: 11px;
+    }
+    body.facilities_landing_page,
+    body.about_us_page,
+    .facilities_landing_page_html,
+    .about_us_page_html {
+        height: auto;
+        overflow: auto;
+    }
+    body.facilities_landing_page .footer {
+        display: block;
+    }
+    body.facilities_landing_page .wrapper,
+    body.facilities_landing_page.footer_visible .wrapper,
+    body.facilities_landing_page .footer,
+    body.facilities_landing_page.footer_visible .footer,
+    body.about_us_page .wrapper,
+    body.about_us_page.footer_visible .wrapper,
+    body.about_us_page .footer,
+    body.about_us_page.footer_visible .footer {
+        position: relative !important;
+        height: auto;
+        bottom: auto !important;
+        top: auto !important;
+    }
+    .landing_grids ul li:before, 
+    .landing_grids ul li a:before {
+        display: none;
+    }
+    .landing_grids ul li .txt {
+        height: auto;
+    }
+    .landing_grids ul li .txt .txt_hover {
+        top: auto;
+        opacity: 1;
+        position: static;
+    }
+    .landing_grids ul li .txt .txt_inner .txt_inner_box {
+        display: none;
+    }
+    .landing_grids ul li:hover .txt {
+        height: auto;
+    }
+    body.facilities_landing_page .header,
+    body.about_us_page .header {
+        display: block;
+    }        
+    body.facilities_landing_page .wrapper .logo,
+    body.facilities_landing_page .wrapper .menu_btn,
+    body.facilities_landing_page .wrapper .livechat_btn,
+    body.facilities_landing_page .header .livechat_btn,
+    body.about_us_page .wrapper .logo,
+    body.about_us_page .wrapper .menu_btn,
+    body.about_us_page .wrapper .livechat_btn,
+    body.about_us_page .header .livechat_btn {
+        display: none;
+    }
+    body.facilities_landing_page .header:before,
+    body.about_us_page .header:before {
+        background: #fff;
+    }   
+    body.facilities_landing_page .menu_btn,
+    body.about_us_page .menu_btn {
+        background-image: url(../images/menu_btn_red.png);    
+    }    
+    body.facilities_landing_page,
+    body.about_us_page {
+        padding-top: 58px;
+    } 
 }
 
 @media only screen and (max-width: 1024px), (max-height: 604px){
@@ -3611,9 +3932,13 @@ body .normal_slider .flex-direction-nav {
     }
     .mobile_foot_widgets {
         padding-top: 52px;
+        padding-bottom: 20px;
     }
     .qrcode {
         width: 80px;
+    }
+    .mobile_foot_widget:first-child {
+        display: none;
     }
 }
 
@@ -3625,3 +3950,8 @@ body .normal_slider .flex-direction-nav {
 }
 */
 
+@media only screen and (max-height: 520px) {
+    .mobile_foot_widgets {
+        padding-top: 14px;
+    }
+}
