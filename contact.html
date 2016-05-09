@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US" class="facilities_list_pages_html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex,follow" />
+  <title>Wanda</title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=yes" />   
+  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="screen" />  
+  <link rel="stylesheet" href="css/jquery.scrollbar.css" type="text/css" media="screen" />  
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />   
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>  
+  <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollbar.min.js"></script>  
+  <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
+  <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>    
+  <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body class="facilities_list_pages">
+  <div class="full_screen">
+    <div class="contact fixed_full_bg" style="background-image: url(images/t/contact.jpg);">
+      <div class="table">
+        <div class="td td_middle">
+          <div class="contact_inner">
+            <h2 class="block_box_title">Contact</h2>
+            <div class="text">We look forward to hearing from you.</div>
+            <div class="contact_box">
+              <div class="contact_form">
+                <form>
+                  <div class="field field_name">
+                    <label class="placeholder">Name<span class="red_required">*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="field field_email">
+                    <label class="placeholder">Email<span class="red_required">*</span></label>
+                    <input type="text" />
+                  </div>     
+                  <div class="field">
+                    <label class="placeholder">Company Name</label>
+                    <input type="text" />
+                  </div>  
+                  <div class="field">
+                    <label class="placeholder">Subject</label>
+                    <input type="text" />
+                  </div>   
+                  <div class="field">
+                    <textarea placeholder="Drop a line...."></textarea>
+                  </div> 
+                  <div class="field field_captcha">
+                    <input type="text" placeholder="Captcha" />
+                    <img src="images/t/captcha.jpg" alt="" />
+                  </div>    
+                  <input type="submit" value="Send" />
+                </form>
+              </div>
+              <div class="contact_info">
+                <h3>For General Inquiries</h3>
+                <ul>
+                  <li class="contact_phone">
+                    <div class="table">
+                      <div class="td">
+                        022-8888888
+                      </div>
+                    </div>
+                  </li>
+                  <li class="contact_email">
+                    <div class="table">
+                      <div class="td">
+                        <a href="mailto:info@wandastudios.com">info@wandastudios.com</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="contact_location">
+                    <div class="table">
+                      <div class="td">
+                        44/F HNA IMC Center, No.2 HongKong Road , Shinan District, 266000 Qingdao, Shandong, CHINA
+                      </div>
+                    </div>
+                  </li>                                    
+                </ul>
+                <div class="social_btns">
+                  <a href="#" class="facebook"></a>  
+                  <a href="#" class="twitter"></a> 
+                  <a href="#" class="linked_in"></a>         
+                  <a href="#" class="weibo"></a>
+                  <div class="clear"></div>
+                </div>                
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>              
+        </div>
+      </div>          
+    </div>  
+
+    <div class="header">
+      <a href="index.html" class="logo animate_left animate_lefted"><img src="images/logo.png" alt="" /><img src="images/logo_red.png" alt="" class="logo_red" /></a>
+      <a href="#" class="menu_btn animate_right animate_righted"></a>
+      <a href="#" class="livechat_btn livechat_btn_up animate_right animate_righted"></a>
+    </div>                  
+  </div>
+
+  <div id="map"></div>
+
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=xQmNansY0TwKyaUbfdIGVpBM"></script>   
+  <script type="text/javascript">
+  // 百度地图API功能
+  var map = new BMap.Map("map");    // 创建Map实例
+  map.centerAndZoom(new BMap.Point(120.338802,36.061135), 16);  // 初始化地图,设置中心点坐标和地图级别
+  window.onresize = function() {
+    map.centerAndZoom(new BMap.Point(120.338802,36.061135), 16);
+  }
+  //map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+  map.setCurrentCity("青岛");          // 设置地图显示的城市 此项是必须设置的
+  map.setMapStyle({style:'grayscale'});
+  //map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放 
+  var pt = new BMap.Point(120.338802,36.061135);
+  var icon = new BMap.Icon("images/marker.png", new BMap.Size(88, 96));
+  var marker = new BMap.Marker(pt,{icon:icon});  // 创建标注
+  map.addOverlay(marker);              // 将标注添加到地图中 
+  </script>  
+
+  <div class="footer">
+    <div class="foot_box">
+      <img src="images/foot_logo.png" alt="" class="foot_logo" />
+      <div class="foot_share">
+        <a href="#" class="foot_facebook grey_border"><span class="grey_border_span"></span></a>
+        <a href="#" class="foot_twitter grey_border"><span class="grey_border_span"></span></a>
+        <a href="#" class="foot_linkedin grey_border"><span class="grey_border_span"></span></a>
+        <a href="#" class="foot_weibo grey_border"><span class="grey_border_span"></span></a>
+      </div>
+      <a href="#lightbox_6" class="btn map_btn lightbox_btn"><span>View 3D Map</span></a>
+      <div class="clear"></div>
+      <a href="#" class="back_top mobile_back_top grey_border"><span class="back_top_bg"></span><span class="grey_border_span"></span></a>
+    </div>
+    <div class="foot_widgets">
+      <div class="foot_widget">
+        <h3><a href="#">About Us</a></h3>
+        <ul>
+          <li><a href="#">The Studios</a></li>
+          <li><a href="#">The Wanda Group</a></li>
+          <li><a href="#">The City of Qingdao</a></li>
+        </ul>
+      </div>
+      <div class="foot_widget">
+        <h3><a href="#">World-Class Facilities</a></h3>
+        <ul>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">Backlots &amp; T-lots</a></li>
+          <li><a href="#">Marine Facilites</a></li>
+          <li><a href="#">Production Offices</a></li>
+          <li><a href="#">Post-Production Facilities</a></li>
+        </ul>
+      </div>   
+      <div class="foot_widget">
+        <h3><a href="#">Studio Operation Services</a></h3>
+        <ul>
+          <li><a href="#">Pre-Production</a></li>
+          <li><a href="#">Production</a></li>
+          <li><a href="#">Shoot</a></li>
+          <li><a href="#">Post-Production</a></li>
+        </ul>
+        <h3><a href="#">IT Services</a></h3>
+      </div>  
+      <div class="foot_widget foot_widget_last">
+        <h3><a href="#">Incentives</a></h3>
+        <h3><a href="#">Partner Directory</a></h3>
+        <h3><a href="#">Press Center</a></h3>
+        <h3><a href="#">Careers</a></h3>
+        <h3><a href="#">Contact Us</a></h3>
+      </div>   
+      <div class="foot_right">
+        <a href="#" class="back_top grey_border"><span class="back_top_bg"></span><span class="grey_border_span"></span></a>
+        <div class="qrcode"><img src="images/qrcode.jpg" alt="" /><span>Follow Us<br />On WeChat</span></div>
+      </div>           
+      <div class="clear"></div>
+    </div>
+    <div class="mobile_foot_widgets">
+      <div class="mobile_foot_widget">
+        <h3>Phone</h3>
+        <div class="txt">0228888888</div>
+      </div>
+      <div class="mobile_foot_widget">
+        <h3>Email</h3>
+        <div class="txt"><a href="mailto:info@wandastudios.com">info@wandastudios.com</a></div>
+      </div>
+      <div class="mobile_foot_widget">
+        <h3>Mailing Address</h3>
+        <div class="txt">44/F HNA IMC Center, No.2 HongKong Road , Shinan District, 266000 Qingdao, Shandong, CHINA</div>
+      </div>  
+      <div class="qrcode"><img src="images/qrcode.jpg" alt="" /></div>          
+    </div>
+    <div class="copyright">
+      <span>Copyright &copy; 2016 Wanda Studios Qingdao. All Rights Reserved.</span> <a href="#">Terms &amp; Privacy</a>
+    </div>
+  </div>        
+
+
+ 
+
+
+  <div class="lightbox" id="lightbox_0">
+    <div class="iframe" width="640" height="480" src="https://sketchfab.com/models/14fc482da7a94997ae7bc8ad81274e45/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></div> 
+    <a href="#" class="lightbox_close"></a>
+  </div> 
+
+  <div class="lightbox" id="lightbox_1">
+    <div class="iframe" width="640" height="480" src="https://sketchfab.com/models/14fc482da7a94997ae7bc8ad81274e45/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></div> 
+    <a href="#" class="lightbox_close"></a>
+  </div>    
+
+  <div class="lightbox" id="lightbox_2">
+    <div class="iframe" width="640" height="480" src="https://sketchfab.com/models/6f5e13385ea74742a5af1e5338bde70b/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></div>
+    <a href="#" class="lightbox_close"></a>
+  </div>   
+
+  <div class="lightbox" id="lightbox_3">
+    <div class="iframe" width="640" height="480" src="https://sketchfab.com/models/6f5e13385ea74742a5af1e5338bde70b/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></div>
+    <a href="#" class="lightbox_close"></a>
+  </div>
+
+  <div class="lightbox" id="lightbox_4">
+    <div class="iframe" width="640" height="480" src="https://sketchfab.com/models/6f5e13385ea74742a5af1e5338bde70b/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></div>
+    <a href="#" class="lightbox_close"></a>
+  </div>
+
+  <div class="lightbox" id="lightbox_5">
+    <div class="iframe" width="640" height="480" src="https://sketchfab.com/models/6f5e13385ea74742a5af1e5338bde70b/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></div>
+    <a href="#" class="lightbox_close"></a>
+  </div>
+
+  <div class="lightbox" id="lightbox_6">
+    <div class="iframe" width="640" height="480" src="https://sketchfab.com/models/6f5e13385ea74742a5af1e5338bde70b/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></div>
+    <a href="#" class="lightbox_close"></a>
+  </div> 
+</body>
+</html>
