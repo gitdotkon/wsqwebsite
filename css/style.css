@@ -2223,8 +2223,9 @@ body.about_us_page .logo {
 .landing_grids .mobile_bg {
     display: none;
 }
-body.facilities_list_pages .home_screen {
-    /*max-width: 587px;*/
+body.facilities_list_pages .home_screen .text_box {
+    max-width: 660px;
+    margin: 0 auto;
 }
 body.facilities_list_pages .home_screen {
     font-size: 20px;
@@ -2916,7 +2917,7 @@ body.facilities_list_pages .footer {
 .about_cols ul li {
     margin: 29px 0 0 0;
     border-left: 1px solid #ccc;
-    padding: 0 0 0 21px;
+    padding: 0 15px 0 21px;
 }
 .about_cols ul li:first-child {
     margin-top: 0;
@@ -2985,6 +2986,7 @@ body.facilities_list_pages .footer {
 }
 .surroundings .btns a {
     color: #fff;
+    text-transform: uppercase;
     display: inline-block;
     width: 322px;
     margin: 0 29px;
@@ -3327,7 +3329,11 @@ body.facilities_list_pages .footer {
     background: #ec3c40; 
     margin: 0 0 0 -19px;
 }
+.group_property_ul ul {
+    padding: 70px 0 0 0;
+}
 .group_property_ul ul li {
+    vertical-align: top;
     display: inline-block;
     width: 168px;
     margin: 0 41px;
@@ -3383,12 +3389,23 @@ body.facilities_list_pages .footer {
 .chairman_dream .text {
     width: 600px;
     height: 600px;
-    background: #eee;
     border-radius: 100%;
     position: absolute;
     top: 50%;
     right: 207px;
     margin: -300px 0 0 0;
+}
+.chairman_dream .text .flexslider,
+.chairman_dream .text .slides,
+.chairman_dream .text .slides li,
+.chairman_dream .text .slides .text_box {
+    height: 100%;
+    position: relative;
+}
+.chairman_dream .text .slides .text_box {
+    background: #eee;
+    border-radius: 100%; 
+    padding: 0 115px;   
 }
 .block_box {
     color: #333;
@@ -3934,6 +3951,7 @@ a.apply_btn:hover {
     height: auto;
     position: relative;
     padding: 0 170px 0;
+    height: 100%;
 }
 .contact:before {
     display: block;
@@ -3987,7 +4005,7 @@ a.apply_btn:hover {
     font-size: 20px;
     font-family: 'avenir_lt_55_romanroman';    
     line-height: 26px;
-    padding: 21px 0;    
+    padding: 25px 0 17px;   
 }
 .field input[type="text"],
 .field input[type="email"],
@@ -4002,7 +4020,7 @@ a.apply_btn:hover {
     font-size: 20px;
     font-family: 'avenir_lt_55_romanroman';    
     line-height: 26px;
-    padding: 21px 0;
+    padding: 25px 0 17px;
     border: none;
     background: transparent;
     border-bottom: 1px solid #fff;
@@ -4072,7 +4090,7 @@ a.apply_btn:hover {
 .contact_info {
     width: 46.2%;
     float: right;
-    padding: 48px 0 0 0;
+    padding: 55px 0 0 0;
 }
 .contact_info h3 {
     color: #fff;
@@ -4090,8 +4108,9 @@ a.apply_btn:hover {
     text-align: left;
 }
 .contact_info ul li {
-    height: 112px;
-    padding: 24px 0 24px 68px;
+    height: 64px;
+    padding: 0 0 0 68px;
+    margin: 0 0 15px;
 }
 .contact_info ul li.contact_phone {
     background: url(../images/contact_phone.png) no-repeat 8px 50%;
@@ -4103,7 +4122,7 @@ a.apply_btn:hover {
     background: url(../images/contact_location.png) no-repeat 5px 50%;
 }
 .contact_info ul {
-    padding: 0 0 56px;
+    padding: 0 0 47px;
 }
 .contact_info .social_btns {
     position: static;
@@ -4111,6 +4130,7 @@ a.apply_btn:hover {
 .contact_box {
     position: relative;
     overflow: hidden;
+    padding: 38px 0 0 0;
 }
 .full_screen .contact_info .td {
     vertical-align: middle;
@@ -4165,6 +4185,7 @@ a.apply_btn:hover {
 }
 .vendors_tenants ul {
     padding: 0 0 105px;
+    position: relative;
 }
 .vendors_tenants ul li {
     display: inline-block;
@@ -4303,11 +4324,12 @@ h1.detail_title {
 .detail_meta {
     color: #141414;
     font-size: 18px;
+    font-family: 'avenir_lt_55_romanroman';      
     line-height: 24px;
     padding: 0 0 56px;
 }
 .detail_category {
-    color: #787878;
+    color: #787878;  
     font-style: italic;
     display: inline-block;
     padding: 0 0 0 18px;
@@ -4544,7 +4566,258 @@ body.red_header_fixed .red_header_static {
     display: inline-block;
     vertical-align: top;
 }
-
+.about_qd {
+    background: #f3f3f3;
+}
+.about_qd .img:after {
+    background-image: url(../images/about_qd_rd.png);
+}
+.hr_box .specs {
+    width: 1048px;
+}
+.hr_box {
+    height: 980px;
+    margin-top: -80px;
+}
+.block_box_title_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0 0 0 92px;
+}
+.block_box_title_wrapper h2.block_box_title {
+    color: #fff;
+    font-size: 72px;
+    line-height: 82px;
+    text-align: left;
+}
+.block_box_title_wrapper h2.block_box_title:before {
+    left: 0;
+    margin-left: 0;
+}
+.hr_box .specs_list {
+    color: #141414;
+    font-size: 18px;
+    font-family: 'avenir_lt_55_romanroman';    
+    line-height: 26px;
+}
+.hr_box .specs_list strong {
+    color: #ab081a;
+    font-weight: normal;
+    font-family: 'avenir_lt_55_romanheavy';    
+}
+.hr_box .specs_list ul li {
+    padding: 0 0 20px 23px;
+}
+.hr_box .specs_list ul li ul {
+    padding: 0 0 0 29px;
+}
+.hr_box .specs_list ul li ul li {
+    padding: 20px 0 0 12px;
+    background: url(../images/sub_li.jpg) no-repeat 0 32px;
+}
+.holdings {
+    height: 540px;
+    position: relative;
+}
+.holdings:before {
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .5;
+}
+.holdings h2.block_box_title {
+    color: #fff;
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 87px;
+    max-width: 900px;
+}
+.sv_icons {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'avenir_lt_55_romanroman';    
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 146px;
+}
+.sv_icons ul li {
+    width: 210px;
+    display: inline-block;
+    position: relative;
+}
+.sv_icons ul li:before {
+    width: 18px;
+    height: 100%;
+    background: url(../images/arr_left.png) no-repeat 50% 25px;
+    position: absolute;
+    top: 0;
+    left: -9px;
+    display: block;
+    content: ' ';
+}
+.sv_icons ul li:first-child:before {
+    display: none;
+}
+.sv_icons .icon {
+    width: 85px;
+    height: 85px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    margin: 0 auto 19px;
+}
+.sv_icons ul li.active .icon {
+    border-color: #ab081a;
+    background-color: #ab081a;
+}
+.sv_icons .icon_1 {
+    background: url(../images/sv_1.png) no-repeat 50% 50%;
+}
+.sv_icons .icon_2 {
+    background: url(../images/sv_2.png) no-repeat 50% 50%;
+}
+.sv_icons .icon_3 {
+    background: url(../images/sv_3.png) no-repeat 50% 50%;
+}
+.sv_icons .icon_4 {
+    background: url(../images/sv_4.png) no-repeat 50% 50%;
+}
+.cr_cols {
+    max-width: 1520px;
+    margin: 0 auto;
+}
+.cr_cols,
+.cr_cols a {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'avenir_lt_55_romanheavy';    
+    line-height: 40px;
+    text-align: center;
+}
+.cr_cols ul {
+    padding-top: 88px;
+}
+.cr_cols ul li {
+    display: inline-block;
+    width: 25%;
+}
+.cr_cols .icon {
+    height: 57px;
+    margin: 0 0 36px;
+}
+.cr_cols .icon_1 {
+    background: url(../images/cr_1.png) no-repeat 50% 50%;
+}
+.cr_cols .icon_2 {
+    background: url(../images/cr_2.png) no-repeat 50% 50%;
+}
+.cr_cols .icon_3 {
+    background: url(../images/cr_3.png) no-repeat 50% 50%;
+}
+.cr_cols .icon_4 {
+    background: url(../images/cr_4.png) no-repeat 50% 50%;
+}
+.filter_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    font-size: 20px;
+    font-family: 'avenir_lt_55_romanheavy';    
+    line-height: 30px;
+    text-align: center;
+    text-shadow: none;
+}
+.filter_box span {
+    display: inline-block;
+    position: relative;
+    padding: 25px 33px 25px 0;
+    margin: 0 30px;
+    background: url(../images/filter_box.png) no-repeat 100% 50%;
+    cursor: pointer;    
+}
+.filter_box span ul {
+    font-size: 16px;
+    font-family: 'avenir_lt_55_romanroman';    
+    line-height: 26px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 160px;
+    text-align: left;
+    background: #eee;
+    display: none;
+}
+.filter_box span ul li {
+    padding: 6px 15px;
+    cursor: pointer;
+}
+.filter_box span ul li.active,
+.filter_box span ul li:hover {
+    background: #fff;
+}
+.filter_box span:hover ul {
+    display: block;
+}
+.filter_reset {
+    color: #ab081a;
+    font-size: 20px;
+    font-family: 'avenir_lt_55_romanroman';    
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #ab081a;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 12px 46px; 
+    margin-left: 26px;
+}
+.filter_reset:hover {
+    color: #fff;
+    background: #ab081a;
+}
+body.incentive_page .stage_screen_btns span, 
+body.incentive_page .stage_screen_btns a {
+    width: 240px;
+    height: 240px;
+    line-height: 32px;
+}
+body.incentive_page .stage_screen_btns a .table, 
+body.incentive_page .stage_screen_btns a .td {
+    width: 240px;
+    height: 240px;    
+}
+body.incentive_page .stage_screen_btns .big {
+    font-size: 36px;
+    font-family: 'avenir_lt_65_mediumblack';    
+    line-height: 44px;
+    text-transform: uppercase;
+}
+body.incentive_page .stage_screen_btns .hover_btn:before, 
+body.incentive_page .stage_screen_btns a.hover_btn:before {
+    -webkit-transform: rotate3d(0, 0, 1, -69deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -69deg) translate3d(0, -3em, 0);
+}
+@media only screen and (min-width: 1025px) {
+    body.incentive_page .stage_screen_btns .hover_btn:hover:before,
+    body.incentive_page .stage_screen_btns a.hover_btn:hover:before {
+        opacity: 1;
+        background-color: #de302f;
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+        -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+}
 
 
 

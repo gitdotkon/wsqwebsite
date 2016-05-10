@@ -727,6 +727,14 @@ jQuery(document).ready(function($) {
     }
   });    
 
+  $('.chairman_dream .flexslider').flexslider({
+    animation: 'fade',
+    slideshow: true,
+    slideshowSpeed: 10000,
+    animationSpeed: 800,
+    smoothHeight: false
+  }); 
+
   $('.team_detail .text').scrollbar({
     showArrows: false,
     scrollx: 'simple',
@@ -754,25 +762,46 @@ jQuery(document).ready(function($) {
     }
   });
 
-  $('.gallery ul').infinitescroll({
-    navSelector  : ".page_navi",   
-    nextSelector : ".page_navi .page_next",    
-    itemSelector : ".gallery ul li"     
+
+  $('.photo_gallery ul').infinitescroll({
+    navSelector  : ".photo_gallery .page_navi",   
+    nextSelector : ".photo_gallery .page_navi .page_next",    
+    itemSelector : ".photo_gallery ul li"     
   });     
 
   $(window).unbind('.infscr');
 
-  $('.load_more_btn').click(function(){
-    $('.gallery ul').infinitescroll('retrieve');
+  $('.photo_gallery .load_more_btn').click(function(){
+    $('.photo_gallery ul').infinitescroll('retrieve');
     return false;
   });
 
-  $('.gallery ul').infinitescroll({
-    navSelector  : ".page_navi",   
-    nextSelector : ".page_navi .page_next",    
-    itemSelector : ".gallery ul li"     
+  $('.photo_gallery ul').infinitescroll({
+    navSelector  : ".photo_gallery .page_navi",   
+    nextSelector : ".photo_gallery .page_navi .page_next",    
+    itemSelector : ".photo_gallery ul li"     
   });   
 
+
+  $('.gallery_videos ul').infinitescroll({
+    navSelector  : ".gallery_videos .page_navi",   
+    nextSelector : ".gallery_videos .page_navi .page_next",    
+    itemSelector : ".gallery_videos ul li"     
+  });     
+
+  $(window).unbind('.infscr');
+
+  $('.gallery_videos .load_more_btn').click(function(){
+    $('.gallery_videos ul').infinitescroll('retrieve');
+    return false;
+  });
+
+  $('.gallery_videos ul').infinitescroll({
+    navSelector  : ".gallery_videos .page_navi",   
+    nextSelector : ".gallery_videos .page_navi .page_next",    
+    itemSelector : ".gallery_videos ul li"     
+  }); 
+  
 
   $('.grid').imagesLoaded(function() {
     $('.grid').masonry({
@@ -786,6 +815,7 @@ jQuery(document).ready(function($) {
   function set_red_header_fixed() {
     var window_height = $(window).height(),
       top = $(document).scrollTop();
+    if (!$('.full_screen').length) window_height = 0;
     if (top > window_height) {
       $('body').addClass('red_header_fixed');
     } else {
@@ -815,4 +845,28 @@ jQuery(document).ready(function($) {
  
     return false;
   });
+
+  $('.filter_box span ul li').click(function() {
+    $(this).parents('span').find('ul li.active').removeClass('active');
+    $(this).addClass('active');
+    //$(this).parents('span').find('ul').hide();
+
+    filter();
+    return false;
+  });
+
+  $('.filter_reset').click(function() {
+    $('.filter_box .active').removeClass('active');
+    
+    filter();
+    return false;    
+  });
+
+  function filter() {
+    var location = $('.filter_location .active').attr('data-filter'),
+      title = $('.filter_title .active').attr('data-filter');
+    $('.job').show();
+    if (location) $('.job[data-location!=' + location + ']').hide();
+    if (title) $('.job[data-title!=' + title + ']').hide();
+  }
 });
