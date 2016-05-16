@@ -19,11 +19,14 @@
   <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
   <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>    
   <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+  <script type="text/javascript" src="js/jquery.nicefileinput.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body class="facilities_list_pages">
   <div class="full_screen">
     <div class="contact fixed_full_bg" style="background-image: url(images/t/contact.jpg);">
+      <div class="contact_mobile_bg" style="background-image: url(images/mobile/contact.jpg);"></div>
       <div class="table">
         <div class="td td_middle">
           <div class="contact_inner">
@@ -67,6 +70,7 @@
                         022-8888888
                       </div>
                     </div>
+                    <span class="icon-56"></span>
                   </li>
                   <li class="contact_email">
                     <div class="table">
@@ -74,6 +78,7 @@
                         <a href="mailto:info@wandastudios.com">info@wandastudios.com</a>
                       </div>
                     </div>
+                    <span class="icon-57"></span>
                   </li>
                   <li class="contact_location">
                     <div class="table">
@@ -81,13 +86,14 @@
                         44/F HNA IMC Center, No.2 HongKong Road , Shinan District, 266000 Qingdao, Shandong, CHINA
                       </div>
                     </div>
+                    <span class="icon-58"></span>
                   </li>                                    
                 </ul>
                 <div class="social_btns">
-                  <a href="#" class="facebook"></a>  
-                  <a href="#" class="twitter"></a> 
-                  <a href="#" class="linked_in"></a>         
-                  <a href="#" class="weibo"></a>
+                  <a href="#" class="facebook"><span class="icon-13"></span></a>  
+                  <a href="#" class="twitter"><span class="icon-14"></span></a> 
+                  <a href="#" class="linked_in"><span class="icon-15"></span></a>         
+                  <a href="#" class="weibo"><span class="icon-16"></span></a>
                   <div class="clear"></div>
                 </div>                
               </div>
@@ -100,10 +106,41 @@
 
     <div class="header">
       <a href="index.html" class="logo animate_left animate_lefted"><img src="images/logo.png" alt="" /><img src="images/logo_red.png" alt="" class="logo_red" /></a>
-      <a href="#" class="menu_btn animate_right animate_righted"></a>
-      <a href="#" class="livechat_btn livechat_btn_up animate_right animate_righted"></a>
+      <a href="#" class="menu_btn animate_right animate_righted"><span class="icon-1"></span></a>
+      <a href="#" class="livechat_btn livechat_btn_up animate_right animate_righted"><span class="icon-4"></span>Live Chat</a>
     </div>                  
   </div>
+
+  <div class="mobile_contact_form">
+              <div class="contact_form">
+                <form>
+                  <div class="field field_name">
+                    <label class="placeholder">Name<span class="red_required">*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="field field_email">
+                    <label class="placeholder">Email<span class="red_required">*</span></label>
+                    <input type="text" />
+                  </div>     
+                  <div class="field">
+                    <label class="placeholder">Company Name</label>
+                    <input type="text" />
+                  </div>  
+                  <div class="field">
+                    <label class="placeholder">Subject</label>
+                    <input type="text" />
+                  </div>   
+                  <div class="field">
+                    <textarea placeholder="Drop a line...."></textarea>
+                  </div> 
+                  <div class="field field_captcha">
+                    <input type="text" placeholder="Captcha" />
+                    <img src="images/t/captcha.jpg" alt="" />
+                  </div>    
+                  <input type="submit" value="Send" />
+                </form>
+              </div>     
+  </div> 
 
   <div id="map"></div>
 
@@ -111,15 +148,15 @@
   <script type="text/javascript">
   // 百度地图API功能
   var map = new BMap.Map("map");    // 创建Map实例
-  map.centerAndZoom(new BMap.Point(120.338802,36.061135), 16);  // 初始化地图,设置中心点坐标和地图级别
+  map.centerAndZoom(new BMap.Point(120.381916,36.067874), 18);  // 初始化地图,设置中心点坐标和地图级别
   window.onresize = function() {
-    map.centerAndZoom(new BMap.Point(120.338802,36.061135), 16);
+    map.centerAndZoom(new BMap.Point(120.381916,36.067874), 18);
   }
   //map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
   map.setCurrentCity("青岛");          // 设置地图显示的城市 此项是必须设置的
   map.setMapStyle({style:'grayscale'});
   //map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放 
-  var pt = new BMap.Point(120.338802,36.061135);
+  var pt = new BMap.Point(120.381916,36.067874);
   var icon = new BMap.Icon("images/marker.png", new BMap.Size(88, 96));
   var marker = new BMap.Marker(pt,{icon:icon});  // 创建标注
   map.addOverlay(marker);              // 将标注添加到地图中 
@@ -129,12 +166,12 @@
     <div class="foot_box">
       <img src="images/foot_logo.png" alt="" class="foot_logo" />
       <div class="foot_share">
-        <a href="#" class="foot_facebook grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_twitter grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_linkedin grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_weibo grey_border"><span class="grey_border_span"></span></a>
+        <a href="#" class="foot_facebook grey_border"><span class="grey_border_span"></span><span class="icon-13"></span></a>
+        <a href="#" class="foot_twitter grey_border"><span class="grey_border_span"></span><span class="icon-14"></span></a>
+        <a href="#" class="foot_linkedin grey_border"><span class="grey_border_span"></span><span class="icon-15"></span></a>
+        <a href="#" class="foot_weibo grey_border"><span class="grey_border_span"></span><span class="icon-16"></span></a>
       </div>
-      <a href="#lightbox_6" class="btn map_btn lightbox_btn"><span>View 3D Map</span></a>
+      <a href="#lightbox_6" class="btn map_btn lightbox_btn"><span>View 3D Map<span class="icon-8"></span></span></a>
       <div class="clear"></div>
       <a href="#" class="back_top mobile_back_top grey_border"><span class="back_top_bg"></span><span class="grey_border_span"></span></a>
     </div>

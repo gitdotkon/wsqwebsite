@@ -19,6 +19,8 @@
   <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
   <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>    
   <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+  <script type="text/javascript" src="js/jquery.nicefileinput.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body class="facilities_list_pages">
@@ -30,7 +32,7 @@
       <div class="td td_middle">
         <div class="home_screen stages_home_screen">
           <h2 class="animate_up">Press Center</h2>
-          <div class="animate_up text_box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</div>
+          <div class="animate_up text_box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's<span class="desktop_br"></span> standard dummy text ever since the 1500s, when an unknown printer took a galley</div>
           <div class="stage_screen_btns stage_screen_btns_trigger">
             <span class="animate_up"><a href="#" class="hover_btn tab_nav_trigger"><div class="table"><div class="td">News</div></div></a></span><span class="animate_up"><a href="#" class="hover_btn tab_nav_trigger"><div class="table"><div class="td">Photo<br /> Gallery</div></div></a></span><span class="animate_up"><a href="#" class="hover_btn tab_nav_trigger"><div class="table"><div class="td">Video<br /> Gallery</div></div></a></span>
           </div>
@@ -41,57 +43,129 @@
 
     <div class="header">
       <a href="index.html" class="logo animate_left animate_lefted"><img src="images/logo.png" alt="" /><img src="images/logo_red.png" alt="" class="logo_red" /></a>
-      <a href="#" class="menu_btn animate_right animate_righted"></a>
-      <a href="#" class="livechat_btn livechat_btn_up animate_right animate_righted"></a>
+      <a href="#" class="menu_btn animate_right animate_righted"><span class="icon-1"></span></a>
+      <a href="#" class="livechat_btn livechat_btn_up animate_right animate_righted"><span class="icon-4"></span>Live Chat</a>
     </div>                  
   </div>
 
   <div class="header red_header">
     <div class="tab_nav">
       <ul>
-        <li><a href="#">News</a></li>
+        <li class="news_a"><a href="#">News</a></li>
         <li class="active"><a href="#">Photo Gallery</a></li>
         <li><a href="#">Video Gallery</a></li>
       </ul>
     </div>
     <a href="index.html" class="logo animate_left animate_lefted"><img src="images/logo.png" alt="" /><img src="images/logo_red.png" alt="" class="logo_red" /></a>
-    <a href="#" class="menu_btn animate_right animate_righted"></a>
-    <a href="#" class="livechat_btn livechat_btn_up animate_righted"></a>
+    <a href="#" class="menu_btn animate_right animate_righted"><span class="icon-1"></span></a>
+    <a href="#" class="livechat_btn livechat_btn_up animate_righted"><span class="icon-4"></span>Live Chat</a>
   </div>
 
   <div class="tabs">
     <div class="tab">
-      <div class="fl_specs">
-        <div class="img" style="background-image: url(images/t/fl_specs.jpg)">
-          <div class="table">
-            <div class="td">
-              <h2>Exterior<br /> Water Tank</h2>
+      <div class="news_nav">
+        <ul>
+          <li class="active"><a href="press_center.html">All</a></li><li><a href="press_center.html">Press Release</a></li><li><a href="press_center.html">News</a></li><li><a href="press_center.html">Company Statements</a></li><li><a href="press_center.html">Company Articles</a></li>
+        </ul>
+      </div>
+      <div class="news">
+        <div class="news_inner">
+          <div class="news_item news_item_w2_h2">
+            <div class="img" style="background-image: url(images/t/news_item_w2_h2.jpg);">
+              <div class="date">
+                <div class="table"><div class="td"><div class="month">May</div>02</div></div>
+              </div>
+            </div>
+            <div class="text">
+              <div class="category">Press Release</div>
+              <h2 class="title"><a href="press_center_detail.html">Chris Hemsworth Brings a Thunderstorm to the Age of Ultron</a></h2>
+              <div class="desc">
+                The Asgardian super hero returns once more for Marvel’s “Avengers: Age of Ultron” May 1, and it sounds like this time Earth’s Mightiest Heroes will need him more than ever
+              </div>
+            </div>
+          </div>
+
+          <div class="news_item news_item_w2 news_item_fr">
+            <div class="img" style="background-image: url(images/t/news_item_w2.jpg);">
+              <div class="date">
+                <div class="table"><div class="td"><div class="month">May</div>02</div></div>
+              </div>
+            </div>
+            <div class="text">
+              <div class="category">News</div>
+              <h2 class="title"><a href="press_center_detail.html">Chris Hemsworth Brings a Thunderstorm to the Age of Ultron</a></h2>
+              <div class="desc">
+                The Asgardian super hero returns once more for Marvel’s “Avengers: Age of Ultron” May 1, and it sounds like this time Earth’s Mightiest Heroes will need him more than ever
+              </div>
+            </div>
+          </div>
+
+          <div class="news_item news_item_w2 news_item_fr">
+            <div class="img" style="background-image: url(images/t/news_item_w2.jpg);">
+              <div class="date">
+                <div class="table"><div class="td"><div class="month">May</div>02</div></div>
+              </div>
+            </div>
+            <div class="text">
+              <div class="category">News</div>
+              <h2 class="title"><a href="press_center_detail.html">Chris Hemsworth Brings a Thunderstorm to the Age of Ultron</a></h2>
+              <div class="desc">
+                The Asgardian super hero returns once more for Marvel’s “Avengers: Age of Ultron” May 1, and it sounds like this time Earth’s Mightiest Heroes will need him more than ever
+              </div>
+            </div>
+          </div>
+
+          <div class="news_item news_item_h2">
+            <div class="img" style="background-image: url(images/t/news_item_h2.jpg);">
+              <div class="date">
+                <div class="table"><div class="td"><div class="month">May</div>02</div></div>
+              </div>
+            </div>
+            <div class="text">
+              <div class="category">News</div>
+              <h2 class="title"><a href="press_center_detail.html">Chris Hemsworth Brings a Thunderstorm to the Age of Ultron</a></h2>
+              <div class="desc">
+                The Asgardian super hero returns once more for Marvel’s “Avengers: Age of Ultron” May 1, and it sounds like this time Earth’s Mightiest Heroes will need him more than ever
+              </div>
             </div>
           </div>            
-        </div>
-        <div class="text">
-          <div class="table">
-            <div class="td">
-              <img src="images/t/fl_specs_table.jpg" alt="" />
+
+          <div class="news_item news_item_h2 news_item_ml">
+            <div class="img" style="background-image: url(images/t/news_item_h2.jpg);">
+              <div class="date">
+                <div class="table"><div class="td"><div class="month">May</div>02</div></div>
+              </div>
+            </div>
+            <div class="text">
+              <div class="category">News</div>
+              <h2 class="title"><a href="press_center_detail.html">Chris Hemsworth Brings a Thunderstorm to the Age of Ultron</a></h2>
+              <div class="desc">
+                The Asgardian super hero returns once more for Marvel’s “Avengers: Age of Ultron” May 1, and it sounds like this time Earth’s Mightiest Heroes will need him more than ever
+              </div>
+            </div>
+          </div>  
+
+          <div class="news_item news_item_w2_h2 news_item_fr">
+            <div class="img" style="background-image: url(images/t/news_item_w2_h2.jpg);">
+              <div class="date">
+                <div class="table"><div class="td"><div class="month">May</div>02</div></div>
+              </div>
+            </div>
+            <div class="text">
+              <div class="category">Press Release</div>
+              <h2 class="title"><a href="press_center_detail.html">Chris Hemsworth Brings a Thunderstorm to the Age of Ultron</a></h2>
+              <div class="desc">
+                The Asgardian super hero returns once more for Marvel’s “Avengers: Age of Ultron” May 1, and it sounds like this time Earth’s Mightiest Heroes will need him more than ever
+              </div>
             </div>
           </div>
-        </div>
-        <div class="clear"></div>
-      </div> 
 
-      <div class="block block_1">
-        <div class="block_inner">
-          <h2 class="block_title">The advanced water processing system</h2>
-          <div class="text">
-            Water quality consistently meets current domestic CJ244 regulations: Swimming Pool Water Quality Standards. 
-            Water cleanliness is maintained using chlorine.<br />
-            In addition to the exterior water tank, the Studio offers an indoor water tank – the second in the world permanently heated – which is also filtered to accommodate production requirements. Its total volume is 1200m3, measures one meter longer than the indoor water stage found in London. The indoor water tank has a standalone first-time fill system and remains permanently filled. The water cycle treatment period runs every 3-4 hours; and after filtration, water quality meets International Swimming Federation (FINA) and China Swimming Pool Regulation CJ244 “Swimming Pool Water Quality Standard” requirements. Sterilization methods are through UV and chlorine. 
-            The indoor water tank is consistently maintained at 32 degrees Celcius (89.6 degrees Fahrenheit).
-            Another attribute of the indoor water tank worth mentioning is its built-in Rolled Steel Joist (RSJ) beam, also known as a lintel or girder. 
-            It enables equipment mobility, easing the maneuverability of set pieces above and under water.              
-          </div>
+          <div class="clear"></div>          
         </div>
-      </div>                                                
+
+        <div class="load_more"><a href="#" class="load_more_btn">View More</a></div>
+        <div class="page_navi"><a href="?p=2" class="page_next"></a></div>        
+      </div>                                               
     </div>
 
     <div class="tab tab_active">
@@ -357,12 +431,12 @@
     <div class="foot_box">
       <img src="images/foot_logo.png" alt="" class="foot_logo" />
       <div class="foot_share">
-        <a href="#" class="foot_facebook grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_twitter grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_linkedin grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_weibo grey_border"><span class="grey_border_span"></span></a>
+        <a href="#" class="foot_facebook grey_border"><span class="grey_border_span"></span><span class="icon-13"></span></a>
+        <a href="#" class="foot_twitter grey_border"><span class="grey_border_span"></span><span class="icon-14"></span></a>
+        <a href="#" class="foot_linkedin grey_border"><span class="grey_border_span"></span><span class="icon-15"></span></a>
+        <a href="#" class="foot_weibo grey_border"><span class="grey_border_span"></span><span class="icon-16"></span></a>
       </div>
-      <a href="#lightbox_6" class="btn map_btn lightbox_btn"><span>View 3D Map</span></a>
+      <a href="#lightbox_6" class="btn map_btn lightbox_btn"><span>View 3D Map<span class="icon-8"></span></span></a>
       <div class="clear"></div>
       <a href="#" class="back_top mobile_back_top grey_border"><span class="back_top_bg"></span><span class="grey_border_span"></span></a>
     </div>

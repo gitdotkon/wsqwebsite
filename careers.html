@@ -19,13 +19,15 @@
   <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
   <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>    
   <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+  <script type="text/javascript" src="js/jquery.nicefileinput.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body class="facilities_list_pages">
   <div class="full_screen">
     <div class="slide_bg slide_bg_ed" style="background-image: url(images/t/careers.jpg)"></div>
     <img src="images/t/careers.jpg" alt="" class="image_loader" />
-    <div class="mobile_slide_bg" style="background-image: url(images/mobile/backlots2_bg.jpg)"></div>
+    <div class="mobile_slide_bg" style="background-image: url(images/mobile/careers.jpg)"></div>
     <div class="table">
       <div class="td">
         <div class="home_screen stages_home_screen">
@@ -45,8 +47,8 @@
 
     <div class="header">
       <a href="index.html" class="logo animate_left animate_lefted"><img src="images/logo.png" alt="" /><img src="images/logo_red.png" alt="" class="logo_red" /></a>
-      <a href="#" class="menu_btn animate_right animate_righted"></a>
-      <a href="#" class="livechat_btn livechat_btn_up animate_right animate_righted"></a>
+      <a href="#" class="menu_btn animate_right animate_righted"><span class="icon-1"></span></a>
+      <a href="#" class="livechat_btn livechat_btn_up animate_right animate_righted"><span class="icon-4"></span>Live Chat</a>
     </div>                  
   </div>
 
@@ -55,8 +57,8 @@
       <span>By Location<ul class="filter_location"><li data-filter="beijing">Beijing</li><li data-filter="qingdao">Qingdao</li><li data-filter="shanghai">Shanghai</li></ul></span><span>By Title<ul class="filter_title"><li data-filter="customer_manager">Customer Manager</li><li data-filter="sales_manager">Sales Manager</li></ul></span><a href="#" class="filter_reset">Reset</a>
     </div>
     <a href="index.html" class="logo animate_left animate_lefted"><img src="images/logo.png" alt="" /><img src="images/logo_red.png" alt="" class="logo_red" /></a>
-    <a href="#" class="menu_btn animate_right animate_righted"></a>
-    <a href="#" class="livechat_btn livechat_btn_up animate_righted"></a>
+    <a href="#" class="menu_btn animate_right animate_righted"><span class="icon-1"></span></a>
+    <a href="#" class="livechat_btn livechat_btn_up animate_righted"><span class="icon-4"></span>Live Chat</a>
   </div>
 
   <div class="careers">
@@ -89,8 +91,40 @@
                 <li>Good organization, communication and interpersonal skills, can withstand the pressure and finish the task within the prescribed time limit</li>                   
               </ul>                  
             </div> 
-            <div class="clear text_center"><a href="#" class="apply_btn">Apply</a></div>               
+            <div class="clear text_center"><a href="#apply_wrapper_1" class="apply_btn">Apply</a></div>               
             <div class="clear"></div>                  
+          </div>
+        </div>
+
+        <div class="apply_wrapper" id="apply_wrapper_1">
+          <div class="table">
+            <div class="td">
+              <div class="apply_box">
+                <h3>Apply for This Position</h3>
+                <form>
+                  <input type="hidden" name="job_id" value="" />
+                  <div class="apply_form_item">
+                    <input type="text" placeholder="Name" datatype="*" null="Please enter your name" />
+                  </div>
+                  <div class="apply_form_item">
+                    <input type="text" placeholder="Phone" datatype="m" null="Please enter your phone number" errormsg="The phone number you entered is not valid" />
+                  </div>   
+                  <div class="apply_form_item">
+                    <input type="text" placeholder="Email" datatype="e" null="Please enter your email address" errormsg="The email address you entered is not valid" />
+                  </div>                    
+                  <div class="apply_form_item">
+                    <input type="file" class="nicefileinput nice" />
+                  </div>    
+                  <div class="apply_form_item">
+                    <textarea placeholder="Drop a line..."></textarea>
+                  </div> 
+                  <div class="apply_form_item">
+                    <input type="submit" value="Submit" />
+                  </div>                                                                  
+                </form>
+                <a href="#" class="apply_close"></a>
+              </div>              
+            </div>
           </div>
         </div>
       </div>
@@ -122,7 +156,7 @@
                 <li>Good organization, communication and interpersonal skills, can withstand the pressure and finish the task within the prescribed time limit</li>                   
               </ul>                  
             </div> 
-            <div class="clear text_center"><a href="#" class="apply_btn">Apply</a></div>               
+            <div class="clear text_center"><a href="#apply_wrapper_1" class="apply_btn">Apply</a></div>               
             <div class="clear"></div>                  
           </div>
         </div>
@@ -155,7 +189,7 @@
                 <li>Good organization, communication and interpersonal skills, can withstand the pressure and finish the task within the prescribed time limit</li>                   
               </ul>                  
             </div> 
-            <div class="clear text_center"><a href="#" class="apply_btn">Apply</a></div>               
+            <div class="clear text_center"><a href="#apply_wrapper_1" class="apply_btn">Apply</a></div> 
             <div class="clear"></div>                  
           </div>
         </div>
@@ -188,24 +222,25 @@
                 <li>Good organization, communication and interpersonal skills, can withstand the pressure and finish the task within the prescribed time limit</li>                   
               </ul>                  
             </div> 
-            <div class="clear text_center"><a href="#" class="apply_btn">Apply</a></div>               
+            <div class="clear text_center"><a href="#apply_wrapper_1" class="apply_btn">Apply</a></div>        
             <div class="clear"></div>                  
           </div>
         </div>
       </div>                                    
-    </div>          
+    </div>  
+    <div class="white_overlay"></div>        
   </div>
 
   <div class="footer">
     <div class="foot_box">
       <img src="images/foot_logo.png" alt="" class="foot_logo" />
       <div class="foot_share">
-        <a href="#" class="foot_facebook grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_twitter grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_linkedin grey_border"><span class="grey_border_span"></span></a>
-        <a href="#" class="foot_weibo grey_border"><span class="grey_border_span"></span></a>
+        <a href="#" class="foot_facebook grey_border"><span class="grey_border_span"></span><span class="icon-13"></span></a>
+        <a href="#" class="foot_twitter grey_border"><span class="grey_border_span"></span><span class="icon-14"></span></a>
+        <a href="#" class="foot_linkedin grey_border"><span class="grey_border_span"></span><span class="icon-15"></span></a>
+        <a href="#" class="foot_weibo grey_border"><span class="grey_border_span"></span><span class="icon-16"></span></a>
       </div>
-      <a href="#lightbox_6" class="btn map_btn lightbox_btn"><span>View 3D Map</span></a>
+      <a href="#lightbox_6" class="btn map_btn lightbox_btn"><span>View 3D Map<span class="icon-8"></span></span></a>
       <div class="clear"></div>
       <a href="#" class="back_top mobile_back_top grey_border"><span class="back_top_bg"></span><span class="grey_border_span"></span></a>
     </div>

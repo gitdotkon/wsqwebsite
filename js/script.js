@@ -354,9 +354,15 @@ jQuery(document).ready(function($) {
 
     $('.next_screen').click(function() {
       if ($(this).hasClass('next_screen_trigger')) {
-        $('html, body').animate({
-          scrollTop: $(window).height()
-        }, 360);  
+        if (!$(this).parents('.full_screen').hasClass('sec_full_screen')) {
+          $('html, body').animate({
+            scrollTop: $(window).height()
+          }, 360);  
+        } else {
+          $('html, body').animate({
+            scrollTop: $(window).height() * 2
+          }, 360);           
+        }
       } else {
         animate(1);
       }
@@ -514,7 +520,7 @@ jQuery(document).ready(function($) {
 
     $('.back_top').click(function() {
       if($(this).hasClass('mobile_back_top')) {
-        if($body.hasClass('stage_page') || $body.hasClass('facilities_landing_page') || $body.hasClass('about_us_page')) {
+        if($body.hasClass('stage_page') || $body.hasClass('facilities_landing_page') || $body.hasClass('about_us_page') || $body.hasClass('facilities_list_pages')) {
           $('html, body').animate({
             scrollTop: 0
           }, 600);    
@@ -697,18 +703,20 @@ jQuery(document).ready(function($) {
     navText: [],
     responsive : {
       0 : {
-        items: 2
+        items: 1
       },
       767 : {
-        items: 3
+        items: 2
       },
       960 : {
-        items: 4
+        items: 5
       }            
     }    
   });  
 
-  $('.team_detail .flexslider').flexslider({
+  $('.team_detail').clone().addClass('mobile_team_detail').insertAfter($('.team_detail'));
+
+  $('.team_detail').first().find('.flexslider').flexslider({
     animation: 'fade',
     slideshow: false,
     slideshowSpeed: 8000,
@@ -732,10 +740,34 @@ jQuery(document).ready(function($) {
     slideshow: true,
     slideshowSpeed: 10000,
     animationSpeed: 800,
-    smoothHeight: false
+    smoothHeight: false,
+    start: function(slider) {
+      $('.slider_prev').click(function() {
+        slider.flexAnimate(slider.getTarget("prev"), true);
+
+        return false;
+      });
+
+      $('.slider_next').click(function() {
+        slider.flexAnimate(slider.getTarget("next"), true);
+        
+        return false;
+      });      
+    }
   }); 
 
-  $('.team_detail .text').scrollbar({
+  $('.mobile_team_detail .name, .mobile_team_detail .position').click(function() {
+    if (!$(this).parent('li').hasClass('active')) {
+      $('.mobile_team_detail .active').removeClass('active');
+      $(this).parent('li').addClass('active');
+    } else {
+      $(this).parent('li').removeClass('active');
+    }
+
+    return false;
+  });
+
+  $('.team_detail').first().find('.text').scrollbar({
     showArrows: false,
     scrollx: 'simple',
     scrolly: 'simple',
@@ -801,7 +833,26 @@ jQuery(document).ready(function($) {
     nextSelector : ".gallery_videos .page_navi .page_next",    
     itemSelector : ".gallery_videos ul li"     
   }); 
-  
+
+
+  $('.news_inner').infinitescroll({
+    navSelector  : ".news .page_navi",   
+    nextSelector : ".news .page_navi .page_next",    
+    itemSelector : ".news .news_item"     
+  });     
+
+  $(window).unbind('.infscr');
+
+  $('.news .load_more_btn').click(function(){
+    $('.news_inner').infinitescroll('retrieve');
+    return false;
+  });
+
+  $('.news_inner').infinitescroll({
+    navSelector  : ".news .page_navi",   
+    nextSelector : ".news .page_navi .page_next",    
+    itemSelector : ".news .news_item"    
+  });   
 
   $('.grid').imagesLoaded(function() {
     $('.grid').masonry({
@@ -810,8 +861,8 @@ jQuery(document).ready(function($) {
     });
   });   
 
-  $('.red_header').clone().addClass('red_header_static').insertAfter($('.red_header'));
-
+  if (!$('body').hasClass('facilities_list_pages')) $('.red_header').clone().addClass('red_header_static').insertAfter($('.red_header'));
+  
   function set_red_header_fixed() {
     var window_height = $(window).height(),
       top = $(document).scrollTop();
@@ -833,6 +884,12 @@ jQuery(document).ready(function($) {
     $(this).parent('li').addClass('active');
     $('.tab_active').removeClass('tab_active');
     $('.tab').eq(index).addClass('tab_active');
+
+    $('.tab').eq(index).find('.work_shops').slideDown();
+
+    $('.sv_icons .active').removeClass('active');
+    $('.sv_icons ul li').eq(index).addClass('active');    
+
     $('html, body').animate({
       scrollTop: $(window).height()
     }, 360);  
@@ -845,6 +902,8 @@ jQuery(document).ready(function($) {
  
     return false;
   });
+
+  $('.filter_box').first().clone().addClass('mobile_filter_box').insertBefore($('.careers'));
 
   $('.filter_box span ul li').click(function() {
     $(this).parents('span').find('ul li.active').removeClass('active');
@@ -869,4 +928,43 @@ jQuery(document).ready(function($) {
     if (location) $('.job[data-location!=' + location + ']').hide();
     if (title) $('.job[data-title!=' + title + ']').hide();
   }
+
+  $.Tipmsg.r = '';
+
+  $('.apply_box form').Validform({
+
+  });
+
+  $("input[type=file].nice").nicefileinput({
+    label: 'Upload Your Resume'
+  });
+
+  $('.apply_btn').click(function() {
+    $('.white_overlay').show();
+    $($(this).attr('href')).fadeIn();
+
+    return false;
+  });
+
+  $('.apply_close').click(function() {
+    $('.white_overlay').hide();
+    $('.apply_wrapper').fadeOut();
+
+    return false;
+  });  
+
+  function setSecScreenHeight() {
+    var window_height = $(window).height();
+    $('.sec_full_screen').height(window_height);
+  }
+  setSecScreenHeight();
+  $(window).resize(function() {
+    setSecScreenHeight();
+  });
+
+  $('.work_shops_close').click(function() {
+    $(this).parents('.work_shops').slideUp();
+    $('.tab_nav .active').removeClass('active');
+    return false;
+  });   
 });
