@@ -1451,7 +1451,8 @@ a.red_btn:hover {
     opacity: .8;
 }
 .hover_btn:before,
-a.hover_btn:before {
+a.hover_btn:before,
+a.hover_btn.active:before{
     content: '';
     position: absolute;
     top: 0;
@@ -1480,7 +1481,8 @@ a.hover_btn {
 }
 @media only screen and (min-width: 1025px) {
     .hover_btn:hover:before,
-    a.hover_btn:hover:before {
+    a.hover_btn:hover:before,
+    a.hover_btn.active:before{
         opacity: 1;
         background-color: #de302f;
         -webkit-transform: rotate3d(0, 0, 1, 0deg);
@@ -1537,7 +1539,8 @@ a.hover_btn {
 .btn:hover,
 a.btn:hover,
 .hover_btn:hover,
-a.hover_btn:hover {
+a.hover_btn:hover,
+a.hover_btn.active{
     color: #fff;
     border-color: #de302f;
 }
@@ -1898,6 +1901,9 @@ body.home_screen_invisible .stage_nav_container {
 .stage_list .td,
 .side_stage_pic .td {
     padding-top: 110px;
+}
+.side_stage_pic .stage_pic_inner .td{
+    padding-top: 0;
 }
 .stage_list_slider .slides img {
     display: block;
@@ -2650,7 +2656,7 @@ body.facilities_list_pages .button_box .bg:before {
     top: 0;
     left: 0;
     background: #000;
-    opacity: .7;
+    opacity: .6;
 }
 .landing_grid_bg_slider .flexslider,
 .landing_grid_bg_slider .slides,
@@ -2824,6 +2830,12 @@ body.facilities_list_pages .home_screen h2:before {
 }
 body.facilities_list_pages .stage_screen_btns {
     padding-top: 56px;
+}
+body.single_facilities_landing_page .tab_nav{
+    display: none;
+}
+body.single_facilities_landing_page .stage_screen_btns{
+    visibility: hidden;
 }
 body.facilities_list_pages .stage_screen_btns a {
     font-size: 20px;
@@ -3485,6 +3497,14 @@ body.workshops_page .stage_screen_btns {
     width: 220px;
     height: 28px; 
 }
+.three_cols .three_cols_subtitle{
+    text-shadow: none;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-top: 30px;
+    font-family: "avenir_lt_35_lightlight";
+}
 .three_cols img {
     display: block;
     width: 100%;
@@ -3829,6 +3849,64 @@ body.main_nav_visible .main_nav {
     width: 20.16%;
     float: left;
 }
+.main_nav_list .left ul{
+    padding: 0;
+    margin: 0;
+}
+.main_nav_list .left li{
+    margin: 0;
+    padding: 46px 0 0 0;
+    color: #323232;
+    font-size: 28px;
+    font-family: 'avenir_lt_55_romanheavy';
+    line-height: 36px;
+    text-shadow: none;
+}
+.main_nav_list .left li:first-child{
+    padding-top: 0;
+}
+.main_nav_list .left li a{
+    position: relative;
+    color: #323232;
+    font-size: 28px;
+    font-family: 'avenir_lt_55_romanheavy';
+    line-height: 36px;
+    text-shadow: none;
+    padding: 0;
+}
+.main_nav_list .left li.has-submenu>a:after{
+    content: '';
+    background: url('../images/filter_box.png') no-repeat;
+    width: 14px;
+    height: 7px;
+    position: relative;
+    margin-left: 18px;
+    top: -4px;
+    display: inline-block;
+}
+.main_nav_list .left li.has-submenu.open > a:after{
+    transform: rotate(180deg);
+}
+
+/* Sub menu */
+.main_nav_list .left ul ul {
+    padding-top: 19px;
+    margin-bottom: -32px;
+    display: none;
+}
+.main_nav_list .left ul ul li{
+    padding: 0;
+    margin-bottom: 12px;
+}
+.main_nav_list .left ul ul li a{
+    color: #505050;
+    font-size: 18px;
+    font-family: 'avenir_lt_55_romanroman';
+    line-height: 28px;
+    display: block;
+    padding: 0;
+    position: relative;
+}
 .main_nav_list .middle {
     width: 32.25%;
     float: left;  
@@ -3873,6 +3951,7 @@ body.main_nav_visible .main_nav {
     text-shadow: none;
 }
 .lang_switcher {
+    display: none;
     clear: both;
     padding: 110px 0 0 0;
 }
@@ -4189,6 +4268,9 @@ body.main_nav_visible .main_nav {
     display: inline-block;
     cursor: pointer;
 }
+.hbg_slider_btns ul li a{
+    color: #ccc;
+}
 .hbg_slider_btns ul li:hover,
 .hbg_slider_btns ul li.active {
     color: #ab081a;
@@ -4382,7 +4464,7 @@ body.main_nav_visible .main_nav {
     line-height: 30px;
     text-shadow: none; 
     text-align: center;    
-    height: 636px;
+    height: 780px;
     position: relative;
 }
 .lifestyle_destination:before {
@@ -5800,16 +5882,27 @@ h1.detail_title {
     display: inline-block;
     position: relative;
 }
-.tab_nav ul li:before {
+.tab_nav ul li:hover:after{
+    background-position: 0 -28px;
+}
+.tab_nav ul li:after {
     display: block;
-    content: ' ';
-    width: 1px;
-    height: 16px;
+    content: '';
+    color: #ccc;
+    width: 11px;
+    height: 22px;
     position: absolute;
     top: 50%;
-    left: 0;
-    background: #ab081a;
-    margin: -8px 0 0 0;
+    right: 0;
+    background: url('../images/sub-menu-arr.png');
+    /*margin: -8px 0 0 0;*/
+    transform: translate(100%, -50%);
+}
+.tab_nav ul li.active:after{
+    background-position: 0 -28px;
+}
+.tab_nav ul li:last-child:after{
+    display: none;
 }
 .tab_nav ul li.news_a:after {
     display: block;
@@ -5884,6 +5977,16 @@ body.red_header_fixed .red_header_static {
 }
 .about_qd {
     background: #f3f3f3;
+}
+.about_qd h2:after{
+    display: block;
+    content: ' ';
+    width: 38px;
+    height: 1px;
+    background: #ec3c40;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
 }
 .about_qd .img:after {
     background-image: url(../images/about_qd_rd.png);  
@@ -7286,6 +7389,9 @@ body.the_studios2_page .home_screen h2 {
         border: 1px solid #fff;
         border-radius: 4px;
     }
+    a.btn.incentive_btn{
+        padding: 19px 64px 19px 64px;
+    }
     .map_btn > span {
         display: block;
         padding: 7px 0 7px 62px;
@@ -7293,6 +7399,7 @@ body.the_studios2_page .home_screen h2 {
         position: relative;
     }
     .map_btn > span span {
+        display: inline-block;
         width: 44px;
         height: 44px;
         font-size: 44px;
@@ -7576,6 +7683,9 @@ body.the_studios2_page .home_screen h2 {
     a.btn {
         font-size: 15px;
         padding: 6px 18px;
+    }
+    a.btn.incentive_btn{
+        padding: 13px 45px;
     }
     .side {
         font-size: 20px;
@@ -7909,6 +8019,9 @@ body.the_studios2_page .home_screen h2 {
         border: 1px solid #fff;
         border-radius: 4px;
     }
+    a.btn.incentive_btn{
+        padding: 9px 30px;
+    }
     .map_btn {
         margin-top: 17px;
     }
@@ -7917,7 +8030,10 @@ body.the_studios2_page .home_screen h2 {
         padding: 3px 0 3px 32px;
         background: url(../images/map_btn.png) no-repeat 0 0;
         background-size: auto 20px;
-    }   
+    }
+    .map_btn > span > span{
+        display: none;
+    }
     .mobile_more {
         padding: 35px 0 0 0;
         display: none;
