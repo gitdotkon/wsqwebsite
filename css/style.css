@@ -5900,6 +5900,12 @@ h1.detail_title {
     text-align: center;
     text-transform: uppercase;
 }
+.backlots_page .tab_nav{
+    display: none;
+}
+.backlots_page .stage_screen_btns{
+    visibility: hidden;
+}
 .tab_nav ul li {
     padding: 37px 34px;
     display: inline-block;
