@@ -31,7 +31,8 @@ jQuery(document).ready(function ($) {
 
             $('.sv_icons .active').removeClass('active');
             $('.sv_icons').find('li[data-id='+query+']').addClass('active');
-            $('body').addClass('red_header_fixed ');
+            $('body').addClass('red_header_fixed footer_visible');
+            $('.next_screen_trigger').addClass('next_screen_ed');
             $('.home_screen').find('.animate_up').css({'opacity': 1});
             $('html, body').animate({
                 scrollTop: $(window).height()

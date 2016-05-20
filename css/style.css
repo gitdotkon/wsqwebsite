@@ -4342,7 +4342,7 @@ body.main_nav_visible .main_nav {
     margin: 34px 0 0 0;
 }
 .travel_times {
-    height: 1080px;
+    height: 960px;
 }
 .fixed_full_bg {
     background-position: 50% 50%;
@@ -4351,7 +4351,7 @@ body.main_nav_visible .main_nav {
 }
 .travel_times h2 {
     color: #fff;
-    font-size: 70px;
+    font-size: 69px;
     font-family: 'avenir_lt_65_mediumblack';  
     line-height: 70px;
     text-shadow: none; 
@@ -4375,7 +4375,7 @@ body.main_nav_visible .main_nav {
 .travel_times .text {
     max-width: 1350px;
     margin: 0 auto;
-    padding: 60px 0 0 0;
+    padding: 70px 0 0 0;
     position: relative;
     height: 100%;
 }
@@ -4415,11 +4415,11 @@ body.main_nav_visible .main_nav {
 }
 .travel_cols {
     color: #fff;
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'avenir_lt_55_romanroman';    
     line-height: 30px;
     text-shadow: none;     
-    padding: 21px 52px 53px;
+    padding: 21px 42px 53px;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -5961,6 +5961,9 @@ h1.detail_title {
 .red_header_static {
     display: none;
     position: static !important;
+}
+body.red_header_fixed .tabs{
+    padding-top: 100px;
 }
 body.red_header_fixed .red_header {
     position: fixed;
