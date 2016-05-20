@@ -3888,12 +3888,12 @@ body.main_nav_visible .main_nav {
 }
 .main_nav_list .left li.has-submenu>a:after{
     content: '';
-    background: url('../images/filter_box.png') no-repeat;
-    width: 14px;
-    height: 7px;
+    background: url('../images/sub-menu-arr2.png') no-repeat;
+    width: 17px;
+    height: 9px;
     position: relative;
-    margin-left: 18px;
-    top: -4px;
+    margin-left: 16px;
+    top: -3px;
     display: inline-block;
 }
 .main_nav_list .left li.has-submenu.open > a:after{
@@ -3945,6 +3945,10 @@ body.main_nav_visible .main_nav {
 }
 .main_nav_list ul li a:hover {
     color: #ab081a;
+}
+.main_nav_list ul li a:hover span{
+    color: #fff;
+    background: #ab081a;
 }
 .main_nav_list ul li a [class^="icon-"], 
 .main_nav_list ul li a [class*=" icon-"] {
