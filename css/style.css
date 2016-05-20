@@ -5971,7 +5971,7 @@ body.red_header_fixed .red_header_static {
     background: url(../images/ss_3.png) no-repeat 50% 50%;
 }
 .ss_cols ul li {
-    width: 33.333%;
+    width: 32.333%;
     display: inline-block;
     vertical-align: top;
 }
