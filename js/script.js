@@ -17,6 +17,7 @@
 }(jQuery));
 
 jQuery(document).ready(function ($) {
+    /* workshop */
 
     /* Parse location params on service page */
     if($('body').hasClass('service_page')){
@@ -37,7 +38,7 @@ jQuery(document).ready(function ($) {
             $('html, body').animate({
                 scrollTop: $(window).height()
             }, 360);
-            
+
         }
 
     }
@@ -740,7 +741,19 @@ jQuery(document).ready(function ($) {
             slideshowSpeed: 8000,
             animationSpeed: 800,
             start: function($slider){
+                $('#workshop_four_tile').find('.work_shops_tile').click(function(){
+                    var index = $(this).index();
 
+                    $('.tabs').find('.tab_active').removeClass('tab_active');
+                    $('.tabs').find('.tab').eq(1).addClass('tab_active');
+                    $slider.flexAnimate(index);
+                })
+            },
+            before: function($slider){
+                console.log('After');
+                console.log($slider);
+                $('.tab_nav').find('.active').removeClass('active');
+                $('.tab_nav').find('li').eq($slider.animatingTo).addClass('active');
             }
         });
 
@@ -1050,8 +1063,10 @@ jQuery(document).ready(function ($) {
     });
 
     $('.work_shops_close').click(function () {
-        $(this).parents('.work_shops').slideUp();
+        // $(this).parents('.work_shops').slideUp();
         $('.tab_nav .active').removeClass('active');
+        $('.tabs .tab_active').removeClass('tab_active');
+        $('.tabs').find('.tab').eq(0).addClass('tab_active');
         return false;
     });
 

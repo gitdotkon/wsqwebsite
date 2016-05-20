@@ -4086,6 +4086,18 @@ body.main_nav_visible .main_nav {
 .work_shops {
     position: relative;
 }
+.work_shops.four-tile:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.work_shops.four-tile .title{
+    width: 100%;
+}
+.work_shops.four-tile .work_shops_tile{
+    float: left;
+    width: 25%;
+}
 .work_shops_close {
     display: block;
     width: 34px;
@@ -5916,10 +5928,19 @@ h1.detail_title {
     display: inline-block;
     position: relative;
 }
-.tab_nav ul li:hover:after{
+.tab_nav ul li:after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: -8px 0 0 0;
+    height: 15px;
+}
+.about_page .tab_nav ul li:hover:after{
     background-position: 0 -28px;
 }
-.tab_nav ul li:after {
+.about_page .tab_nav ul li:after {
     display: block;
     content: '';
     color: #ccc;
@@ -5929,13 +5950,13 @@ h1.detail_title {
     top: 50%;
     right: 0;
     background: url('../images/sub-menu-arr.png');
-    /*margin: -8px 0 0 0;*/
+
     transform: translate(100%, -50%);
 }
-.tab_nav ul li.active:after{
+.about_page .tab_nav ul li.active:after{
     background-position: 0 -28px;
 }
-.tab_nav ul li:last-child:after{
+.about_page .tab_nav ul li:last-child:after{
     display: none;
 }
 .tab_nav ul li.news_a:after {
