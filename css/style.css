@@ -932,6 +932,12 @@ table {
     padding:0;
     list-style:none;
 }
+html.menu_is_open{
+    overflow: hidden;
+}
+html.menu_is_open body{
+    overflow: hidden;
+}
 /* FlexSlider Necessary Styles*********************************/
 .flexslider .slides > li {
     display:none;
@@ -3504,9 +3510,12 @@ body.workshops_page .stage_screen_btns {
     text-shadow: none;
     text-align: center;
     color: #fff;
-    position: relative;
     margin-top: 30px;
     font-family: "avenir_lt_35_lightlight";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
 }
 .three_cols img {
     display: block;
@@ -3954,9 +3963,8 @@ body.main_nav_visible .main_nav {
     text-shadow: none;
 }
 .lang_switcher {
-    display: none;
     clear: both;
-    padding: 110px 0 0 0;
+    padding: 70px 0 0 0;
 }
 .lang_switcher,
 .lang_switcher a {
@@ -5788,6 +5796,18 @@ h1.detail_title {
     border: 2px solid #fff;
     padding: 10px 66px;
     border-radius: 30px;
+}
+.screen_slide .view_btn{
+    position: relative;
+    -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
+    transition: all 1s cubic-bezier(.19,1,.22,1);
+}
+.screen_slide .view_btn:hover{
+    background: #ab0819;
+    opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
+    transition: all 1s cubic-bezier(.19,1,.22,1);
+    border-color: #ab0819;
 }
 .load_more {
     clear: both;

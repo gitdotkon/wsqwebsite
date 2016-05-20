@@ -46,10 +46,16 @@ jQuery(document).ready(function ($) {
         var parent = $(this).closest('li');
         if($(parent).hasClass('has-submenu')){
             if($(parent).hasClass('open')){
-                return true;
+                $(parent).removeClass('open');
+                $(parent).find('ul').slideUp();
+            }else{
+                $('.main_nav_list .left li.open').removeClass('open').find('ul').slideUp();
+                $(parent).addClass('open');
+                $(parent).find('ul').slideDown();
             }
-            $(parent).addClass('open');
-            $(parent).find('ul').slideDown();
+
+            // $(parent).toggleClass('open');
+            // $(parent).find('ul').slideToggle();
             return false;
         }
     });
@@ -443,6 +449,7 @@ jQuery(document).ready(function ($) {
                     } else {
                         if ($('.slide_active').prev('.slide').length) {
                             animate($('.slide_active').prev('.slide').index());
+
                         }
                     }
                 }
@@ -712,8 +719,16 @@ jQuery(document).ready(function ($) {
             animationSpeed: 800,
             start: function (slider) {
                 $('.landing_grids ul li').mouseover(function () {
-                    var index = $(this).index();
+                    var index = $(this).index()+1;
                     slider.flexAnimate(index);
+                });
+                $('.landing_grids ul li').mouseleave(function(){
+                    var index = $('.landing_grids ul li').length;
+                    slider.flexAnimate(0);
+                });
+
+                $('.landing_grids h2, .landing_grids .txt_inner').mouseover(function(){
+                    slider.flexAnimate(0);
                 });
             }
         });
@@ -722,7 +737,10 @@ jQuery(document).ready(function ($) {
             animation: 'slide',
             slideshow: false,
             slideshowSpeed: 8000,
-            animationSpeed: 800
+            animationSpeed: 800,
+            start: function($slider){
+
+            }
         });
 
         $('.historical_bg .flexslider').flexslider({
@@ -1037,11 +1055,13 @@ jQuery(document).ready(function ($) {
 
     $('.menu_btn').click(function () {
         $('body').addClass('main_nav_visible');
+        $('html').toggleClass('menu_is_open');
         return false;
     });
 
     $('.main_nav_close').click(function () {
         $('body').removeClass('main_nav_visible');
+        $('html').toggleClass('menu_is_open');
         return false;
     });
 });
