@@ -1220,6 +1220,7 @@ a.back_top,
     width: 100%;
     height: 100%;
     text-align: center;
+    z-index: 1;
 }
 .foot_share a {
     display: block;
@@ -5963,7 +5964,7 @@ h1.detail_title {
     position: static !important;
 }
 body.red_header_fixed .tabs{
-    padding-top: 100px;
+    padding-top: 128px;
 }
 body.red_header_fixed .red_header {
     position: fixed;
@@ -9673,4 +9674,11 @@ body > #Validform_msg {
     .stage_list a {
         margin: 5px 0;
     }
+}
+.foot_logo_a{
+    position: relative;
+    z-index: 2;
+    display: block;
+    overflow: hidden;
+    float: left;
 }
