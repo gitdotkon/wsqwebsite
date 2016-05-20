@@ -942,6 +942,9 @@ jQuery(document).ready(function ($) {
     });
 
     $('.tab_nav a').click(function () {
+        if($('body').hasClass('disable_tab')){
+            return true;
+        }
         var index = $(this).parent('li').index();
         $('.tab_nav .active').removeClass('active');
         $(this).parent('li').addClass('active');

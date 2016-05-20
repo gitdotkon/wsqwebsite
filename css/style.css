@@ -2555,6 +2555,9 @@ body .normal_slider .flex-direction-nav {
     background: #000;    
     opacity: .6;
 }
+body.stage_page .button_box .bg:before{
+    opacity: 0;
+}
 body.facilities_list_pages .button_box .bg:before {
     display: none;
 }
