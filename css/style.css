@@ -932,7 +932,8 @@ table {
     padding:0;
     list-style:none;
 }
-html.menu_is_open{
+html.menu_is_open,
+html.has_lightbox_visible{
     overflow: hidden;
 }
 html.menu_is_open body{
@@ -1572,7 +1573,8 @@ a.hover_btn.active{
     opacity: 1;
     top: 0;
 }
-.lightbox iframe {
+.lightbox iframe,
+.lightbox video{
     width: 100% !important;
     height: 100% !important;
 }

@@ -603,11 +603,18 @@ jQuery(document).ready(function ($) {
         var $lightbox = $($(this).attr('href'));
         if (!$lightbox.hasClass('lightbox_visible')) {
             if (!$lightbox.find('iframe').length) {
-                var $iframe = $('<iframe />').prependTo($lightbox),
-                    attrs = $lightbox.find('.iframe').attri();
-                $.each(attrs, function (ele, key) {
-                    $iframe.attr(ele, key);
-                });
+                if($lightbox.find('#video').length>0){
+                    var vid = document.getElementById('video');
+                    vid.play();
+                    $('html').addClass('video_playing');
+                }else{
+                    var $iframe = $('<iframe />').prependTo($lightbox),
+                        attrs = $lightbox.find('.iframe').attri();
+                    $.each(attrs, function (ele, key) {
+                        $iframe.attr(ele, key);
+                    });
+                }
+
             }
             $('.lightbox_visible').removeClass('lightbox_visible');
             $lightbox.addClass('lightbox_visible');
@@ -619,6 +626,11 @@ jQuery(document).ready(function ($) {
     $('.lightbox_close').click(function () {
         $('.lightbox_visible').removeClass('lightbox_visible');
         $('.has_lightbox_visible').removeClass('has_lightbox_visible');
+        if($('html').hasClass('video_playing')){
+            $('html').removeClass('video_playing');
+            var vid = document.getElementById('video');
+            vid.pause();
+        }
         return false;
     });
 
@@ -750,8 +762,6 @@ jQuery(document).ready(function ($) {
                 })
             },
             before: function($slider){
-                console.log('After');
-                console.log($slider);
                 $('.tab_nav').find('.active').removeClass('active');
                 $('.tab_nav').find('li').eq($slider.animatingTo).addClass('active');
             }
@@ -966,7 +976,6 @@ jQuery(document).ready(function ($) {
         } else {
             $('body').removeClass('red_header_fixed');
         }
-        console.log('Set');
     }
 
     set_red_header_fixed();
