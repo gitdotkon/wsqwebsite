@@ -5969,10 +5969,9 @@ h1.detail_title {
     width: 11px;
     height: 22px;
     position: absolute;
-    top: 50%;
+    top: 58%;
     right: 0;
     background: url('../images/sub-menu-arr.png');
-
     transform: translate(100%, -50%);
 }
 .about_page .tab_nav ul li.active:after{
@@ -6238,7 +6237,7 @@ body.red_header_fixed .red_header_static {
 }
 .cr_cols ul li {
     display: inline-block;
-    width: 25%;
+    width: 24%;
 }
 .cr_cols .icon {
     height: 57px;
