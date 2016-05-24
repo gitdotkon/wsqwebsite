@@ -747,12 +747,45 @@ jQuery(document).ready(function ($) {
             }
         });
 
+        if(!$('body').hasClass('workshops_page')){
+            $('.tab_nav a').click(function () {
+                if($('body').hasClass('disable_tab')){
+                    return true;
+                }
+
+                var index = $(this).parent('li').index();
+                $('.tab_nav .active').removeClass('active');
+                $(this).parent('li').addClass('active');
+                $('.tab_active').removeClass('tab_active');
+                $('.tab').eq(index).addClass('tab_active');
+
+                $('.tab').eq(index).find('.work_shops').slideDown();
+
+                $('.sv_icons .active').removeClass('active');
+                $('.sv_icons ul li').eq(index).addClass('active');
+
+                $('html, body').animate({
+                    scrollTop: $(window).height()
+                }, 360);
+                return false;
+            });
+        }
+
         $('.work_shops .flexslider').flexslider({
             animation: 'slide',
             slideshow: false,
             slideshowSpeed: 8000,
             animationSpeed: 800,
             start: function($slider){
+                $('.tab_nav a').click(function(){
+                    var index = $(this).parent('li').index();
+                    console.log(index);
+                    $('.tabs').find('.tab_active').removeClass('tab_active');
+                    $('.tabs').find('.tab').eq(1).addClass('tab_active');
+                    $slider.flexAnimate(index);
+                    return false;
+                });
+
                 $('#workshop_four_tile').find('.work_shops_tile').click(function(){
                     var index = $(this).index();
 
@@ -983,26 +1016,7 @@ jQuery(document).ready(function ($) {
         set_red_header_fixed();
     });
 
-    $('.tab_nav a').click(function () {
-        if($('body').hasClass('disable_tab')){
-            return true;
-        }
-        var index = $(this).parent('li').index();
-        $('.tab_nav .active').removeClass('active');
-        $(this).parent('li').addClass('active');
-        $('.tab_active').removeClass('tab_active');
-        $('.tab').eq(index).addClass('tab_active');
 
-        $('.tab').eq(index).find('.work_shops').slideDown();
-
-        $('.sv_icons .active').removeClass('active');
-        $('.sv_icons ul li').eq(index).addClass('active');
-
-        $('html, body').animate({
-            scrollTop: $(window).height()
-        }, 360);
-        return false;
-    });
 
     $('.tab_nav_trigger').click(function () {
         var index = $('.tab_nav_trigger').index($(this));
@@ -1011,6 +1025,15 @@ jQuery(document).ready(function ($) {
         $(this).addClass('active');
 
         return false;
+    });
+
+    $('.service_page .main_nav_list .right ul li a').click(function(){
+        var index = $(this).parent('li').index();
+        $('body').removeClass('main_nav_visible');
+        $('html').toggleClass('menu_is_open');
+        $('.tab_nav ul li').eq(index).find('a').trigger('click');
+        //$(this).closest('.stage_screen_btns').find('.active').removeClass('active');
+        //$(this).addClass('active');
     });
 
     $('.filter_box').first().clone().addClass('mobile_filter_box').insertBefore($('.careers'));

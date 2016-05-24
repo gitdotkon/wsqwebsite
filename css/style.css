@@ -4016,6 +4016,9 @@ body.main_nav_visible .main_nav {
     background-position: 50% 50%;
     background-size: cover;
 }
+.work_shop:hover{
+    cursor: pointer;
+}
 .work_shop:before {
     display: block;
     content: ' ';
@@ -4099,6 +4102,20 @@ body.main_nav_visible .main_nav {
 .work_shops.four-tile .work_shops_tile{
     float: left;
     width: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.work_shops.four-tile .work_shops_tile:hover .work_shop:before,
+.work_shops.four-tile .work_shops_tile .work_shop:before{
+    -webkit-transition: top 1s ease-out 0.5s;
+    -moz-transition: top 1s ease-out 0.5s;
+    -o-transition: top 1s ease-out 0.5s;
+    transition: top 1s ease-out 0.5s;
+}
+.work_shops.four-tile .work_shops_tile:hover .work_shop:before{
+    opacity: 0.2;
+
 }
 .work_shops_close {
     display: block;
@@ -5938,6 +5955,8 @@ h1.detail_title {
     right: 0;
     margin: -8px 0 0 0;
     height: 15px;
+    width: 1px;
+    background: #ccc;
 }
 .about_page .tab_nav ul li:hover:after{
     background-position: 0 -28px;
