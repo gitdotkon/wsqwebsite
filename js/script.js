@@ -741,18 +741,23 @@ jQuery(document).ready(function ($) {
             slideshowSpeed: 8000,
             animationSpeed: 800,
             start: function (slider) {
-                $('.landing_grids ul li').mouseover(function () {
-                    var index = $(this).index()+1;
+                $('.landing_grids_inner ul li').mouseover(function () {
+                    var index = $(this).index();
+                    // console.log('Hover on '+index);
                     slider.flexAnimate(index);
                 });
-                $('.landing_grids ul li').mouseleave(function(){
-                    var index = $('.landing_grids ul li').length;
+                $('.landing_grids_inner ul li').mouseleave(function(){
+                    var index = $('.landing_grids_inner ul li').length;
+                    // console.log('Hover leave on '+index);
                     slider.flexAnimate(0);
                 });
 
-                $('.landing_grids h2, .landing_grids .txt_inner').mouseover(function(){
+                $('.landing_grids_inner h2, .landing_grids_inner .txt_inner').mouseover(function(){
                     slider.flexAnimate(0);
                 });
+            },
+            before: function($slider){
+                console.log($slider);
             }
         });
 

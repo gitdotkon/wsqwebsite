@@ -2865,6 +2865,7 @@ body.facilities_list_pages .stage_screen_btns a.tab_nav_small {
 body.facilities_list_pages .stage_screen_btns a .table,
 body.facilities_list_pages .stage_screen_btns a .td {
     height: 138px;
+    margin: auto;
 }
 body.partner_directory_page .stage_screen_btns span, 
 body.partner_directory_page .stage_screen_btns a,
@@ -6279,7 +6280,8 @@ body.red_header_fixed .red_header_static {
     top: 44px;
     right: 0;
 }
-.filter_box span {
+.filter_box span,
+.filter_box .span{
     display: inline-block;
     position: relative;
     padding: 35px 33px 35px 0;
@@ -6287,7 +6289,8 @@ body.red_header_fixed .red_header_static {
     /*background: url(../images/filter_box.png) no-repeat 100% 50%;*/
     cursor: pointer;    
 }
-.filter_box span ul {
+.filter_box span ul,
+.filter_box .span ul {
     font-size: 16px;
     font-family: 'avenir_lt_55_romanroman';    
     line-height: 26px;
@@ -6299,15 +6302,19 @@ body.red_header_fixed .red_header_static {
     background: #eee;
     display: none;
 }
-.filter_box span ul li {
+.filter_box span ul li,
+.filter_box .span ul li {
     padding: 6px 15px;
     cursor: pointer;
 }
 .filter_box span ul li.active,
-.filter_box span ul li:hover {
+.filter_box span ul li:hover,
+.filter_box .span ul li.active,
+.filter_box .span ul li:hover{
     background: #fff;
 }
-.filter_box span:hover ul {
+.filter_box span:hover ul,
+.filter_box .span:hover ul{
     display: block;
 }
 .filter_reset {
@@ -6827,7 +6834,8 @@ body.the_studios2_page .home_screen h2 {
     .tab_nav ul li {
         padding: 27px 15px;
     }
-    .filter_box span {
+    .filter_box span,
+    .filter_box .span{
         padding-top: 25px;
         padding-bottom: 25px;
     }
@@ -6899,7 +6907,8 @@ body.the_studios2_page .home_screen h2 {
         padding-left: 30px;
         padding-right: 30px;
     }
-    .filter_box span {
+    .filter_box span,
+    .filter_box .span{
         margin: 0 10px;
     }
     .filter_reset {
@@ -9234,21 +9243,25 @@ body.the_studios2_page .home_screen h2 {
         display: block;
         z-index: 4444;
     }    
-    .filter_box span {
+    .filter_box span,
+    .filter_box .span{
         float: left;
         padding: 0 12px 0 0;
         margin: 4px 0 0 36px;
         background-size: 7px auto;
     }
-    .filter_box span:first-child {
+    .filter_box span:first-child,
+    .filter_box .span:first-child{
         margin-left: 0;
     }
-    .filter_box span ul {
+    .filter_box span ul,
+    .filter_box .span ul{
         font-size: 12px;
         line-height: 17px;  
         width: 100px;      
     }
-    .filter_box span ul li {
+    .filter_box span ul li,
+    .filter_box .span ul li{
         padding: 5px 8px;
     }
     .filter_reset {
