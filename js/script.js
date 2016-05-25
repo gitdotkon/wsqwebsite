@@ -741,19 +741,17 @@ jQuery(document).ready(function ($) {
             slideshowSpeed: 8000,
             animationSpeed: 800,
             start: function (slider) {
-                $('.landing_grids_inner ul li').mouseover(function () {
-                    var index = $(this).index();
-                    // console.log('Hover on '+index);
-                    slider.flexAnimate(index);
+                $('.landing_grids_inner ul li').hover(function(){
+                    var index = $(this).attr('data-id');
+                    slider.flexAnimate(parseInt(index));
+                }, function(){
+                    //slider.flexAnimate(1);
                 });
-                $('.landing_grids_inner ul li').mouseleave(function(){
-                    var index = $('.landing_grids_inner ul li').length;
-                    // console.log('Hover leave on '+index);
-                    slider.flexAnimate(0);
-                });
-
-                $('.landing_grids_inner h2, .landing_grids_inner .txt_inner').mouseover(function(){
-                    slider.flexAnimate(0);
+                $('.landing_grids_inner h2, .landing_grids_inner .txt_inner .btn_medium').hover(function(){
+                    slider.flexAnimate(1);
+                }, function(){
+                    var index = $(this).closest('li').attr('data-id');
+                    slider.flexAnimate(parseInt(index));
                 });
             },
             before: function($slider){
@@ -778,6 +776,7 @@ jQuery(document).ready(function ($) {
                 $('.sv_icons .active').removeClass('active');
                 $('.sv_icons ul li').eq(index).addClass('active');
 
+
                 $('html, body').animate({
                     scrollTop: $(window).height()
                 }, 360);
@@ -793,9 +792,12 @@ jQuery(document).ready(function ($) {
             start: function($slider){
                 $('.tab_nav a').click(function(){
                     var index = $(this).parent('li').index();
-                    console.log(index);
                     $('.tabs').find('.tab_active').removeClass('tab_active');
                     $('.tabs').find('.tab').eq(1).addClass('tab_active');
+
+                    $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
+                    $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
+
                     $slider.flexAnimate(index);
                     return false;
                 });

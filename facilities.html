@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/jquery.scrollbar.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/media-screen.css" type="text/css" media="screen"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -31,18 +32,18 @@
                 <ul class="slides">
                     <li style="background-image: url(images/t/Wanda_Facilities-bg.jpg);"></li>
                     <li style="background-image: url(images/t/Stage.jpg);"></li>
+                    <li style="background-image: url(images/t/workshops2.jpg);"></li>
                     <li style="background-image: url(images/t/backlots.jpg);"></li>
                     <li style="background-image: url(images/t/Marine.jpg);"></li>
-                    <li style="background-image: url(images/t/Postprod.jpg);"></li>
-                    <li style="background-image: url(images/t/workshops2.jpg);"></li>
                     <li style="background-image: url(images/t/ProdOffice.jpg);"></li>
-
+                    <li style="background-image: url(images/t/Postprod.jpg);"></li>
                 </ul>
             </div>
         </div>
         <div class="landing_grids_inner">
             <ul>
-                <li>
+                <!-- Stages -->
+                <li data-id="1">
                     <div class="mobile_bg">
                         <img src="images/mobile/landing_grid_bg_1.jpg" alt=""/>
                     </div>
@@ -66,77 +67,8 @@
                         </div>
                     </a>
                 </li>
-                <li>
-                    <div class="mobile_bg">
-                        <img src="images/mobile/landing_grid_bg_2.jpg" alt=""/>
-                    </div>
-                    <a href="backlots.html">
-                        <div class="table">
-                            <div class="td">
-                                <h2>Backlots</h2>
-                                <div class="txt">
-                                    <div class="txt_inner">
-                                        <div class="txt_inner_box">
-                                            <div class="text">Backlots &amp; T-lots</div>
-                                            <span class="btn_medium">View</span>
-                                        </div>
-                                        <div class="txt_hover">
-                                            <div class="text">Backlots &amp; T-lots</div>
-                                            <span class="btn_medium">View</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="no_br">
-                    <div class="mobile_bg">
-                        <img src="images/mobile/landing_grid_bg_3.jpg" alt=""/>
-                    </div>
-                    <a href="marine.html">
-                        <div class="table">
-                            <div class="td">
-                                <h2>Marine<br/> Facilities</h2>
-                                <div class="txt">
-                                    <div class="txt_inner">
-                                        <div class="txt_inner_box">
-                                            <div class="text">2 Spacious Water Tanks</div>
-                                            <span class="btn_medium">View</span>
-                                        </div>
-                                        <div class="txt_hover">
-                                            <div class="text">2 Spacious Water Tanks</div>
-                                            <span class="btn_medium">View</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <div class="mobile_bg">
-                        <img src="images/mobile/landing_grid_bg_4.jpg" alt=""/>
-                    </div>
-                    <a href="postprod.html">
-                        <div class="table">
-                            <div class="td">
-                                <h2>Post-<br/>Production</h2>
-                                <div class="txt">
-                                    <div class="txt_inner">
-                                        <div class="txt_inner_box">
-                                            <div class="text">Coming Soon</div>
-                                        </div>
-                                        <div class="txt_hover">
-                                            <div class="text">Coming Soon</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
+                <!-- Workshop -->
+                <li data-id="2">
                     <div class="mobile_bg">
                         <img src="images/mobile/landing_grid_bg_5.jpg" alt=""/>
                     </div>
@@ -160,7 +92,58 @@
                         </div>
                     </a>
                 </li>
-                <li class="no_br no_bb">
+                <!-- Backlots -->
+                <li data-id="3" class="no_br">
+                    <div class="mobile_bg">
+                        <img src="images/mobile/landing_grid_bg_2.jpg" alt=""/>
+                    </div>
+                    <a href="backlots.html">
+                        <div class="table">
+                            <div class="td">
+                                <h2>Backlots</h2>
+                                <div class="txt">
+                                    <div class="txt_inner">
+                                        <div class="txt_inner_box">
+                                            <div class="text">Backlots &amp; T-lots</div>
+                                            <span class="btn_medium">View</span>
+                                        </div>
+                                        <div class="txt_hover">
+                                            <div class="text">Backlots &amp; T-lots</div>
+                                            <span class="btn_medium">View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- Marine Facilities -->
+                <li data-id="4">
+                    <div class="mobile_bg">
+                        <img src="images/mobile/landing_grid_bg_3.jpg" alt=""/>
+                    </div>
+                    <a href="marine.html">
+                        <div class="table">
+                            <div class="td">
+                                <h2>Marine<br/> Facilities</h2>
+                                <div class="txt">
+                                    <div class="txt_inner">
+                                        <div class="txt_inner_box">
+                                            <div class="text">2 Spacious Water Tanks</div>
+                                            <span class="btn_medium">View</span>
+                                        </div>
+                                        <div class="txt_hover">
+                                            <div class="text">2 Spacious Water Tanks</div>
+                                            <span class="btn_medium">View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- Production Officies -->
+                <li data-id="5">
                     <div class="mobile_bg">
                         <img src="images/mobile/landing_grid_bg_6.jpg" alt=""/>
                     </div>
@@ -177,6 +160,29 @@
                                         <div class="txt_hover">
                                             <div class="text">Headquarters Building, Stages &amp; U-shaped Offices</div>
                                             <span class="btn_medium">View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- Post production -->
+                <li data-id="6" class="no_br no_bb">
+                    <div class="mobile_bg">
+                        <img src="images/mobile/landing_grid_bg_4.jpg" alt=""/>
+                    </div>
+                    <a href="postprod.html">
+                        <div class="table">
+                            <div class="td">
+                                <h2>Post-<br/>Production</h2>
+                                <div class="txt">
+                                    <div class="txt_inner">
+                                        <div class="txt_inner_box">
+                                            <div class="text">Coming Soon</div>
+                                        </div>
+                                        <div class="txt_hover">
+                                            <div class="text">Coming Soon</div>
                                         </div>
                                     </div>
                                 </div>

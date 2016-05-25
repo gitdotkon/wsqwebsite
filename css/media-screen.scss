@@ -1,0 +1,51 @@
+@import "compass/css3";
+@media only screen and (max-width: 1024px){
+	.mobile_more,
+	.mobile_more .title{
+		display: block;
+		br{
+			display: none;
+		}
+	}
+	.mobile_more{
+		padding-top: 24px;
+	}
+	.map_btn {
+		margin-top: 5px;
+	}
+	.foot_share [class^="icon-"], .foot_share [class*=" icon-"]{
+		font-size: 18px;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	}
+	.back_top .back_top_bg {
+		background: url(../images/back_top.png) no-repeat 50% 50%;
+		background-size: 9px auto;
+	}
+	body .foot_share a {
+		width: 35px;
+		height: 35px;
+		margin-left: 6px;
+		margin-right: 0;
+	}
+	.mobile_back_top, a.mobile_back_top{
+		width: 35px;
+		height: 35px;
+	}
+	.mobile_foot_widgets h3{
+		font-size: 20px;
+	}
+	.mobile_foot_widgets .txt {
+		opacity: .5;
+	}
+	.mobile_foot_widget:first-child{
+		display: block;
+	}
+	.copyright span, .copyright a{
+		opacity: 0.5;
+	}
+}
+@media only screen and (max-width: 640px){
+
+}

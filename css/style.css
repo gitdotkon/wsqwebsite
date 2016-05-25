@@ -6376,7 +6376,7 @@ body.incentive_page .stage_screen_btns a.hover_btn:before,
 }
 @media only screen and (min-width: 1025px) {
     body.partner_directory_page .stage_screen_btns .hover_btn:hover:before,
-    body.partner_directory_page .stage_screen_btns a.hover_btn:hover:before,    
+    body.partner_directory_page .stage_screen_btns a.hover_btn:hover:before,
     body.incentive_page .stage_screen_btns .hover_btn:hover:before,
     body.incentive_page .stage_screen_btns a.hover_btn:hover:before,
     .tab_nav_small.hover_btn:hover:before {
@@ -7086,6 +7086,7 @@ body.the_studios2_page .home_screen h2 {
     .screen_slide,
     .slide_bg {
         position: absolute;
+        overflow: hidden;
         top: 0;
         left: 0;
         width: 100%;
@@ -7967,7 +7968,10 @@ body.the_studios2_page .home_screen h2 {
         z-index: 99;    
         background: url(../images/menu_btn.png) no-repeat 50% 50%;
         background-size: 100% auto;
-    }  
+    }
+    .menu_btn span{
+        display: none;
+    }
     .mobile_slide_bg {
         position: absolute;
         top: 0;
@@ -8035,7 +8039,10 @@ body.the_studios2_page .home_screen h2 {
         z-index: 99;    
         background: url(../images/livechat_btn.png) no-repeat 50% 50%;
         background-size: 100% auto;
-    }    
+    }
+    .livechat_btn.livechat_btn_up{
+        display: none;
+    }
     .social_btns {
         position: fixed;
         bottom: 28px;
@@ -8193,6 +8200,7 @@ body.the_studios2_page .home_screen h2 {
         width: auto;
         height: auto;
     }
+
     body .foot_share a {
         width: 27px;
         height: 27px;
@@ -9706,9 +9714,6 @@ body > #Validform_msg {
     }
     .qrcode {
         width: 80px;
-    }
-    .mobile_foot_widget:first-child {
-        display: none;
     }
 }
 
