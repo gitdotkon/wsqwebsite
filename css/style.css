@@ -3948,7 +3948,8 @@ body.main_nav_visible .main_nav {
     padding: 9px 0 9px 80px;
     position: relative;
 }
-.main_nav_list ul li a:hover {
+.main_nav_list ul li a:hover,
+.main_nav_list ul li.active a{
     color: #ab081a;
 }
 .main_nav_list ul li a:hover span{
@@ -5981,24 +5982,24 @@ h1.detail_title {
 .about_page .tab_nav ul li:last-child:after{
     display: none;
 }
-.tab_nav ul li.news_a:after {
+.tab_nav ul li.news_a:before {
     display: block;
     content: ' ';
     width: 100%;
     height: 15px;
     position: absolute;
     bottom: auto;
-    top: 93px;
+    top: 85px;
     left: 0;
     background: url(../images/news_a.png) no-repeat 50% 50%;
     visibility: hidden;
 }
-.tab_nav ul li.news_a.active:after {
+.tab_nav ul li.news_a.active:before {
     visibility: visible;
 }
-.tab_nav ul li:first-child:before {
-    display: none;
-}
+/*.tab_nav ul li:first-child:before {*/
+    /*display: none;*/
+/*}*/
 .tab_nav ul li.active a,
 .tab_nav ul li a:hover {
     color: #ab081a;
