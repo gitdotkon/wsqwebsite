@@ -5978,6 +5978,9 @@ h1.detail_title {
     width: 1px;
     background: #ccc;
 }
+.tab_nav ul li:last-child:after{
+    display: none;
+}
 .about_page .tab_nav ul li:hover:after{
     background-position: 0 -28px;
 }
