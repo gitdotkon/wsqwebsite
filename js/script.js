@@ -519,44 +519,12 @@ jQuery(document).ready(function ($) {
             slide_count = $('.slide').size();
         $('.wrapper').data({'swipe-index': 0});
 
-        if ($body.hasClass('stages_page')) {
-            $body.swipe({
-                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                    if ('up' == direction && !$('.wrapper').hasClass('wrapper_1')) {
-                        var index = $wrapper.data('swipe-index');
-                        if (index != slide_count) {
-                            var index = $wrapper.data('swipe-index');
-                            $wrapper.data({'swipe-index': Number(index) + 1});
-                            $wrapper.removeAttr('class');
-                            $wrapper.addClass('wrapper').addClass('wrapper_' + $wrapper.data('swipe-index'));
-
-                            if (index == slide_count - 1) {
-                                $body.addClass('mobile_footer_visible');
-                            } else {
-                                $body.removeClass('mobile_footer_visible');
-                            }
-                        }
-
-                        $('body.stages_page .mobile_stage_slide').scrollTop(0);
-
-                        $body.addClass('stages_header_bg');
-                    }
-
-                    if ('down' == direction && $('.wrapper').hasClass('wrapper_1')) {
-                        //$body.removeClass('stages_header_bg');
-                    }
-
-                    update_mobile_nav_container();
-                },
-                threshold: 0,
-                //fingerReleaseThreshold: 400,
-                preventDefaultEvents: false
-            });
-        } else {
-            if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')) {
+        if($(window).width()>1024){
+            if ($body.hasClass('stages_page')) {
                 $body.swipe({
                     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                        if ('up' == direction) {
+                        console.log('Lol');
+                        if ('up' == direction && !$('.wrapper').hasClass('wrapper_1')) {
                             var index = $wrapper.data('swipe-index');
                             if (index != slide_count) {
                                 var index = $wrapper.data('swipe-index');
@@ -570,25 +538,62 @@ jQuery(document).ready(function ($) {
                                     $body.removeClass('mobile_footer_visible');
                                 }
                             }
-                        }
-                        if ('down' == direction) {
-                            $body.removeClass('mobile_footer_visible');
 
-                            var index = $wrapper.data('swipe-index');
-                            if (0 != index) {
-                                $wrapper.data({'swipe-index': Number(index) - 1});
-                                $wrapper.removeAttr('class');
-                                $wrapper.addClass('wrapper').addClass('wrapper_' + $wrapper.data('swipe-index'));
-                            }
+                            $('body.stages_page .mobile_stage_slide').scrollTop(0);
+
+                            $body.addClass('stages_header_bg');
                         }
+
+                        if ('down' == direction && $('.wrapper').hasClass('wrapper_1')) {
+                            //$body.removeClass('stages_header_bg');
+                        }
+
                         update_mobile_nav_container();
                     },
                     threshold: 0,
-                    //fingerReleaseThreshold: 200,
-                    preventDefaultEvents: $body.hasClass('stage_page') ? false : true
+                    //fingerReleaseThreshold: 400,
+                    preventDefaultEvents: false
                 });
+            } else {
+                if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')) {
+                    $body.swipe({
+                        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                            console.log('Lol');
+                            if ('up' == direction) {
+                                var index = $wrapper.data('swipe-index');
+                                if (index != slide_count) {
+                                    var index = $wrapper.data('swipe-index');
+                                    $wrapper.data({'swipe-index': Number(index) + 1});
+                                    $wrapper.removeAttr('class');
+                                    $wrapper.addClass('wrapper').addClass('wrapper_' + $wrapper.data('swipe-index'));
+
+                                    if (index == slide_count - 1) {
+                                        $body.addClass('mobile_footer_visible');
+                                    } else {
+                                        $body.removeClass('mobile_footer_visible');
+                                    }
+                                }
+                            }
+                            if ('down' == direction) {
+                                $body.removeClass('mobile_footer_visible');
+
+                                var index = $wrapper.data('swipe-index');
+                                if (0 != index) {
+                                    $wrapper.data({'swipe-index': Number(index) - 1});
+                                    $wrapper.removeAttr('class');
+                                    $wrapper.addClass('wrapper').addClass('wrapper_' + $wrapper.data('swipe-index'));
+                                }
+                            }
+                            update_mobile_nav_container();
+                        },
+                        threshold: 0,
+                        //fingerReleaseThreshold: 200,
+                        preventDefaultEvents: $body.hasClass('stage_page') ? false : true
+                    });
+                }
             }
         }
+
 
         $('.social_btns').bind('click touchstart', function () {
             $(this).addClass('social_btns_open');
@@ -776,12 +781,12 @@ jQuery(document).ready(function ($) {
                 }, function(){
                     //slider.flexAnimate(1);
                 });
-                $('.landing_grids_inner h2, .landing_grids_inner .txt_inner .btn_medium').hover(function(){
-                    slider.flexAnimate(1);
-                }, function(){
-                    var index = $(this).closest('li').attr('data-id');
-                    slider.flexAnimate(parseInt(index));
-                });
+                // $('.landing_grids_inner h2, .landing_grids_inner .txt_inner .btn_medium').hover(function(){
+                //     slider.flexAnimate(1);
+                // }, function(){
+                //     var index = $(this).closest('li').attr('data-id');
+                //     slider.flexAnimate(parseInt(index));
+                // });
             },
             before: function($slider){
                 console.log($slider);
