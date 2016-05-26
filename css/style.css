@@ -2929,29 +2929,37 @@ body.facilities_list_pages .slide_bg:before {
     display: block;
     width: 15px;
     height: 15px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     position: absolute;
     border-radius: 100%;
     overflow: hidden;
-}
-.round_nav_inner span:before {
-    display: block;
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #fff;
-    opacity: 0;  
     -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
-    transition: all 1s cubic-bezier(.19,1,.22,1); 
-    border-radius: 100%;           
+    transition: all 1s cubic-bezier(.19,1,.22,1);
 }
-.round_nav:hover span:before,
-.round_nav_inner span.round_nav_active:before {
-    opacity: 1;
+
+.round_nav_inner span.round_nav_active{
+    background: #fff;
+    -webkit-transition: all 1s cubic-bezier(.19,1,.22,1);
+    transition: all 1s cubic-bezier(.19,1,.22,1);
 }
+/*.round_nav_inner span:before {*/
+    /*display: block;*/
+    /*content: ' ';*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*background: #fff;*/
+    /*opacity: 0;  */
+    /*-webkit-transition: all 1s cubic-bezier(.19,1,.22,1);*/
+    /*transition: all 1s cubic-bezier(.19,1,.22,1); */
+    /*border-radius: 100%;           */
+/*}*/
+/*.round_nav:hover span:before,*/
+/*.round_nav_inner span.round_nav_active:before {*/
+    /*opacity: 1;*/
+/*}*/
 .round_nav_inner span.round_nav_1 {
     top: 0;
     left: 50%;
@@ -5893,6 +5901,15 @@ h1.detail_title {
 }
 .full_screen .td_middle {
     vertical-align: middle;
+}
+.td_bottom{
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+}
+.stages_page .home_screen{
+    padding-bottom: 177px;
 }
 .full_screen .td .home_screen {
     padding-bottom: 146px;   
@@ -9743,4 +9760,21 @@ body > #Validform_msg {
     display: block;
     overflow: hidden;
     float: left;
+}
+
+/* Hide page for first stage */
+.main_nav_list .left li:nth-child(4),
+.foot_widget_last h3:nth-child(2),
+.livechat_btn,
+.main_nav_list .left li:nth-child(5) ul li:nth-child(2),
+.main_nav_list .left li:nth-child(5) ul li:nth-child(3),
+.press_center_page .tab_nav li:nth-child(2),
+.press_center_page .tab_nav li:nth-child(3),
+.press_center_page .tab_nav ul li:after,
+.press_center_page .stage_screen_btns .animate_up:nth-child(2),
+.press_center_page .stage_screen_btns .animate_up:nth-child(3),
+.main_nav_list .left li:nth-child(6),
+.foot_widget_last h3:nth-child(4),
+.search_form{
+    display: none;
 }

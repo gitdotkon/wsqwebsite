@@ -718,6 +718,7 @@ jQuery(document).ready(function ($) {
                 $('.stage_list_trigger[data-target="' + $(slider).parent('.stage_list_slider').attr('id') + '"]').find('.stage_item_trigger').mouseover(function () {
                     if($.isFunction(slider.flexAnimate)){
                         var index = $(this).index();
+                        console.log(index);
                         slider.flexAnimate(index);
                     }
                 });
