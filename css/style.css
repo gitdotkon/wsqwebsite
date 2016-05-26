@@ -3373,7 +3373,8 @@ body.facilities_list_pages .footer {
     opacity: 1;
     top: 0;
 }
-body.workshops_page .stage_screen_btns {
+body.workshops_page .stage_screen_btns,
+body.facilities_list_pages.press_center_page .stage_screen_btns {
     padding-top: 160px;
 }
 .rn_animate_faded {
@@ -5911,7 +5912,8 @@ h1.detail_title {
 .stages_page .home_screen{
     padding-bottom: 177px;
 }
-.full_screen .td .home_screen {
+.full_screen .td .home_screen,
+.press_center_page .td_bottom .home_screen{
     padding-bottom: 146px;   
 }
 .full_screen .td_middle .home_screen {
@@ -7872,6 +7874,11 @@ body.the_studios2_page .home_screen h2 {
     .mobile_br {
         display: block;
     }
+    .contact_info ul li [class^="icon-"], .contact_info ul li [class*=" icon-"]{
+        position: static;
+        margin: 0 0 22px;
+        font-size: 28px;
+    }
     html {
         position: fixed;
         width: 100%;
@@ -9430,7 +9437,7 @@ body.the_studios2_page .home_screen h2 {
     }
     .contact_info ul li {
         height: auto;
-        padding: 30px 0 18px 0;    
+        padding: 10px 0 18px 0;
         margin: 0;
         background-position: 50% 0 !important;    
     }

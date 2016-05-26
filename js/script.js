@@ -849,6 +849,9 @@ jQuery(document).ready(function ($) {
                     $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
                     $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
 
+                    $('html, body').animate({
+                        scrollTop: $(window).height()
+                    }, 360);
                     $slider.flexAnimate(index);
                     return false;
                 });
@@ -858,6 +861,9 @@ jQuery(document).ready(function ($) {
 
                     $('.tabs').find('.tab_active').removeClass('tab_active');
                     $('.tabs').find('.tab').eq(1).addClass('tab_active');
+                    $('html, body').animate({
+                        scrollTop: $(window).height()
+                    }, 360);
                     $slider.flexAnimate(index);
                 })
             },
