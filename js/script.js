@@ -17,6 +17,18 @@
 }(jQuery));
 
 jQuery(document).ready(function ($) {
+    /* Hightlight menu item */
+    // var path_name = window.location.pathname;
+    // $('.main_nav_box').find('li a').each(function(){
+    //     var current_url = $(this).attr('href');
+    //     var only_url = current_url.split('#');
+    //     if(path_name.indexOf(only_url[0])>0){
+    //         $(this).closest('li').addClass('active');
+    //         $(this).closest('.has-submenu').addClass('active');
+    //         console.log($(this).closest('.has-submenu').addClass('active').length);
+    //     }
+    // })
+
     /* workshop */
 
     /* Parse location params on service page */
