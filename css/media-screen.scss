@@ -15,8 +15,36 @@
 	.lang_switcher{
 		padding-bottom: 20px;
 	}
+	.main_nav_list ul{
+		padding-top: 20px;
+	}
+	.main_nav_inner h3, .main_nav_inner h3 a,
+	.main_nav_list .left li a{
+		font-size: 24px;
+	}
 }
 @media only screen and (max-width: 1024px){
+	.red_header{
+		.menu_btn{
+			top: 28px;
+			position: absolute;
+			background-image: url(../images/menu_btn_red.png);
+		}
+		.logo{
+			position: absolute;
+			top: 23px;
+			left: 20px;
+		}
+	}
+	.main_nav_list .left ul ul{
+		margin-bottom: 0;
+		li:last-child{
+			border: none;
+		}
+	}
+	.main_nav_list .left ul .active.has-submenu{
+		border: none;
+	}
 	.mobile_more,
 	.mobile_more .title{
 		display: block;
@@ -104,6 +132,13 @@
 			border-top: 1px solid #d3d3d3;
 		}
 	}
+	.main_nav_list .left li.has-submenu{
+		li{
+			&:first-child{
+				border-top: none;
+			}
+		}
+	}
 	.main_nav_list .left li a,
 	.main_nav_inner h3,
 	.main_nav_list ul li a,
@@ -148,7 +183,7 @@
 		z-index: 100;
 		width: 13px;
 		height: 7px;
-		background-size: 100%;
+		background-size: cover;
 	}
 	.main_nav_logo{
 		width: 36px;
@@ -166,9 +201,128 @@
 	.main_nav_inner h3{
 		margin: 0 20px;
 	}
-	/* TODO Remove after end styling !!! */
-	.search_form {
-		display: block !important;
+	///* TODO Remove after end styling !!! */
+	//.search_form {
+	//	display: block !important;
+	//}
+	.about_qd .text{
+		font-size: 22px;
+	}
+	.about_col {
+		width: 100%;
+		float: none;
+	}
+	.about_cols{
+		padding-top: 20px;
+	}
+	.about_cols h3{
+		font-size: 30px;
+		padding-bottom: 20px;
+	}
+	.about_cols ul li{
+		font-size: 22px;
+		line-height: 24px;
+	}
+	.about_cols ul{
+		margin-bottom: 20px;
+	}
+	.header.mobile_header{
+		background: #fff;
+		position: fixed;
+		.menu_btn{
+			background-image: url(../images/menu_btn_red.png);
+		}
+	}
+	.surroundings{
+		height: auto;
+
+		h2{
+			font-size: 48px;
+			line-height: 50px;
+		}
+		.btns{
+			padding-top: 40px;
+			a{
+				display: block;
+				max-width: 80%;
+				margin: 20px auto;
+			}
+		}
+		.text{
+			padding-top: 60px;
+			height: auto;
+			padding-bottom: 30px;
+		}
+	}
+	.historical_bg{
+		padding-top: 60px;
+		h2{
+			font-size: 36px;
+			line-height: 40px;
+		}
+		.hbg_slider{
+			padding: 0 20px;
+			font-size: 22px;
+			line-height: 26px;
+		}
+	}
+	.seasons_climate{
+		font-size: 22px;
+		line-height: 24px;
+		padding: 60px 20px 50px 20px;
+		h2{
+			font-size: 48px;
+			line-height: 50px;
+
+		}
+		.text,
+		.img{
+			float: none;
+			width: 100%;
+			margin: 0;
+		}
+		.img{
+			margin-top: 30px;
+		}
+	}
+	.travel_times{
+		height: auto;
+		h2{
+			font-size: 36px;
+			line-height: 38px;
+		}
+	}
+	.travel_cols{
+		position: relative;
+		margin: 0 20px;
+		padding: 20px;
+		left: 0;
+		width: auto;
+		border-radius: 15px 15px 0 0;
+	}
+	.travel_col {
+		width: 100%;
+		float: none;
+		font-size: 22px;
+	}
+	.lifestyle_destination{
+		height: auto;
+		padding: 60px 20px 40px;
+		h2{
+			font-size: 48px;
+			line-height: 50px;
+		}
+	}
+	.button_boxes .arr{
+		color: #fff;
+		span.icon-9,
+		span.icon-11{
+			display: none;
+		}
+	}
+	.hover_btn:before, a.hover_btn:before, a.hover_btn.active:before {
+		-webkit-transform: rotate3d(0, 0, 1, -66deg) translate3d(0, -3em, 0);
+		transform: rotate3d(0, 0, 1, -66deg) translate3d(0, -3em, 0);
 	}
 }
 @media only screen and (max-width: 640px){
@@ -220,7 +374,9 @@
 		font-size: 12px;
 		font-family: 'avenir_lt_55_romanheavy';
 	}
-
+	.main_nav_list .left ul ul li a{
+		font-size: 12px;
+	}
 	.main_nav_list .left li.has-submenu span.menu-expand{
 		top: 21px;
 		right: 4px;
@@ -234,10 +390,152 @@
 	.lang_switcher, .lang_switcher a{
 		font-size: 10px;
 	}
+	/**/
+	.about_qd .text{
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.about_cols h3{
+		font-size: 15px;
+		padding-bottom: 15px;
+	}
+	.about_cols ul{
+		margin-bottom: 20px;
+	}
+	.about_cols ul li{
+		font-size: 12px;
+		padding-left: 15px;
+		line-height: 18px;
+	}
+	.surroundings{
+		h2{
+			font-size: 24px;
+			line-height: 26px;
+			padding: 0 0 16px;
+			margin: 0 0 23px;
+		}
+		.text{
+			padding-top: 40px;
+			padding-bottom: 20px;
+			.txt{
+				font-size: 12px;
+				line-height: 16px;
+				padding: 0 15px;
+			}
+		}
+		.btns{
+			padding-top: 20px;
+			a{
+				border-width: 1px;
+				padding: 2px 10px 1px;
+				font-size: 12px;
+			}
+		}
+	}
+	.historical_bg{
+		padding-top: 40px;
+		h2{
+			font-size: 18px;
+			line-height: 20px;
+			padding: 0 0 16px;
+			margin: 0 0 16px;
+		}
+		strong{
+			font-size: 12px;
+			line-height: 16px;
+		}
+		.hbg_slider{
+			font-size: 12px;
+			line-height: 16px;
+		}
+		p{
+			padding-bottom: 20px;
+		}
+	}
+	.hbg_slider_btns{
+		font-size: 18px;
+		ul li{
+			margin: 0 29px 14px;
+		}
+	}
+	.seasons_climate{
+		padding: 40px 20px 40px 20px;
+		font-size: 12px;
+		line-height: 16px;
+		h2{
+			padding: 0 0 16px;
+			margin: 0 0 16px;
+			font-size: 24px;
+			line-height: 26px;
+		}
+		.img{
+
+		}
+	}
+	.travel_times{
+		h2{
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+	.travel_col{
+		font-size: 12px;
+	}
+	.travel_cols .red_arr{
+		background-size: cover;
+		width: 9px;
+		height: 10px;
+	}
+	.travel_cols h3{
+		font-size: 14px;
+		padding: 0 0 10px;
+		margin: 0 0 10px;
+	}
+	.lifestyle_destination{
+		padding: 40px 20px 40px;
+		h2{
+			font-size: 24px;
+			line-height: 26px;
+			padding: 0 0 16px;
+			margin: 0 0 16px;
+		}
+		.txt{
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+	.button_box, .button_box a{
+		font-size: 12px;
+		line-height: 18px;
+	}
+	body.facilities_list_pages .home_screen {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
 }
 
+/* Height */
+@media only screen and (max-height: 880px){
+	.contact h2.block_box_title{
+		font-size: 58px;
+		line-height: 58px;
+		padding: 0 0 20px;
+		margin: 0 auto 20px;
+	}
+}
 @media only screen and (max-height: 800px){
 	.main_nav_inner{
 		overflow-y: scroll;
+	}
+	/* contact page */
+	.contact_info ul {
+		padding: 0 0 18px;
+	}
+	.field textarea{
+		height: 100px;
+	}
+	.contact_box{
+		padding: 10px 0 0 0;
 	}
 }

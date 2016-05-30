@@ -104,6 +104,11 @@
                 </div>
             </div>
         </div>
+        <a href="#" class="next_screen next_screen_trigger">
+            <span class="next_screen_mouse">
+                <span class="next_screen_mousewheel"></span>
+            </span>
+        </a>
     </div>
 
     <div class="header">
@@ -117,14 +122,15 @@
 
 <div class="mobile_contact_form">
     <div class="contact_form">
-        <form>
+        <form action="mail.php">
+            <input type="hidden" name="page" value="contact">
             <div class="field field_name">
                 <label class="placeholder">Name<span class="red_required">*</span></label>
-                <input type="text"/>
+                <input type="text" required/>
             </div>
             <div class="field field_email">
                 <label class="placeholder">Email<span class="red_required">*</span></label>
-                <input type="text"/>
+                <input type="text" required/>
             </div>
             <div class="field">
                 <label class="placeholder">Company Name</label>

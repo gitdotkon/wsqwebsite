@@ -17,17 +17,6 @@
 }(jQuery));
 
 jQuery(document).ready(function ($) {
-    /* Hightlight menu item */
-    // var path_name = window.location.pathname;
-    // $('.main_nav_box').find('li a').each(function(){
-    //     var current_url = $(this).attr('href');
-    //     var only_url = current_url.split('#');
-    //     if(path_name.indexOf(only_url[0])>0){
-    //         $(this).closest('li').addClass('active');
-    //         $(this).closest('.has-submenu').addClass('active');
-    //         console.log($(this).closest('.has-submenu').addClass('active').length);
-    //     }
-    // })
     /* Studios page */
     if($('body').hasClass('the_studios2_page')){
         $(window).mousewheel(function(e){
@@ -37,7 +26,6 @@ jQuery(document).ready(function ($) {
                 }, 360);
                 return false;
             }
-
         })
     }
     /* workshop */
@@ -496,8 +484,23 @@ jQuery(document).ready(function ($) {
 
             return false;
         });
-
+        var globalDelta = 0;
         $body.bind('mousewheel', function (e) {
+            /**/
+            globalDelta+=e.deltaY;
+            if(globalDelta>=1){
+                globalDelta = 0;
+            }
+
+            console.log(globalDelta);
+            if($(window).width() <1024){
+                if (globalDelta<0){
+                    $('.full_screen .header').addClass('mobile_header');
+                }else{
+                    $('.full_screen .header').removeClass('mobile_header');
+                }
+            }
+            /**/
             if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('facilities_list_pages2')) {
                 if ('-1' == e.deltaY) {
                     if ($('.slide_active').next('.slide').length) {
@@ -1221,4 +1224,6 @@ jQuery(document).ready(function ($) {
         $('html').toggleClass('menu_is_open');
         return false;
     });
+
+
 });

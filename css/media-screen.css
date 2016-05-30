@@ -16,8 +16,39 @@
   .lang_switcher {
     padding-bottom: 20px;
   }
+
+  .main_nav_list ul {
+    padding-top: 20px;
+  }
+
+  .main_nav_inner h3, .main_nav_inner h3 a,
+  .main_nav_list .left li a {
+    font-size: 24px;
+  }
 }
 @media only screen and (max-width: 1024px) {
+  .red_header .menu_btn {
+    top: 28px;
+    position: absolute;
+    background-image: url(../images/menu_btn_red.png);
+  }
+  .red_header .logo {
+    position: absolute;
+    top: 23px;
+    left: 20px;
+  }
+
+  .main_nav_list .left ul ul {
+    margin-bottom: 0;
+  }
+  .main_nav_list .left ul ul li:last-child {
+    border: none;
+  }
+
+  .main_nav_list .left ul .active.has-submenu {
+    border: none;
+  }
+
   .mobile_more,
   .mobile_more .title {
     display: block;
@@ -127,6 +158,10 @@
     border-top: 1px solid #d3d3d3;
   }
 
+  .main_nav_list .left li.has-submenu li:first-child {
+    border-top: none;
+  }
+
   .main_nav_list .left li a,
   .main_nav_inner h3,
   .main_nav_list ul li a,
@@ -179,7 +214,7 @@
     z-index: 100;
     width: 13px;
     height: 7px;
-    background-size: 100%;
+    background-size: cover;
   }
 
   .main_nav_logo {
@@ -203,9 +238,137 @@
     margin: 0 20px;
   }
 
-  /* TODO Remove after end styling !!! */
-  .search_form {
-    display: block !important;
+  .about_qd .text {
+    font-size: 22px;
+  }
+
+  .about_col {
+    width: 100%;
+    float: none;
+  }
+
+  .about_cols {
+    padding-top: 20px;
+  }
+
+  .about_cols h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .about_cols ul li {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .about_cols ul {
+    margin-bottom: 20px;
+  }
+
+  .header.mobile_header {
+    background: #fff;
+    position: fixed;
+  }
+  .header.mobile_header .menu_btn {
+    background-image: url(../images/menu_btn_red.png);
+  }
+
+  .surroundings {
+    height: auto;
+  }
+  .surroundings h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .surroundings .btns {
+    padding-top: 40px;
+  }
+  .surroundings .btns a {
+    display: block;
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  .surroundings .text {
+    padding-top: 60px;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .historical_bg {
+    padding-top: 60px;
+  }
+  .historical_bg h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .historical_bg .hbg_slider {
+    padding: 0 20px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .seasons_climate {
+    font-size: 22px;
+    line-height: 24px;
+    padding: 60px 20px 50px 20px;
+  }
+  .seasons_climate h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .seasons_climate .text,
+  .seasons_climate .img {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+  .seasons_climate .img {
+    margin-top: 30px;
+  }
+
+  .travel_times {
+    height: auto;
+  }
+  .travel_times h2 {
+    font-size: 36px;
+    line-height: 38px;
+  }
+
+  .travel_cols {
+    position: relative;
+    margin: 0 20px;
+    padding: 20px;
+    left: 0;
+    width: auto;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .travel_col {
+    width: 100%;
+    float: none;
+    font-size: 22px;
+  }
+
+  .lifestyle_destination {
+    height: auto;
+    padding: 60px 20px 40px;
+  }
+  .lifestyle_destination h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .button_boxes .arr {
+    color: #fff;
+  }
+  .button_boxes .arr span.icon-9,
+  .button_boxes .arr span.icon-11 {
+    display: none;
+  }
+
+  .hover_btn:before, a.hover_btn:before, a.hover_btn.active:before {
+    -webkit-transform: rotate3d(0, 0, 1, -66deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -66deg) translate3d(0, -3em, 0);
   }
 }
 @media only screen and (max-width: 640px) {
@@ -263,6 +426,10 @@
     font-family: 'avenir_lt_55_romanheavy';
   }
 
+  .main_nav_list .left ul ul li a {
+    font-size: 12px;
+  }
+
   .main_nav_list .left li.has-submenu span.menu-expand {
     top: 21px;
     right: 4px;
@@ -278,10 +445,162 @@
   .lang_switcher, .lang_switcher a {
     font-size: 10px;
   }
+
+  /**/
+  .about_qd .text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .about_cols h3 {
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+
+  .about_cols ul {
+    margin-bottom: 20px;
+  }
+
+  .about_cols ul li {
+    font-size: 12px;
+    padding-left: 15px;
+    line-height: 18px;
+  }
+
+  .surroundings h2 {
+    font-size: 24px;
+    line-height: 26px;
+    padding: 0 0 16px;
+    margin: 0 0 23px;
+  }
+  .surroundings .text {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .surroundings .text .txt {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 15px;
+  }
+  .surroundings .btns {
+    padding-top: 20px;
+  }
+  .surroundings .btns a {
+    border-width: 1px;
+    padding: 2px 10px 1px;
+    font-size: 12px;
+  }
+
+  .historical_bg {
+    padding-top: 40px;
+  }
+  .historical_bg h2 {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 0 0 16px;
+    margin: 0 0 16px;
+  }
+  .historical_bg strong {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .historical_bg .hbg_slider {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .historical_bg p {
+    padding-bottom: 20px;
+  }
+
+  .hbg_slider_btns {
+    font-size: 18px;
+  }
+  .hbg_slider_btns ul li {
+    margin: 0 29px 14px;
+  }
+
+  .seasons_climate {
+    padding: 40px 20px 40px 20px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .seasons_climate h2 {
+    padding: 0 0 16px;
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .travel_times h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .travel_col {
+    font-size: 12px;
+  }
+
+  .travel_cols .red_arr {
+    background-size: cover;
+    width: 9px;
+    height: 10px;
+  }
+
+  .travel_cols h3 {
+    font-size: 14px;
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+  }
+
+  .lifestyle_destination {
+    padding: 40px 20px 40px;
+  }
+  .lifestyle_destination h2 {
+    font-size: 24px;
+    line-height: 26px;
+    padding: 0 0 16px;
+    margin: 0 0 16px;
+  }
+  .lifestyle_destination .txt {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .button_box, .button_box a {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  body.facilities_list_pages .home_screen {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+/* Height */
+@media only screen and (max-height: 880px) {
+  .contact h2.block_box_title {
+    font-size: 58px;
+    line-height: 58px;
+    padding: 0 0 20px;
+    margin: 0 auto 20px;
+  }
 }
 @media only screen and (max-height: 800px) {
   .main_nav_inner {
     overflow-y: scroll;
+  }
+
+  /* contact page */
+  .contact_info ul {
+    padding: 0 0 18px;
+  }
+
+  .field textarea {
+    height: 100px;
+  }
+
+  .contact_box {
+    padding: 10px 0 0 0;
   }
 }
 

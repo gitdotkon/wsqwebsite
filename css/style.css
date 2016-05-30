@@ -2153,8 +2153,11 @@ body.facilities_list_pages#screen_visible_1 .menu_btn {
 body.home_screen_invisible .header:before {
     opacity: 0;
 }
-body.facilities_list_pages .header .logo_red {
+body.facilities_list_pages .header img{
     display: none;
+}
+body.facilities_list_pages .header .logo_red {
+    display: block;
 }
 body.facilities_list_pages#screen_visible_1 .header .logo img,
 body.stage_page .header .logo img {
@@ -6435,7 +6438,7 @@ body.incentive_page .stage_screen_btns a.hover_btn:before,
     font-family: 'avenir_lt_55_romanroman';
     line-height: 24px;    
     text-shadow: none;
-    padding: 0 110px 60px;
+    padding: 0 20px 60px;
     background: #f3f3f3;
 }
 .news .category {
@@ -8004,6 +8007,9 @@ body.the_studios2_page .home_screen h2 {
         left: 21px;
         width: 32px;
     }
+    .red_header .logo{
+        position: static;
+    }
     .logo img {
         display: block;
     }
@@ -8017,6 +8023,9 @@ body.the_studios2_page .home_screen h2 {
         z-index: 99;    
         background: url(../images/menu_btn.png) no-repeat 50% 50%;
         background-size: 100% auto;
+    }
+    .red_header .menu_btn{
+        position: relative;
     }
     .menu_btn span{
         display: none;
@@ -8540,29 +8549,29 @@ body.the_studios2_page .home_screen h2 {
         left: 50%;
         background: #acacac;
     }
-    .button_box .bg {
-        display: none;
-    }
+    /*.button_box .bg {*/
+        /*display: none;*/
+    /*}*/
     .button_box a {
-        height: 55px;
+        height: 120px;
     }
     .button_box, 
     .button_box a {
         color: #141414;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 18px;
+        line-height: 24px;
         text-shadow: none;
     }
     .button_box .text {
         padding: 0 20px;
     }
     .button_box .arr {
-        background: url(../images/mobile/button_box_prev.png) no-repeat 0 50%;
+        background: url(../images/mobile/button_box_white_prev.png) no-repeat 0 50%;
         background-size: 22px auto;
         padding: 5px 0 3px 31px;
     }
     .button_box_next .arr {
-        background: url(../images/mobile/button_box_next.png) no-repeat 100% 50%;
+        background: url(../images/mobile/button_box_white_next.png) no-repeat 100% 50%;
         background-size: 22px auto;
         padding: 5px 31px 3px 0;
     }   
@@ -8897,9 +8906,9 @@ body.the_studios2_page .home_screen h2 {
         padding-top: 58px;
     } 
 
-    .tab_nav {
-        display: none;
-    }
+    /*.tab_nav {*/
+        /*display: none;*/
+    /*}*/
     body.facilities_list_pages .home_screen h2 {
         font-size: 30px;
         line-height: 35px;
@@ -9169,8 +9178,8 @@ body.the_studios2_page .home_screen h2 {
         top: auto;
     }
     body.facilities_list_pages .home_screen {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 16px;
+        line-height: 20px;
     }
     .cr_cols, 
     .cr_cols a {
@@ -9399,8 +9408,9 @@ body.the_studios2_page .home_screen h2 {
         position: fixed;
     }
     .red_header {
+        height: 80px;
         /*height: 47px;*/
-        height: 0px;
+        /*height: 0px;*/
     }
     .contact {
         background-image: none !important;
