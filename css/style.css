@@ -3792,6 +3792,9 @@ body.main_nav_visible .main_nav {
     line-height: 36px;
     text-shadow: none;
 }
+.main_nav_inner h3.active a{
+    color: #b21727;
+}
 .main_nav_inner h3 {
     padding: 46px 0 0 0;
 }
@@ -3915,10 +3918,14 @@ body.main_nav_visible .main_nav {
 }
 
 /* Sub menu */
+
 .main_nav_list .left ul ul {
     padding-top: 19px;
     margin-bottom: -32px;
     display: none;
+}
+.main_nav_list .left ul .active ul{
+    display: block;
 }
 .main_nav_list .left ul ul li{
     padding: 0;
@@ -3932,6 +3939,9 @@ body.main_nav_visible .main_nav {
     display: block;
     padding: 0;
     position: relative;
+}
+.main_nav_list .left ul ul li.active a{
+    color: #de302f;
 }
 .main_nav_list .middle {
     width: 32.25%;
@@ -3961,8 +3971,9 @@ body.main_nav_visible .main_nav {
 .main_nav_list ul li.active a{
     color: #ab081a;
 }
-.main_nav_list ul li a:hover span{
-    color: #fff;
+.main_nav_list ul li a:hover span,
+.main_nav_list ul li.active span{
+    color: #fff !important;
     background: #ab081a;
 }
 .main_nav_list ul li a [class^="icon-"], 
