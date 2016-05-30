@@ -28,7 +28,18 @@ jQuery(document).ready(function ($) {
     //         console.log($(this).closest('.has-submenu').addClass('active').length);
     //     }
     // })
+    /* Studios page */
+    if($('body').hasClass('the_studios2_page')){
+        $(window).mousewheel(function(e){
+            if($(window).scrollTop() == 0 && e.deltaY<0){
+                $('html, body').animate({
+                    scrollTop: $(window).height()
+                }, 360);
+                return false;
+            }
 
+        })
+    }
     /* workshop */
 
     /* Parse location params on service page */

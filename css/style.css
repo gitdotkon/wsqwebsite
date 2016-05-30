@@ -4050,6 +4050,10 @@ body.main_nav_visible .main_nav {
     position: absolute;
     top: 0;
     left: 0;
+    /*background: #000;*/
+    /*opacity: .6;*/
+}
+.work_shops_tile .work_shop:before{
     background: #000;
     opacity: .6;
 }

@@ -1,3 +1,22 @@
+@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+  .main_nav_list {
+    max-width: 96%;
+    margin: 0 auto;
+  }
+
+  .main_nav_list .left li {
+    padding: 30px 0 0 0;
+  }
+
+  .main_nav_list .middle {
+    margin: 0 0 0 11.12%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .lang_switcher {
+    padding-bottom: 20px;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .mobile_more,
   .mobile_more .title {
@@ -258,6 +277,11 @@
 
   .lang_switcher, .lang_switcher a {
     font-size: 10px;
+  }
+}
+@media only screen and (max-height: 800px) {
+  .main_nav_inner {
+    overflow-y: scroll;
   }
 }
 
