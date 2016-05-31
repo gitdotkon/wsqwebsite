@@ -2159,6 +2159,13 @@ body.facilities_list_pages .header img{
 body.facilities_list_pages .header .logo_red {
     display: none;
 }
+body.facilities_list_pages .header.red_header img{
+    display: none;
+}
+body.facilities_list_pages .header.red_header img.logo_red{
+    display: block;
+}
+
 body.facilities_list_pages#screen_visible_1 .header .logo img,
 body.stage_page .header .logo img {
     display: none;
@@ -8445,6 +8452,7 @@ body.the_studios2_page .home_screen h2 {
     }
     .specs_list ul li {
         padding: 6px 0 6px 15px;
+        padding-left: 15px !important;
         border-bottom: 1px solid #acacac;
     }
     .specs_list ul li:first-child {
@@ -8453,7 +8461,7 @@ body.the_studios2_page .home_screen h2 {
     .specs_list .dot {
         width: 6px;
         height: 6px;
-        top: 11px;
+        top: 17px;
         left: 0 !important;
     }
     .specs_list .label {

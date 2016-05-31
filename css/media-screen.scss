@@ -452,6 +452,46 @@
 		font-size: 48px;
 		line-height: 52px;
 	}
+	body.facilities_list_pages{
+		 .header.red_header img{
+			 display: none;
+			 &.logo_red{
+				 display: block;
+			 }
+		 }
+	}
+	.group_properties h2,
+	.holdings h2.block_box_title{
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.holdings{
+		height: auto;
+	}
+	.vendors_tenants{
+		padding: 60px 0 40px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		ul{
+			li{
+				height: auto;
+				padding: 15px;
+			}
+		}
+	}
+	.group_property_ul ul {
+		padding: 40px 0 0 0;
+	}
+	.group_property_ul ul li {
+		margin: 0 10px 20px;
+	}
+	.specs{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.specs_list ul li{
+		padding: 10px 0 10px 15px;
+	}
 }
 @media only screen and (max-width: 992px){
 	.ss_cols{
@@ -683,6 +723,36 @@
 	.fl_specs .img h2, .block_box_title_wrapper h2.block_box_title {
 		font-size: 24px;
 		line-height: 26px;
+	}
+	.group_properties h2,
+	.holdings h2.block_box_title{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.holdings h2.block_box_title{
+		margin-bottom: 20px;
+	}
+	.vendors_tenants{
+		padding: 40px 0;
+	}
+	.group_property_ul ul {
+		padding: 20px 0 0 0;
+	}
+	.group_property_ul ul li {
+		margin: 0 10px 20px;
+	}
+	.specs{
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.specs_list ul li{
+		padding: 6px 0 6px 15px;
+		ul{
+			margin-top: 0;
+		}
+	}
+	.specs_list .dot{
+		top: 11px;
 	}
 }
 
