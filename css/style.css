@@ -8796,7 +8796,7 @@ body.the_studios2_page .home_screen h2 {
         z-index: 1111;
     }
     .landing_grids .mobile_bg {
-        display: block;
+        /*display: block;*/
         position: relative;
     }
     .landing_grids .mobile_bg:before {
@@ -8816,11 +8816,6 @@ body.the_studios2_page .home_screen h2 {
     }
     .landing_grid_bg_slider {
         display: none;
-    }
-    .landing_grids ul li {
-        float: none;
-        width: auto;
-        height: auto;
     }
     .landing_grids ul,
     .btn_medium,
@@ -9387,10 +9382,10 @@ body.the_studios2_page .home_screen h2 {
     input[type="submit"], 
     button,
     .contact_form input[type="submit"] {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
         padding: 6px 52px;
-        height: 31px;
+        height: 40px;
     }
     .contact_form input[type="submit"] {
         color: #ab081a;
@@ -9440,8 +9435,8 @@ body.the_studios2_page .home_screen h2 {
         opacity: .5;        
     }
     .contact {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
         padding: 0;
     }
     .contact_form,
@@ -9460,8 +9455,8 @@ body.the_studios2_page .home_screen h2 {
         line-height: 26px;
     }
     .contact_info {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
         text-align: center;     
         padding: 0 36px;   
     }
@@ -9511,8 +9506,8 @@ body.the_studios2_page .home_screen h2 {
     .field label,
     .field textarea {
         color: #666;
-        font-size: 11px;
-        line-height: 16px;
+        font-size: 18px;
+        line-height: 22px;
         padding: 12px 0;
     }  
     .field input[type="text"],

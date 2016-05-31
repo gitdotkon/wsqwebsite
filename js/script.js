@@ -843,6 +843,16 @@ jQuery(document).ready(function ($) {
                 if($(window).width()<1024){
                     var parent = $(this).closest('.tab_nav');
                     if($(parent).hasClass('open')){
+                        if($('body').hasClass('incentive_page')){
+                            var index = $(this).parent('li').index();
+                            $('.tab_nav .active').removeClass('active');
+                            $(this).parent('li').addClass('active');
+                            $('.tab_active').removeClass('tab_active');
+                            $('.tab').eq(index).addClass('tab_active');
+
+                            $(parent).removeClass('open');
+                            return false;
+                        }
                         return true;
                     }else{
                         $(parent).addClass('open');
