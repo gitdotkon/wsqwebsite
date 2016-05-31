@@ -28,6 +28,10 @@ jQuery(document).ready(function ($) {
             }
         })
     }
+    if($(window).width()<1024){
+        setHeightforFullScreen();
+    }
+    init_sslider();
     /* workshop */
 
     /* Parse location params on service page */
@@ -493,45 +497,48 @@ jQuery(document).ready(function ($) {
             }
 
             console.log(globalDelta);
-            if($(window).width() <1024){
-                if (globalDelta<0){
-                    $('.full_screen .header').addClass('mobile_header');
-                }else{
-                    $('.full_screen .header').removeClass('mobile_header');
-                }
-            }
+            // if($(window).width() <1024){
+            //     if (globalDelta<0){
+            //         $('.full_screen .header').addClass('mobile_header');
+            //     }else{
+            //         $('.full_screen .header').removeClass('mobile_header');
+            //     }
+            // }
             /**/
-            if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('facilities_list_pages2')) {
-                if ('-1' == e.deltaY) {
-                    if ($('.slide_active').next('.slide').length) {
-                        animate($('.slide_active').next('.slide').index());
-                    } else {
-                        if (!$('.slide_animating').length && !$('.screen_slide_animating').length && !$body.hasClass('footer_animating') && !$('.lightbox_visible').length) {
-                            $body.addClass('footer_visible');
+            if($(window).width()>1024){
+                if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('facilities_list_pages2')) {
+                    if ('-1' == e.deltaY) {
+                        if ($('.slide_active').next('.slide').length) {
+                            animate($('.slide_active').next('.slide').index());
+                        } else {
+                            if (!$('.slide_animating').length && !$('.screen_slide_animating').length && !$body.hasClass('footer_animating') && !$('.lightbox_visible').length) {
+                                $body.addClass('footer_visible');
 
-                            $('.nav_container').removeClass('nav_container_visible');
+                                $('.nav_container').removeClass('nav_container_visible');
+                            }
                         }
-                    }
-                } else if ('1' == e.deltaY) {
-                    if ($body.hasClass('footer_visible')) {
-                        $body.removeClass('footer_visible');
+                    } else if ('1' == e.deltaY) {
+                        if ($body.hasClass('footer_visible')) {
+                            $body.removeClass('footer_visible');
 
-                        $body.addClass('footer_animating');
-                        setTimeout(function () {
-                            $body.removeClass('footer_animating');
-                        }, 600);
+                            $body.addClass('footer_animating');
+                            setTimeout(function () {
+                                $body.removeClass('footer_animating');
+                            }, 600);
 
-                        $('.nav_container').addClass('nav_container_visible');
+                            $('.nav_container').addClass('nav_container_visible');
 
-                        $('.slide_active').prevAll('.slide').find('.big_pic').removeClass('up').addClass('down');
-                    } else {
-                        if ($('.slide_active').prev('.slide').length) {
-                            animate($('.slide_active').prev('.slide').index());
+                            $('.slide_active').prevAll('.slide').find('.big_pic').removeClass('up').addClass('down');
+                        } else {
+                            if ($('.slide_active').prev('.slide').length) {
+                                animate($('.slide_active').prev('.slide').index());
 
+                            }
                         }
                     }
                 }
             }
+
         });
 
         $('.scroll').bind('mousewheel', function (e) {
@@ -833,26 +840,37 @@ jQuery(document).ready(function ($) {
 
         if(!$('body').hasClass('workshops_page') && !$('body').hasClass('press_center_page')){
             $('.tab_nav a').click(function () {
-                if($('body').hasClass('disable_tab')){
-                    return true;
+                if($(window).width()<1024){
+                    var parent = $(this).closest('.tab_nav');
+                    if($(parent).hasClass('open')){
+                        return true;
+                    }else{
+                        $(parent).addClass('open');
+                        return false;
+                    }
+                }else{
+                    if($('body').hasClass('disable_tab')){
+                        return true;
+                    }
+
+                    var index = $(this).parent('li').index();
+                    $('.tab_nav .active').removeClass('active');
+                    $(this).parent('li').addClass('active');
+                    $('.tab_active').removeClass('tab_active');
+                    $('.tab').eq(index).addClass('tab_active');
+
+                    $('.tab').eq(index).find('.work_shops').slideDown();
+
+                    $('.sv_icons .active').removeClass('active');
+                    $('.sv_icons ul li').eq(index).addClass('active');
+
+
+                    $('html, body').animate({
+                        scrollTop: $(window).height()
+                    }, 360);
+                    return false;
                 }
 
-                var index = $(this).parent('li').index();
-                $('.tab_nav .active').removeClass('active');
-                $(this).parent('li').addClass('active');
-                $('.tab_active').removeClass('tab_active');
-                $('.tab').eq(index).addClass('tab_active');
-
-                $('.tab').eq(index).find('.work_shops').slideDown();
-
-                $('.sv_icons .active').removeClass('active');
-                $('.sv_icons ul li').eq(index).addClass('active');
-
-
-                $('html, body').animate({
-                    scrollTop: $(window).height()
-                }, 360);
-                return false;
             });
         }
         if($('body').hasClass('press_center_page')){
@@ -1203,7 +1221,21 @@ jQuery(document).ready(function ($) {
     setSecScreenHeight();
     $(window).resize(function () {
         setSecScreenHeight();
+
+        setHeightforFullScreen();
+        if($(window).width()<1024){
+            setHeightforFullScreen();
+        }
     });
+
+    function init_sslider(){
+        $('#ss_slider').flexslider({
+            animation: 'slide',
+            slideshow: false,
+            slideshowSpeed: 5000,
+        });
+    }
+
 
     $('.work_shops_close').click(function () {
         // $(this).parents('.work_shops').slideUp();
@@ -1225,5 +1257,7 @@ jQuery(document).ready(function ($) {
         return false;
     });
 
-
+    function setHeightforFullScreen(){
+        $('.full_screen').height($(window).height());
+    }
 });

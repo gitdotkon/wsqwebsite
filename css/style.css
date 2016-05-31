@@ -2154,10 +2154,10 @@ body.home_screen_invisible .header:before {
     opacity: 0;
 }
 body.facilities_list_pages .header img{
-    display: none;
+    display: block;
 }
 body.facilities_list_pages .header .logo_red {
-    display: block;
+    display: none;
 }
 body.facilities_list_pages#screen_visible_1 .header .logo img,
 body.stage_page .header .logo img {
@@ -6095,11 +6095,7 @@ body.red_header_fixed .red_header_static {
 .ss_cols .icon_3 {
     background: url(../images/ss_3.png) no-repeat 50% 50%;
 }
-.ss_cols ul li {
-    width: 32.333%;
-    display: inline-block;
-    vertical-align: top;
-}
+
 .about_qd {
     background: #f3f3f3;
 }
@@ -7904,7 +7900,6 @@ body.the_studios2_page .home_screen h2 {
         font-size: 28px;
     }
     html {
-        position: fixed;
         width: 100%;
         height: 100%;
         top: 0;
@@ -8950,8 +8945,8 @@ body.the_studios2_page .home_screen h2 {
     .chairman_dream,
     .quote_position,
     .quote_name {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
     }
     .chairman_dream .text .slides .text_box,
     .chairman_dream .text .slides .chairman_dream_grey .text_box {
@@ -8978,8 +8973,8 @@ body.the_studios2_page .home_screen h2 {
         margin-bottom: 12px;
     }
     .block_box {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 16px;
+        line-height: 20px;
         background: #fff;
     }
     .mobile_img img {
@@ -9008,12 +9003,12 @@ body.the_studios2_page .home_screen h2 {
     }
     .wanda_studios .round_text,
     .wanda_studios .text {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
     }
     .round_text_inner,
     .wanda_studios .text_inner {
-        padding: 22px 21px;
+        padding: 40px 21px;
     }
     .wanda_studios .text p {
         padding: 18px 0 0 0;
@@ -9050,8 +9045,8 @@ body.the_studios2_page .home_screen h2 {
     }
     .team_detail .name {
         color: #999;
-        font-size: 15px;
-        line-height: 15px;
+        font-size: 20px;
+        line-height: 24px;
         padding: 0 20px 0 10px;
         margin-left: 20px;
         margin-top: 30px;
@@ -9060,8 +9055,8 @@ body.the_studios2_page .home_screen h2 {
     }
     .team_detail .position {
         color: #999;
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
         padding: 0 20px 0 10px;
         margin-left: 20px;
         margin-bottom: 19px;
@@ -9123,8 +9118,8 @@ body.the_studios2_page .home_screen h2 {
         background-position: 50% 50%;        
     }   
     .film_with_us {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
     }
     .film_with_us h2 {
         font-size: 24px;
@@ -9150,8 +9145,8 @@ body.the_studios2_page .home_screen h2 {
         margin: 0;
     }
     .film_with_us h3 {
-        font-size: 15px;
-        line-height: 18px;
+        font-size: 20px;
+        line-height: 24px;
         height: 36px;
         min-height: 36px;
         padding: 0 0 0 39px;
@@ -9833,4 +9828,23 @@ body > #Validform_msg {
 .foot_widget_last h3:nth-child(4),
 .search_form{
     display: none;
+}
+
+@media only screen and (min-width: 993px){
+    .ss_cols ul li {
+        width: 32.333% !important;
+        display: inline-block !important;
+        vertical-align: top;
+        float: none !important;
+    }
+    .ss_cols ul li.clone{
+        display: none !important;
+    }
+    .ss_cols .flex-direction-nav{
+        display: none !important;
+    }
+    .ss_cols ul.slides{
+        width: 100% !important;
+        transform: none !important;
+    }
 }

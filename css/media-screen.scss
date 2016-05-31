@@ -23,6 +23,27 @@
 		font-size: 24px;
 	}
 }
+@media only screen and (max-width: 1600px){
+	body.the_studios2_page{
+		.full_screen .td{
+			vertical-align: middle;
+		}
+		.full_screen .td .home_screen, .press_center_page .td_bottom .home_screen{
+			padding-bottom: 0;
+		}
+		.home_screen h2{
+			padding-top: 0;
+		}
+		.ss_cols{
+			padding: 0;
+			li{
+				.desktop_br{
+					display: none;
+				}
+			}
+		}
+	}
+}
 @media only screen and (max-width: 1024px){
 	.red_header{
 		.menu_btn{
@@ -324,6 +345,119 @@
 		-webkit-transform: rotate3d(0, 0, 1, -66deg) translate3d(0, -3em, 0);
 		transform: rotate3d(0, 0, 1, -66deg) translate3d(0, -3em, 0);
 	}
+	.view_video{
+		display: none;
+	}
+	/* Studios page */
+	body.the_studios2_page{
+		.map_btn{
+			display: none;
+		}
+		.chairman_dream{
+			.slider_btns{
+				display: none;
+			}
+		}
+		.flex-direction-nav{
+			position: static;
+		}
+		.flex-direction-nav a.flex-next,
+		.flex-direction-nav a.flex-prev{
+			width: 17px;
+			height: 34px;
+			top: 50%;
+			margin:0;
+			bottom: auto;
+		}
+		.flex-direction-nav a.flex-next{
+			background: url('../images/mobile/studio-arrow-right.png') no-repeat;
+			right: -20px;
+			left: auto;
+		}
+		.flex-direction-nav a.flex-prev{
+			background: url('../images/mobile/studio-arrow-left.png') no-repeat;
+			left: -20px;
+			right: auto;
+		}
+
+	}
+	.ss_cols{
+		margin-top: 40px;
+	}
+	.our_team_list h2{
+		padding: 40px 0 22px;
+	}
+	.film_with_us h3 [class^="icon-"], .film_with_us h3 [class*=" icon-"]{
+		font-size: 39px;
+		padding: 0;
+	}
+	.film_with_us h3{
+		padding: 0 0 0 50px;
+	}
+	html, body{
+		height: auto;
+		min-height: 100%;
+	}
+	body.red_header_fixed .tabs{
+		padding-top: 80px;
+	}
+	/* Tab nav */
+	.tab_nav{
+		ul{
+			margin: 18px 0 0;
+			background: #fff;
+			padding-top: 45px;
+		}
+
+		ul li{
+			display: none;
+			padding: 10px 0;
+			position: relative;
+			&.active{
+				display: block;
+				position: absolute;
+				top: 17px;
+				left: 0;
+				right: 0;
+				a{
+					position: relative;
+					&:after{
+						display: block;
+						content: '';
+						color: #ccc;
+						width: 11px;
+						height: 22px;
+						position: absolute;
+						background: url('../images/sub-menu-arr.png');
+						background-position: 0 -28px;
+						margin-top: -10px;
+						top: 50%;
+						right: -20px;
+						transform: rotate(90deg);
+					}
+				}
+				&:after{
+					display: none;
+				}
+			}
+		}
+		&.open{
+			li{
+				display: block;
+			}
+		}
+	}
+	/* Group */
+	.fl_specs .img h2, .block_box_title_wrapper h2.block_box_title {
+		font-size: 48px;
+		line-height: 52px;
+	}
+}
+@media only screen and (max-width: 992px){
+	.ss_cols{
+		max-width: 80%;
+
+	}
 }
 @media only screen and (max-width: 640px){
 	.main_nav_logo{
@@ -513,6 +647,43 @@
 		line-height: 14px;
 	}
 
+	body.the_studios2_page{
+
+		.flex-direction-nav a.flex-next,
+		.flex-direction-nav a.flex-prev{
+			width: 11px;
+			height: 21px;
+			background-size: cover !important;
+			margin-top: 8px;
+		}
+	}
+	.chairman_dream, .quote_position, .quote_name,
+	.wanda_studios .round_text, .wanda_studios .text,
+	.team_detail .position,
+	.film_with_us,
+	.block_box{
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.team_detail .name{
+		font-size: 15px;
+		line-height: 15px;
+	}
+	.film_with_us h3{
+		font-size: 16px;
+		line-height: 18px;
+	}
+	.round_text_inner, .wanda_studios .text_inner {
+		padding: 20px 21px;
+	}
+	.film_with_us h3 .td {
+		line-height: 22px;
+	}
+	/* Group */
+	.fl_specs .img h2, .block_box_title_wrapper h2.block_box_title {
+		font-size: 24px;
+		line-height: 26px;
+	}
 }
 
 /* Height */
