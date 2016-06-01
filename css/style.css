@@ -6012,19 +6012,32 @@ h1.detail_title {
     background-position: 0 -28px;
 }
 .about_page .tab_nav ul li:after {
-    display: block;
-    content: '';
-    color: #ccc;
-    width: 11px;
-    height: 22px;
-    position: absolute;
-    top: 58%;
-    right: 0;
-    background: url('../images/sub-menu-arr.png');
-    transform: translate(100%, -50%);
+    /*display: block;*/
+    /*content: '';*/
+    /*color: #ccc;*/
+    /*width: 11px;*/
+    /*height: 22px;*/
+    /*position: absolute;*/
+    /*top: 58%;*/
+    /*right: 0;*/
+    /*background: url('../images/sub-menu-arr.png');*/
+    /*transform: translate(100%, -50%);*/
+    content: "\e908";
+    background: none;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    right: 4px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .about_page .tab_nav ul li.active:after{
-    background-position: 0 -28px;
+    /*background-position: 0 -28px;*/
+    color: #b21727;
 }
 .about_page .tab_nav ul li:last-child:after{
     display: none;

@@ -82,6 +82,553 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 1440px) and (min-width: 1024px){
+	.logo{
+		width: 50px;
+	}
+	.header .logo {
+		top: 17px;
+	}
+	.main_nav_logo {
+		top: 17px;
+		width: 50px;
+	}
+	.header .menu_btn {
+		top: 25px;
+	}
+	.main_nav_close {
+		top: 29px;
+	}
+	.main_nav_close .icon-59 {
+		font-size: 24px;
+	}
+	.menu_btn [class^="icon-"], .menu_btn [class*=" icon-"] {
+		font-size: 31px;
+	}
+	/* Main menu */
+	.search_form input[type="text"]{
+		font-size: 23px;
+		padding: 12px 0;
+	}
+	.search_form .icon-60{
+		font-size: 30px;
+		top: 50px;
+	}
+	.main_nav_list{
+		margin-top: 70px;
+	}
+	.main_nav_inner h3, .main_nav_inner h3 a, .main_nav_list .left li a {
+		font-size: 18px;
+	}
+	.main_nav_list ul li a [class^="icon-"], .main_nav_list ul li a [class*=" icon-"]{
+		font-size: 22px;
+	}
+	.main_nav_list .left li{
+		padding-top: 35px;
+		line-height: 30px;
+	}
+	.main_nav_list ul li a{
+		line-height: 26px;
+		padding: 9px 0 9px 58px;
+	}
+	.main_nav_list .left ul ul li a,
+	.main_nav_list ul li a{
+		font-size: 16px;
+	}
+	.main_nav_list .left ul ul{
+		padding-top: 5px;
+	}
+	/* Footer */
+	.foot_logo_a{
+		width: 116px;
+	}
+	.foot_share a{
+		width: 76px;
+		height: 76px;
+	}
+	.foot_share [class^="icon-"], .foot_share [class*=" icon-"]{
+		font-size: 39px;
+		top: 16px;
+		left: 19px;
+	}
+	.foot_box {
+		padding-top: 19px;
+		padding-bottom: 19px;
+	}
+	.copyright, .copyright a{
+		font-size: 15px;
+	}
+	.map_btn > span span{
+		width: 33px;
+		height: 33px;
+		font-size: 33px;
+	}
+	.map_btn > span{
+		padding: 7px 0 7px 46px;
+	}
+	/* Next screen */
+	.next_screen{
+		width: 285px;
+		height: 64px;
+		margin-left: -142px;
+		background-size: cover;
+	}
+	.next_screen_ed {
+		margin-top: -64px;
+	}
+	.next_screen_mouse{
+		background: url(../images/next_screen_mouse.png) no-repeat 50% 13px;
+	}
+	.next_screen_mousewheel{
+		top: 24px;
+	}
+	/* About us page */
+	.landing_grids{
+		h2 {
+			font-size: 36px;
+			line-height: 36px;
+		}
+	}
+	.landing_grids ul,
+	.btn_medium, a.btn_medium {
+		font-size: 14px;
+		line-height: 24px;
+	}
+	/* The studios */
+	body.facilities_list_pages .home_screen h2 {
+		font-size: 42px;
+		line-height: 42px;
+	}
+	body.facilities_list_pages .home_screen{
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.view_video{
+		padding: 8px 0 12px 38px;
+		font-size: 16px;
+	}
+	.view_video [class^="icon-"], .view_video [class*=" icon-"]{
+		font-size: 27px;
+	}
+	.chairman_dream{
+		font-size: 16px;
+		line-height: 27px;
+		height: 450px;
+	}
+	.quote_name,
+	.quote_position,
+	.block_box{
+		line-height: 27px;
+		font-size: 18px;
+	}
+	.seasons_climate h2, .holdings h2.block_box_title, h2.block_box_title, .group_properties h2, .our_team_list h2 {
+		font-size: 38px;
+		line-height: 47px;
+	}
+	.team_detail .position{
+		font-size: 16px;
+		padding: 0 0 45px;
+	}
+	.team_detail .text{
+		font-size: 14px;
+		line-height: 27px;
+	}
+	.our_team .name {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.our_team_list_ul li{
+		margin: 0 0 40px;
+	}
+	.film_with_us{
+		font-size: 14px;
+		line-height: 18px;
+		h2{
+			font-size: 36px;
+			line-height: 42px;
+		}
+		h3{
+			height: 56px;
+			font-size: 16px;
+			[class^="icon-"],
+			[class*=" icon-"]{
+				font-size: 38px;
+			}
+		}
+		&_col{
+			ul{
+				li{
+					margin: 20px 0 0 0;
+					padding: 0 0 0 27px;
+				}
+			}
+		}
+	}
+	.button_box{
+		font-size: 27px;
+		line-height: 36px;
+		a{
+			height: 228px;
+			font-size: 27px;
+			line-height: 36px;
+		}
+		.arr{
+			padding: 29px 0 29px 108px;
+			[class^="icon-"],
+			[class*=" icon-"]{
+				margin: -40px 0 0 0;
+				padding: 24px 22px;
+				width: 80px;
+				height: 80px;
+				font-size: 30px;
+			}
+		}
+	}
+	.button_box_next .arr{
+		padding-right: 108px;
+		padding-left: 0;
+	}
+	/* The city */
+	.fl_specs .img h2, .block_box_title_wrapper h2.block_box_title{
+		font-size: 39px;
+		line-height: 46px;
+	}
+	.fl_specs .img, .fl_specs .text{
+		height: 408px;
+	}
+	.marine_page{
+		.fl_specs .img, .fl_specs .text{
+			height: 454px;
+		}
+	}
+	.about_qd .text{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.about_cols{
+		font-size: 15px;
+		line-height: 22px;
+		h3{
+			font-size: 19px;
+			line-height: 24px;
+			padding: 0 0 25px;
+		}
+		ul li{
+			margin-top: 22px;
+		}
+	}
+	.surroundings{
+		height: 537px;
+		font-size: 15px;
+		line-height: 22px;
+		h2{
+			font-size: 53px;
+			line-height: 59px;
+		}
+	}
+	.seasons_climate,
+	.hbg_slider_btns{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.hbg_slider_btns ul li{
+		width: 113px;
+		height: 113px;
+	}
+	.historical_bg{
+		font-size: 15px;
+		line-height: 22px;
+		h2{
+			font-size: 53px;
+			line-height: 59px;
+		}
+	}
+	.travel_times{
+		height: 720px;
+		h2{
+			font-size: 53px;
+			line-height: 59px;
+		}
+	}
+	.travel_cols{
+		padding: 16px 32px 40px;
+		h3{
+			font-size: 15px;
+			line-height: 22px;
+		}
+	}
+	.lifestyle_destination{
+		height: 585px;
+		font-size: 15px;
+		line-height: 22px;
+		h2{
+			font-size: 53px;
+			line-height: 59px;
+		}
+	}
+	/* The group */
+	.hr_box h2.block_box_title {
+		max-width: 330px;
+	}
+	.hr_box .specs_list{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.hr_box{
+		height: 735px;
+	}
+	.hr_box .specs_list ul li{
+		padding-bottom: 15px;
+	}
+	.group_properties{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.group_property_ul ul li .ico{
+		height: 126px;
+	}
+	.holdings{
+		padding-top: 58px;
+		padding-bottom: 34px;
+		height: 405px;
+		h2.block_box_title{
+			margin-bottom: 65px;
+		}
+	}
+	/* Home */
+	.light{
+		font-size: 30px;
+		line-height: 38px;
+	}
+	h2, h2 a{
+		font-size: 53px;
+		line-height: 57px;
+	}
+	.social_btns a{
+		width: 33px;
+		height: 33px;
+	}
+	.social_btns [class^="icon-"], .social_btns [class*=" icon-"] {
+		font-size: 16px;
+		line-height: 30px;
+	}
+	.side{
+		.ico{
+			height: 77px;
+			[class^="icon-"],
+			[class*=" icon-"]{
+				font-size: 27px;
+				width: 77px;
+				height: 77px;
+				padding: 24px 0;
+			}
+		}
+	}
+	/* IT Service */
+	.four_grids{
+		.landing_grids{
+			h2{
+				font-size: 30px;
+				line-height: 39px;
+			}
+			ul li .txt{
+				font-size: 15px;
+				line-height: 22px;
+			}
+		}
+	}
+	/* Incentives */
+	body.incentive_page .stage_screen_btns .big{
+		font-size: 27px;
+		line-height: 33px;
+	}
+	body.incentive_page .stage_screen_btns span, body.incentive_page .stage_screen_btns a,
+	body.incentive_page .stage_screen_btns a .table, body.incentive_page .stage_screen_btns a .td{
+		line-height: 24px;
+		width: 180px;
+		height: 180px;
+	}
+	body.incentive_page .stage_screen_btns span{
+		margin: 0 55px;
+	}
+	.incentive h2.block_box_title{
+		font-size: 36px;
+		line-height: 41px;
+	}
+	.content{
+		font-size: 15px;
+		line-height: 22px;
+		h3{
+			font-size: 18px;
+			line-height: 24px;
+		}
+		p{
+			padding-bottom: 22px;
+		}
+	}
+	/* Press center */
+	body.workshops_page .stage_screen_btns, body.facilities_list_pages.press_center_page .stage_screen_btns{
+		padding-top: 120px;
+	}
+	body.facilities_list_pages .stage_screen_btns a{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.stage_screen_btns > span, .stage_screen_btns a,
+	body.facilities_list_pages .stage_screen_btns a,
+	body.facilities_list_pages .stage_screen_btns a .table, body.facilities_list_pages .stage_screen_btns a .td{
+		height: 103px;
+	}
+	body.facilities_list_pages .stage_screen_btns a{
+		width: 103px;
+	}
+	.news .category{
+		margin-bottom: 15px;
+	}
+	.news .category,
+	.load_more a.load_more_btn{
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.news h2.title, .news h2.title a{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.news_item .img .date{
+		font-size: 24px;
+		line-height: 26px;
+		width: 54px;
+		height: 54px;
+	}
+	.news_item .img .date .month{
+		font-size: 15px;
+		line-height: 20px;
+	}
+	/* Contact */
+	.contact{
+		font-size: 15px;
+		line-height: 22px;
+		h2.block_box_title{
+			font-size: 44px;
+			line-height: 44px;
+		}
+	}
+	.contact_info ul li{
+		height: 48px;
+	}
+	.contact_info h3 {
+		font-size: 23px;
+		line-height: 30px;
+	}
+	.field input[type="text"], .field input[type="email"], .field input[type="tel"], .field input[type="password"], .field input[type="file"], .field textarea, .field select, .field .customSelect, .field .NFI-wrapper{
+		font-size: 15px;
+		line-height: 22px;
+		padding: 21px 0 12px;
+	}
+	.contact_info ul li [class^="icon-"],
+	.contact_info ul li [class*=" icon-"]{
+		font-size: 38px;
+	}
+	.contact_info,
+	.contact_form input[type="submit"],
+	.field label{
+		font-size: 15px;
+		line-height: 24px;
+	}
+	.contact_form input[type="submit"]{
+		height: 42px;
+		padding: 8px 78px;
+	}
+	.btn_medium, a.btn_medium{
+		padding: 6px 52px;
+	}
+	/* post production */
+	body.facilities_list_pages .stage_screen_btns a.tab_nav_small {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	/* Marine facilities */
+	.block h2.block_title{
+		font-size: 52px;
+		line-height: 52px;
+	}
+	.block{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.block_2{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.three_cols .text_box{
+		font-size: 30px;
+		line-height: 39px;
+	}
+	.three_cols ul li{
+		height: 606px;
+	}
+	/* Backlots */
+	.hws{
+		font-size: 15px;
+		line-height: 22px;
+		h3{
+			font-size: 30px;
+			line-height: 38px;
+		}
+	}
+	.red_cols{
+		padding: 56px 0 17px;
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.stage_detail_slider .slides > li .text{
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.round_nav_ul [class^="icon-"], .round_nav_ul [class*=" icon-"]{
+		font-size: 30px;
+		margin: -14px 0 0 -14px;
+	}
+	.round_nav_ul{
+		width: 51px;
+		left: 4px;
+		li a{
+			height: 51px;
+			span{
+				padding: 8px 0;
+				font-size: 15px;
+			}
+		}
+	}
+	/* Workshop */
+	.work_shop{
+		height: 810px;
+		font-size: 15px;
+		line-height: 28px;
+		.title h2 {
+			font-size: 23px;
+			line-height: 32px;
+		}
+	}
+	.work_shop .text h3{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.work_shops_close{
+		top: 60px;
+		right: 60px;
+		[class^="icon-"], [class*=" icon-"]{
+			font-size: 25px;
+		}
+	}
+	/* Services */
+	.sv_icons{
+		font-size: 15px;
+		padding-top: 109px;
+	}
+}
+
 @media only screen and (max-width: 1024px){
 	.red_header{
 		.menu_btn{
