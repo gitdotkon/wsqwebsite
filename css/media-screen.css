@@ -715,6 +715,153 @@
     font-size: 15px;
     padding-top: 109px;
   }
+
+  .line_title {
+    font-size: 19px;
+  }
+
+  .pre_production {
+    padding: 63px 0 50px 0;
+  }
+
+  .pre_production_inner ul li {
+    padding: 0 27px;
+  }
+
+  .four_grids .landing_grids ul li {
+    height: 367px;
+  }
+
+  /* Stages */
+  body.stages_page .home_screen h2 {
+    font-size: 52px;
+    line-height: 52px;
+  }
+
+  .stages_page .stage_screen_btns a {
+    width: 103px;
+  }
+
+  .stage_screen_btns a {
+    padding: 31px 10px;
+  }
+
+  .stage_btn_hover {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .stage_nav_container, .stage_nav_container a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .stage_nav_container ul li.active .a {
+    font-size: 54px;
+    line-height: 61px;
+  }
+
+  .stage_nav_container small, .stage_nav_container .a small {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .stage_screen_btns_wrapper .stage_screen_btns span a {
+    width: 69px;
+  }
+
+  .stage_nav_container ul li.active .stage_nav .dot {
+    background: #fff;
+  }
+
+  .stage_pic {
+    width: 466px;
+    height: 294px;
+    background-size: cover;
+    padding: 22px 33px 36px 26px;
+    margin: 15px 0;
+  }
+  .stage_pic h2 {
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .stage_pic .stage_pic_text {
+    padding: 0 0 24px;
+  }
+
+  .stage_list a {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 10px 41px 10px 32px;
+  }
+
+  .stage_list a .icon-5 {
+    top: 8px;
+    right: 8px;
+    font-size: 28px;
+  }
+
+  .stage_index {
+    font-size: 18px;
+  }
+
+  .stage_list_slider {
+    top: 30%;
+    left: 53px;
+    width: 646px;
+    height: 53.175%;
+  }
+
+  /* press center detail */
+  h1.detail_title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .stage_screen_btns_wrapper .stage_screen_btns span {
+    margin: 0 5px;
+  }
+
+  .side_stage_pic {
+    right: 6%;
+    width: 382px;
+  }
+
+  .stage_pic {
+    width: 387px;
+    height: 239px;
+    padding: 16px 28px 33px 22px;
+    background-size: cover;
+  }
+
+  .stage_list_slider {
+    width: 480px;
+    height: 360px;
+    left: 20px;
+    top: 50%;
+    margin: 0;
+  }
+
+  .stage_pic h2 {
+    padding: 0 0 8px;
+    margin: 0 0 8px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .stage_pic .stage_pic_text {
+    padding: 0 0 11px;
+  }
+
+  .stage_list_slider {
+    left: 20px;
+    top: 30%;
+    width: 552px;
+    height: 52.175%;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .red_header .menu_btn {
@@ -1167,6 +1314,9 @@
     font-size: 48px;
     line-height: 52px;
   }
+  .fl_specs .img h2 br, .block_box_title_wrapper h2.block_box_title br {
+    display: none;
+  }
 
   body.facilities_list_pages .header.red_header img {
     display: none;
@@ -1251,14 +1401,21 @@
   }
 
   body.incentive_page .stage_screen_btns span,
-  body.facilities_list_pages .stage_screen_btns a .td {
+  body.facilities_list_pages .stage_screen_btns a .td,
+  .stage_screen_btns span, .stage_screen_btns span:first-child, .stage_screen_btns span:last-child,
+  body.partner_directory_page .stage_screen_btns span {
     width: auto;
     height: auto;
   }
 
+  .facilities_list_pages .hover_btn:before, .facilities_list_pages a.hover_btn:before, .facilities_list_pages a.hover_btn.active:before {
+    -webkit-transform: rotate3d(0, 0, 1, -79deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -79deg) translate3d(0, -3em, 0);
+  }
+
   .tab_nav_small.hover_btn:before {
-    -webkit-transform: rotate3d(0, 0, 1, -78deg) translate3d(0, -3em, 0);
-    transform: rotate3d(0, 0, 1, -78deg) translate3d(0, -3em, 0);
+    -webkit-transform: rotate3d(0, 0, 1, -79deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -79deg) translate3d(0, -3em, 0);
   }
 
   .incentive {
@@ -1306,6 +1463,153 @@
   }
   .work_shops.four-tile .work_shops_tile .title {
     text-align: center;
+  }
+
+  .stages_page .map_btn,
+  .facilities_list_pages .map_btn {
+    display: none;
+  }
+
+  .marine_page .stage_screen_btns span, .marine_page .stage_screen_btns span:first-child, .marine_page .stage_screen_btns span:last-child {
+    width: auto;
+    height: auto;
+  }
+  .marine_page .hover_btn:before, .marine_page a.hover_btn:before, .marine_page a.hover_btn.active:before {
+    -webkit-transform: rotate3d(0, 0, 1, -77deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -77deg) translate3d(0, -3em, 0);
+  }
+  .marine_page .fl_specs .img {
+    padding: 15% 0;
+    position: relative;
+  }
+  .marine_page .fl_specs .img:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.2;
+    z-index: 1;
+  }
+  .marine_page .fl_specs .img .img_text {
+    z-index: 10;
+  }
+  .marine_page .fl_specs .text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .block_2 .block_inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .block_2 ul li {
+    margin-left: 0;
+  }
+
+  .specs_table {
+    min-width: 800px;
+  }
+
+  .marine_page .fl_specs .text {
+    overflow-x: scroll;
+  }
+
+  .specs_table td {
+    font-size: 11px;
+  }
+
+  .specs_table th {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .map_btn {
+    display: none;
+  }
+
+  .three_cols ul li {
+    width: 100%;
+    float: none;
+    padding-bottom: 50%;
+    height: auto;
+  }
+
+  .three_cols .text_box {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .three_cols .three_cols_subtitle {
+    transform: none;
+    left: 0;
+    position: relative;
+  }
+
+  .vendors_tenants h2.block_box_title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .vendors_tenants .text {
+    padding: 0 0 50px;
+  }
+
+  .vendors_tenants ul {
+    padding-bottom: 0;
+  }
+
+  body.partner_directory_page .full_screen .td_middle .home_screen {
+    margin-bottom: 0;
+  }
+
+  .news_item_w2_h2,
+  .news_item_w2,
+  .news_item {
+    width: 100%;
+  }
+
+  .news_item_fr {
+    float: none;
+  }
+
+  .news_item {
+    height: auto;
+  }
+  .news_item .text {
+    height: auto;
+    position: relative;
+    padding: 15px;
+    width: 100%;
+  }
+  .news_item .img {
+    position: relative;
+    padding-bottom: 50%;
+    height: auto;
+    width: 100%;
+  }
+
+  .news_item_ml {
+    margin-left: 0;
+  }
+
+  .news_item_w2_h2 .img:before,
+  .news_item_w2 .img:before,
+  .news_item .img:before {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 15px;
+    background: url(../images/news_arr_up.png) no-repeat 50% 50%;
+  }
+
+  .load_more a.load_more_btn {
+    padding: 14px 72px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -1700,6 +2004,59 @@
   .landing_grids ul li {
     width: 100%;
   }
+
+  .block {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .block_2 {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 20px;
+  }
+
+  .marine_page .fl_specs .text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  body.facilities_list_pages .stage_screen_btns span {
+    margin: 10px 10px;
+  }
+
+  .full_screen .td .home_screen, .press_center_page .td_bottom .home_screen {
+    padding-bottom: 0;
+  }
+
+  .tab_nav, .tab_nav a {
+    font-size: 12px;
+  }
+
+  .three_cols .text_box {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .content ul li, .content ol ol li, .content ol ul li, .content ul ol li, .content ul ul li {
+    background-position: 0 4px;
+  }
+
+  .vendors_tenants h2.block_box_title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .load_more a.load_more_btn {
+    padding: 10px 50px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+}
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .full_screen {
+    min-height: 500px;
+  }
 }
 @media only screen and (max-width: 480px) {
   body.incentive_page .stage_screen_btns span {
@@ -1713,7 +2070,7 @@
   }
 
   body.incentive_page .stage_screen_btns .big {
-    font-size: 22px;
+    font-size: 14px;
   }
 }
 

@@ -843,7 +843,7 @@ jQuery(document).ready(function ($) {
                 if($(window).width()<1024){
                     var parent = $(this).closest('.tab_nav');
                     if($(parent).hasClass('open')){
-                        if($('body').hasClass('incentive_page')){
+                        if($('body').hasClass('incentive_page') || $('body').hasClass('marine_page') || $('body').hasClass('facilities_list_pages')){
                             var index = $(this).parent('li').index();
                             $('.tab_nav .active').removeClass('active');
                             $(this).parent('li').addClass('active');

@@ -6431,8 +6431,8 @@ body.partner_directory_page .stage_screen_btns a.hover_btn:before,
 body.incentive_page .stage_screen_btns .hover_btn:before, 
 body.incentive_page .stage_screen_btns a.hover_btn:before,
 .tab_nav_small.hover_btn:before {
-    -webkit-transform: rotate3d(0, 0, 1, -69deg) translate3d(0, -3em, 0);
-    transform: rotate3d(0, 0, 1, -69deg) translate3d(0, -3em, 0);
+    -webkit-transform: rotate3d(0, 0, 1, -74deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -74deg) translate3d(0, -3em, 0);
 }
 @media only screen and (min-width: 1025px) {
     body.partner_directory_page .stage_screen_btns .hover_btn:hover:before,
@@ -6848,9 +6848,6 @@ body.the_studios2_page .home_screen h2 {
     }     
     .round_nav_ul li {
         margin-top: 10px;
-    }
-    .specs_table td {
-        font-size: 12px;
     }
     .specs_table th {
         font-size: 16px;
@@ -7887,22 +7884,6 @@ body.the_studios2_page .home_screen h2 {
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    .stage_screen_btns_wrapper .stage_screen_btns span {
-        margin: 0 5px;
-    }
-    .side_stage_pic {
-        width: 622px;
-        right: 0;
-    }
-    .stage_list_slider {
-        width: 480px;
-        height: 360px;
-        left: 20px;
-        top: 50%;
-        margin: -180px 0 0 0;
-    }
-}
 
 @media only screen and (min-width: 1025px) {
     body.facilities_landing_page .footer {
@@ -9595,8 +9576,8 @@ body.the_studios2_page .home_screen h2 {
     }
     body.facilities_list_pages .stage_screen_btns a .table, 
     body.facilities_list_pages .stage_screen_btns a .td,
-    .stage_screen_btns span, 
-    .stage_screen_btns span:first-child, 
+    .stage_screen_btns span,
+    .stage_screen_btns span:first-child,
     .stage_screen_btns span:last-child {
         width: 81px;
         height: 81px;
@@ -9743,10 +9724,7 @@ body.the_studios2_page .home_screen h2 {
     .fl_specs .img h2 br{
         display: none;
     }
-    .block {
-        font-size: 11px;
-        line-height: 17px;
-    }
+
     .block h2.block_title {
         font-size: 24px;
         line-height: 26px;
@@ -9756,17 +9734,10 @@ body.the_studios2_page .home_screen h2 {
     .block_inner {
         padding: 34px 16px 40px;
     }
-    .block_2 {
-        font-size: 12px;
-        line-height: 15px;
-        padding: 0 20px;
-    }
+
     .block_2 ul li {
         width: auto;
         float: none;
-    }
-    .block_2 img {
-        width: 100%;
     }
     .block_box_title_wrapper {
         position: relative;
