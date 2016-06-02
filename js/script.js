@@ -702,6 +702,11 @@ jQuery(document).ready(function ($) {
                     });
                 }
 
+            }else{
+                var src = $(this).attr('data-id');
+                if(src){
+                    $lightbox.find('iframe').attr('src', src);
+                }
             }
             $('.lightbox_visible').removeClass('lightbox_visible');
             $lightbox.addClass('lightbox_visible');
@@ -1252,6 +1257,7 @@ jQuery(document).ready(function ($) {
         $('.tab_nav .active').removeClass('active');
         $('.tabs .tab_active').removeClass('tab_active');
         $('.tabs').find('.tab').eq(0).addClass('tab_active');
+        $('.hover_btn.active').removeClass('active');
         return false;
     });
 
