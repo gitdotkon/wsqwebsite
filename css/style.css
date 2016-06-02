@@ -2148,7 +2148,8 @@ body.facilities_list_pages#screen_visible_1 .livechat_btn_up {
 }
 body.stage_page .menu_btn,
 body.facilities_list_pages#screen_visible_1 .menu_btn {
-    background-image: url(../images/menu_btn_red.png);    
+    background: none;
+    color: #ab081a;
 }
 body.home_screen_invisible .header:before {
     opacity: 0;
@@ -3784,6 +3785,8 @@ body.main_nav_visible .main_nav {
 }
 .main_nav_logo img {
     display: block;
+    width: 65px;
+    height: 61px;
 }
 .main_nav_inner {
     position: absolute;
@@ -5960,7 +5963,7 @@ h1.detail_title {
 .red_header .menu_btn {
     color: #ab081a;
     /*background-image: url(../images/menu_btn_red.png);*/
-}   
+}
 .red_header .livechat_btn_up {
     color: #ab081a;    
     /*background-image: url(../images/livechat_btn_red.png);*/
@@ -7189,6 +7192,7 @@ body.the_studios2_page .home_screen h2 {
     }
     .logo img {
         display: block;
+        width: 65px;
     }
     .all_view {
         display: block;
@@ -7646,6 +7650,9 @@ body.the_studios2_page .home_screen h2 {
     .foot_logo {
         float: left;
         display: block;
+        width: 155px;
+        height: 109px;
+        opacity: 0.7;
     }
     .foot_logo img {
         display: block;
@@ -9834,4 +9841,7 @@ body > #Validform_msg {
         width: 100% !important;
         transform: none !important;
     }
+}
+.stages_page.footer_visible .map_btn{
+    display: none;
 }
