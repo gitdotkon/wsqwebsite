@@ -3394,7 +3394,7 @@ body.facilities_list_pages.press_center_page .stage_screen_btns {
 .fl_specs .img,
 .fl_specs .text {
     width: 50%;
-    height: 544px;
+    height: 540px;
     float: left;
 }
 .fl_specs .img_text {
@@ -3433,7 +3433,7 @@ body.facilities_list_pages.press_center_page .stage_screen_btns {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1px;
     background: url(../images/fl_specs_rd.png) no-repeat 100% 50%; 
     background-size: auto 100%;
     z-index: 111;
@@ -3717,7 +3717,7 @@ body.facilities_list_pages.press_center_page .stage_screen_btns {
     background: #fff;
 }
 .block_2 .block_inner {
-    padding: 38px 0 65px;
+    padding: 38px 20px 65px;
     max-width: 1680px;
     margin: 0 auto;    
 }
@@ -3731,11 +3731,18 @@ body.facilities_list_pages.press_center_page .stage_screen_btns {
     margin: 0 auto 20px;
 }
 .block_2 ul {
+    margin: 0 -20px;
     padding: 20px 0 0 0;
 }
+.block_2 ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
 .block_2 ul li {
-    width: 22.5%;
-    margin: 0 0 20px 3.333%;
+    width: 25%;
+    margin: 0 0 20px 0;
+    padding: 0 20px;
     float: left;
 }
 .block_2 ul li.no_ml {
@@ -7131,7 +7138,7 @@ body.the_studios2_page .home_screen h2 {
         padding-bottom: 30px;
     }
     .work_shop .text {
-        width: 66%;
+        width: 75%;
     }
 }
 
@@ -7651,7 +7658,7 @@ body.the_studios2_page .home_screen h2 {
         float: left;
         display: block;
         width: 155px;
-        height: 109px;
+        /*height: 109px;*/
         opacity: 0.7;
     }
     .foot_logo img {
@@ -9830,6 +9837,7 @@ body > #Validform_msg {
         display: inline-block !important;
         vertical-align: top;
         float: none !important;
+        padding: 0 30px;
     }
     .ss_cols ul li.clone{
         display: none !important;
@@ -9844,4 +9852,7 @@ body > #Validform_msg {
 }
 .stages_page.footer_visible .map_btn{
     display: none;
+}
+.red_header_fixed .four_grids{
+    padding-top: 100px;
 }

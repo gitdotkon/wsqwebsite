@@ -64,11 +64,11 @@ jQuery(document).ready(function ($) {
         }, function(){
 
         });
-        $('.news_nav').hover(function(){}, function(){
-            $('.news_nav').slideUp(300, function(){
-                $('.tab_nav .news_a').removeClass('open');
-            });
-        });
+        // $('.news_nav').hover(function(){}, function(){
+        //     $('.news_nav').slideUp(300, function(){
+        //         $('.tab_nav .news_a').removeClass('open');
+        //     });
+        // });
         /* Mouse over */
         var query = window.location.hash;
         if(query){
@@ -100,7 +100,6 @@ jQuery(document).ready(function ($) {
         var path_name = window.location.pathname;
         var current_url = $(this).attr('href');
         var only_url = current_url.split('#');
-        console.log(only_url);
         if(path_name.indexOf(only_url[0])>0){ // the same page
             if(only_url.length>1){
                 var new_hash = '#'+only_url[1];
@@ -496,7 +495,6 @@ jQuery(document).ready(function ($) {
                 globalDelta = 0;
             }
 
-            console.log(globalDelta);
             // if($(window).width() <1024){
             //     if (globalDelta<0){
             //         $('.full_screen .header').addClass('mobile_header');
@@ -603,7 +601,6 @@ jQuery(document).ready(function ($) {
                 if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')) {
                     $body.swipe({
                         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                            console.log('Lol');
                             if ('up' == direction) {
                                 var index = $wrapper.data('swipe-index');
                                 if (index != slide_count) {
@@ -773,7 +770,6 @@ jQuery(document).ready(function ($) {
                 $('.stage_list_trigger[data-target="' + $(slider).parent('.stage_list_slider').attr('id') + '"]').find('.stage_item_trigger').mouseover(function () {
                     if($.isFunction(slider.flexAnimate)){
                         var index = $(this).index();
-                        console.log(index);
                         slider.flexAnimate(index);
                     }
                 });
@@ -839,12 +835,12 @@ jQuery(document).ready(function ($) {
                 // });
             },
             before: function($slider){
-                console.log($slider);
+
             }
         });
 
         if(!$('body').hasClass('workshops_page') && !$('body').hasClass('press_center_page')){
-            $('.tab_nav a').click(function () {
+            $('.tab_nav a').click(function() {
                 if($(window).width()<1024){
                     var parent = $(this).closest('.tab_nav');
                     if($(parent).hasClass('open')){
@@ -888,6 +884,7 @@ jQuery(document).ready(function ($) {
 
             });
         }
+
         if($('body').hasClass('press_center_page')){
             $('.tab_nav a').click(function () {
                 if($('body').hasClass('disable_tab')){
@@ -914,22 +911,69 @@ jQuery(document).ready(function ($) {
             start: function($slider){
                 $('.tab_nav a').click(function(){
                     var index = $(this).parent('li').index();
-                    $('.tabs').find('.tab_active').removeClass('tab_active');
-                    $('.tabs').find('.tab').eq(1).addClass('tab_active');
+                    if($(window).width()>1024){
 
-                    $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
-                    $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
+                        $('.tabs').find('.tab_active').removeClass('tab_active');
+                        $('.tabs').find('.tab').eq(1).addClass('tab_active');
 
-                    $('html, body').animate({
-                        scrollTop: $(window).height()
-                    }, 360);
-                    $slider.flexAnimate(index);
-                    return false;
+                        $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
+                        $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
+
+                        $('html, body').animate({
+                            scrollTop: $(window).height()
+                        }, 360);
+                        $slider.flexAnimate(index);
+                        console.log(index);
+                        return false;
+                    }else{
+                        var parent = $(this).closest('.tab_nav');
+
+                        if($(parent).hasClass('open')){
+                            $(parent).removeClass('open');
+                            console.log(index);
+                            $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
+                            $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
+                            if($('.tab.tab_tile.tab_active').length>0){
+                                $('.tab.tab_tile.tab_active').removeClass('tab_active');
+                                $('.tab.tab_slider').addClass('tab_active');
+                            }else{
+
+                            }
+                            $slider.flexAnimate(index);
+
+                        }else{
+                            $(parent).addClass('open');
+
+                        }
+                        console.log(index);
+                        $slider.flexAnimate(index);
+                        return false;
+                        // if($(parent).hasClass('open')){
+                        //     $(parent).removeClass('open');
+                        //
+                        // }else{
+                        //     $(parent).addClass('open');
+                        //
+                        // }
+                        // $('.tab_nav .active').removeClass('active');
+                        // $(this).parent('li').addClass('active');
+                        // $('.tab_active').removeClass('tab_active');
+                        // $('.tab').eq(index).addClass('tab_active');
+                        //
+                        // $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
+                        // $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
+                        //
+                        // $('html, body').animate({
+                        //     scrollTop: $(window).height()
+                        // }, 360);
+                        // $slider.flexAnimate(index);
+                        // return false;
+                    }
                 });
 
                 $('#workshop_four_tile').find('.work_shops_tile').click(function(){
                     var index = $(this).index();
-
+                    console.log(index);
                     $('.tabs').find('.tab_active').removeClass('tab_active');
                     $('.tabs').find('.tab').eq(1).addClass('tab_active');
                     $('html, body').animate({
@@ -941,6 +985,8 @@ jQuery(document).ready(function ($) {
             before: function($slider){
                 $('.tab_nav').find('.active').removeClass('active');
                 $('.tab_nav').find('li').eq($slider.animatingTo).addClass('active');
+                $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
+                $('.stage_screen_btns_trigger .animate_up').eq($slider.animatingTo).find('.tab_nav_trigger').addClass('active');
             }
         });
 
@@ -1255,6 +1301,7 @@ jQuery(document).ready(function ($) {
     $('.work_shops_close').click(function () {
         // $(this).parents('.work_shops').slideUp();
         $('.tab_nav .active').removeClass('active');
+        $('.tab_nav.open').removeClass('open');
         $('.tabs .tab_active').removeClass('tab_active');
         $('.tabs').find('.tab').eq(0).addClass('tab_active');
         $('.hover_btn.active').removeClass('active');

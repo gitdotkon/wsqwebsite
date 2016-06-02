@@ -61,6 +61,14 @@
 		font-size: 24px;
 	}
 }
+@media only screen and (max-width: 1650px) and (min-width: 1441px){
+	.fl_specs .img{
+		width: 40%;
+	}
+	.fl_specs .text{
+		width: 60%;
+	}
+}
 @media only screen and (max-width: 1600px){
 	body.the_studios2_page{
 		.full_screen .td{
@@ -91,7 +99,7 @@
 		top: 17px;
 	}
 	.main_nav_logo {
-		top: 17px;
+		top: 10px;
 		width: 50px;
 	}
 	.header .menu_btn {
@@ -119,7 +127,7 @@
 		margin-top: 70px;
 	}
 	.main_nav_inner h3, .main_nav_inner h3 a, .main_nav_list .left li a {
-		font-size: 18px;
+		font-size: 22px;
 	}
 	.main_nav_list ul li a [class^="icon-"], .main_nav_list ul li a [class*=" icon-"]{
 		font-size: 22px;
@@ -134,7 +142,7 @@
 	}
 	.main_nav_list .left ul ul li a,
 	.main_nav_list ul li a{
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.main_nav_list .left ul ul{
 		padding-top: 5px;
@@ -295,7 +303,7 @@
 		line-height: 46px;
 	}
 	.fl_specs .img, .fl_specs .text{
-		height: 408px;
+		height: 478px;
 	}
 	.marine_page{
 		.fl_specs .img, .fl_specs .text{
@@ -372,7 +380,7 @@
 		max-width: 330px;
 	}
 	.hr_box .specs_list{
-		font-size: 15px;
+		font-size: 18px;
 		line-height: 22px;
 	}
 	.hr_box{
@@ -386,7 +394,7 @@
 		line-height: 22px;
 	}
 	.group_property_ul ul li .ico{
-		height: 126px;
+		height: 169px;
 	}
 	.holdings{
 		padding-top: 58px;
@@ -443,15 +451,13 @@
 		font-size: 27px;
 		line-height: 33px;
 	}
-	body.incentive_page .stage_screen_btns span, body.incentive_page .stage_screen_btns a,
+	body.incentive_page .stage_screen_btns a,
 	body.incentive_page .stage_screen_btns a .table, body.incentive_page .stage_screen_btns a .td{
 		line-height: 24px;
 		width: 180px;
 		height: 180px;
 	}
-	body.incentive_page .stage_screen_btns span{
-		margin: 0 55px;
-	}
+
 	.incentive h2.block_box_title{
 		font-size: 36px;
 		line-height: 41px;
@@ -492,8 +498,8 @@
 		line-height: 24px;
 	}
 	.news h2.title, .news h2.title a{
-		font-size: 15px;
-		line-height: 22px;
+		font-size: 18px;
+		line-height: 24px;
 	}
 	.news_item .img .date{
 		font-size: 24px;
@@ -603,7 +609,7 @@
 	}
 	/* Workshop */
 	.work_shop{
-		height: 810px;
+		height: 630px;
 		font-size: 15px;
 		line-height: 28px;
 		.title h2 {
@@ -666,8 +672,19 @@
 		font-size: 22px;
 		line-height: 28px;
 	}
+	.stage_screen_btns_wrapper{
+		top: 10px;
+	}
 	.stage_screen_btns_wrapper .stage_screen_btns span a{
-		width: 69px;
+		width: 49px;
+		height: 49px;
+		font-size: 16px;
+		line-height: 20px;
+		padding: 14px 5px;
+	}
+	.stage_screen_btns_wrapper .stage_screen_btns span{
+		width: 49px;
+		height: 49px;
 	}
 	.stage_nav_container ul li.active .stage_nav .dot{
 		background: #fff;
@@ -711,6 +728,65 @@
 	h1.detail_title{
 		font-size: 30px;
 		line-height: 36px;
+	}
+	body.incentive_page.facilities_list_pages{
+		.stage_screen_btns span{
+			margin: 0 55px;
+		}
+		.stage_screen_btns span,
+		.stage_screen_btns a,
+		.stage_screen_btns a .table{
+
+			width: 150px;
+			height: 150px;
+		}
+	}
+	body.incentive_page .full_screen .td .home_screen {
+		padding-bottom: 130px;
+	}
+	.red_header_fixed .four_grids{
+		padding-top: 94px;
+	}
+	.tab_nav ul li.news_a:before{
+		top: 65px;
+	}
+	.fl_specs .img {
+		width: 30%;
+	}
+	.fl_specs .text {
+		width: 70%;
+	}
+	.foot_right{
+		.grey_border_span [class^="icon-"], .grey_border_span [class*=" icon-"] {
+			font-size: 29px;
+			padding: 19px 0;
+		}
+		.grey_border_span{
+			width: 64px;
+			height: 64px;
+		}
+	}
+	.ss_cols{
+		max-width: 97%;
+	}
+	.qrcode{
+		width: 98px;
+	}
+	.block_2 .block_inner{
+		max-width: 92%;
+	}
+	.red_header_fixed .hr_box .specs{
+		padding-top: 62px;
+	}
+}
+@media only screen and (max-width: 1440px) and (min-width: 1250px){
+	/* tmp */
+	.foot_widgets h3, .foot_widgets h3 a{
+		font-size: 23px;
+		line-height: 25px;
+	}
+	.foot_widget {
+		padding-left: 92px;
 	}
 }
 @media only screen and (max-width: 1200px) {
@@ -1428,6 +1504,64 @@
 	.load_more a.load_more_btn{
 		padding: 14px 72px;
 	}
+	/* Workshop */
+	.flexslider .work_shop .text{
+		width: 100%;
+		position: relative;
+		height: auto;
+		padding: 40px 64px 40px 78px;
+	}
+	.flexslider .work_shop .title{
+		position: relative;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		margin-bottom: 50px;
+		padding: 50px 0;
+	}
+	.work_shop{
+		height: auto;
+	}
+	.work_shop .text:after{
+		background: url('../images/work_shop_arr_hor.png') no-repeat center;
+		height: 72px;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: -72px;
+	}
+	.work_shops_close{
+		top: 223px;
+		right: 27px;
+	}
+	.work_shops .flex-direction-nav a.flex-next{
+		right: 20px;
+	}
+	.work_shops .flex-direction-nav a.flex-prev{
+		right: 75px;
+	}
+	.work_shops .flex-direction-nav a.flex-next,
+	.work_shops .flex-direction-nav a.flex-prev{
+		bottom: 0;
+	}
+	.stage_page{
+		.menu_btn span{
+			display: block;
+		}
+		.menu_btn [class^="icon-"], .menu_btn [class*=" icon-"]{
+			font-size: 32px;
+		}
+		.header .menu_btn {
+			top: 13px;
+			right: 30px;
+		}
+	}
+	.specs_list .label {
+		width: 160px;
+	}
+	.spec {
+		margin-left: 173px;
+	}
 }
 @media only screen and (max-width: 992px){
 	.ss_cols{
@@ -1816,6 +1950,9 @@
 	body.facilities_list_pages .stage_screen_btns span {
 		margin: 10px 10px;
 	}
+	body.facilities_list_pages.workshops_page .stage_screen_btns span{
+		margin: 18px;
+	}
 	.full_screen .td .home_screen, .press_center_page .td_bottom .home_screen {
 		padding-bottom: 0;
 	}
@@ -1837,6 +1974,45 @@
 		padding: 10px 50px;
 		font-size: 17px;
 		line-height: 20px;
+	}
+
+	/* Workshop */
+	.work_shops.four-tile .work_shops_tile{
+		width: 100%;
+	}
+	.flexslider .work_shop .text{
+		padding: 30px 58px 30px 20px;
+	}
+	.work_shop .text ul li {
+		padding: 0 0 10px 28px;
+		background-position:  0 5px;
+	}
+	.work_shops_close{
+		.icon-59{
+			font-size: 25px;
+		}
+	}
+	.work_shop .title h2 {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.work_shop{
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.specs_list .label{
+		float: none;
+		width: auto;
+	}
+	.spec{
+		margin-top: 10px;
+		margin-left: 0;
+	}
+	.specs_list ul li {
+		padding: 10px 0 10px 15px;
+	}
+	.specs.mobile_specs{
+		margin-bottom: 30px;
 	}
 }
 @media only screen and (max-height: 500px) and (orientation: landscape){
