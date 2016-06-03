@@ -843,7 +843,11 @@ jQuery(document).ready(function ($) {
             $('.tab_nav a').click(function() {
                 if($(window).width()<1024){
                     var parent = $(this).closest('.tab_nav');
+
                     if($(parent).hasClass('open')){
+                        if($('body').hasClass('about_page')){
+                            return true;
+                        }
                         if($('body').hasClass('incentive_page') || $('body').hasClass('marine_page') || $('body').hasClass('facilities_list_pages')){
                             var index = $(this).parent('li').index();
                             $('.tab_nav .active').removeClass('active');
