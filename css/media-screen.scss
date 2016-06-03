@@ -1365,7 +1365,10 @@
 			}
 		}
 	}
-
+	.main_nav_logo{
+		top: 0;
+		left: 18px;
+	}
 	.about_us_page{
 		.landing_grids{
 			ul li{
@@ -1569,6 +1572,70 @@
 	.spec {
 		margin-left: 173px;
 	}
+	/* Main menu */
+	.main_nav_list h3{
+		position: relative;
+		span.menu-expand{
+			background: url('../images/sub-menu-arr2.png') no-repeat;
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			top: 21px;
+			right: 4px;
+			z-index: 100;
+			width: 13px;
+			height: 7px;
+			background-size: cover;
+		}
+	}
+	.main_nav_list{
+		.middle,
+		.right{
+			h3{
+				border-bottom: 1px solid #d3d3d3;
+			}
+			ul{
+				padding-top: 19px;
+				display: none;
+				li{
+					border-bottom: 1px solid #d3d3d3;
+					margin: 0 20px 12px 40px;
+					&:first-child{
+						border-top: none;
+					}
+					&:last-child{
+						border-bottom: none;
+					}
+					a{
+						color: #505050;
+						font-size: 18px;
+						font-family: 'avenir_lt_55_romanroman';
+						line-height: 28px;
+						display: block;
+						padding: 0;
+						position: relative;
+					}
+				}
+			}
+			&.active{
+				h3{
+					a{
+						color: #de302f;
+					}
+				}
+			}
+			&.open{
+				ul{
+					display: block;
+				}
+				h3{
+					span.menu-expand{
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
 }
 @media only screen and (max-width: 992px){
 	.ss_cols{
@@ -1586,7 +1653,7 @@
 @media only screen and (max-width: 640px){
 	.main_nav_logo{
 		left: 20px;
-		top: 14px;
+		top: 0;
 		max-width: 32px;
 	}
 	.main_nav_close{
@@ -1626,11 +1693,12 @@
 	.main_nav_list .left li a,
 	.main_nav_inner h3,
 	.main_nav_list ul li a,
-	.main_nav_inner h3 a {
+	.main_nav_inner h3 a,
+	.main_nav_list .middle ul li a, .main_nav_list .right ul li a{
 		display: block;
 		padding: 4px 0;
 		font-size: 12px;
-		font-family: 'avenir_lt_55_romanheavy';
+		font-family: 'avenir_lt_55_romanroman';
 	}
 	.main_nav_list .left ul ul li a{
 		font-size: 12px;
@@ -1638,10 +1706,11 @@
 	.main_nav_list .left li.has-submenu span.menu-expand{
 		top: 21px;
 		right: 4px;
-		width: 13px;
-		height: 7px;
+		width: 15px;
+		height: 8px;
 		background-size: 100%;
 	}
+
 	.lang_switcher{
 		padding: 25px 0;
 	}

@@ -125,6 +125,14 @@ jQuery(document).ready(function ($) {
         }
 
     });
+
+    $('.main_nav_list h3 span.menu-expand, .main_nav_list h3 span.menu-expand').click(function(){
+        console.log('Lo');
+        var parent = $(this).closest('div');
+        $(parent).find('ul').slideToggle();
+        $(parent).toggleClass('open');
+    });
+
     /* Sub menu */
     $(window).load(function () {
         var $body = $('body'),

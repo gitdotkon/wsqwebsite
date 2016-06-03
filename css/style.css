@@ -9856,3 +9856,6 @@ body > #Validform_msg {
 .red_header_fixed .four_grids{
     padding-top: 100px;
 }
+.main_nav_list h3 span.menu-expand{
+    display: none;
+}
