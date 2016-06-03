@@ -7642,7 +7642,7 @@ body.the_studios2_page .home_screen h2 {
         transition: all .4s cubic-bezier(.19,1,.22,1);
     }
     body.footer_visible .wrapper {
-        top: -630px;
+        top: -628px;
     }
     body.facilities_landing_page .wrapper {
         top: 0;
@@ -8594,9 +8594,9 @@ body.the_studios2_page .home_screen h2 {
         overflow: auto;
         */
     }
-    body.stages_page {
-        padding: 58px 0 0;
-    }
+    /*body.stages_page {*/
+        /*padding: 58px 0 0;*/
+    /*}*/
     .stages_home_screen .br {
         display: none;
     }
@@ -8660,19 +8660,19 @@ body.the_studios2_page .home_screen h2 {
     .mobile_stages_slider .flex-control-nav {
         display: none;
     }
-    body.stages_page .wrapper .slide {
-        height: 50%;
-    }
-    body.stages_page .wrapper .mobile_stage_slide {
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+    /*body.stages_page .wrapper .slide {*/
+        /*height: 50%;*/
+    /*}*/
+    /*body.stages_page .wrapper .mobile_stage_slide {*/
+        /*overflow-y: auto;*/
+        /*-webkit-overflow-scrolling: touch;*/
+    /*}*/
     body.stages_page .stage_screen_tile,
     body.stages_page .stage_nav_container {
         display: none;
     }
     .mobile_stages_slider {
-        padding: 78px 20px 13px;
+        padding: 0px 20px 40px;
         position: relative;
     }
     .mobile_stages_slider:after {
@@ -8710,45 +8710,58 @@ body.the_studios2_page .home_screen h2 {
     }  
     .mobile_stages_slider_inner {
         position: relative;
-        padding: 67px 0 0 0;
+        padding: 17px 0 0 0;
     }
     .mobile_stages_slider_nav {
-        border: 1px solid #969696;
-        position: relative;
         padding: 0 0 0 0;
-        background: #fff url(../images/mobile/mobile_stages_slider_nav_open.png) no-repeat 50% -99999px;   
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;     
+        top: 15px;
+        left: 56px;
+        right: 56px;
         z-index: 4444;        
     }
-    .mobile_stages_slider_nav:before {
-        display: block;
-        content: ' ';
-        width: 21px;
-        height: 23px;
-        position: absolute;
-        top: 11px;
-        right: 9px;
-        background: url(../images/mobile/mobile_stages_slider_nav.png) no-repeat 50% 50%;
-        background-size: 100% auto;
-    }
+    /*.mobile_stages_slider_nav:before {*/
+        /*display: block;*/
+        /*content: ' ';*/
+        /*width: 21px;*/
+        /*height: 23px;*/
+        /*position: absolute;*/
+        /*top: 11px;*/
+        /*right: 9px;*/
+        /*background: url(../images/mobile/mobile_stages_slider_nav.png) no-repeat 50% 50%;*/
+        /*background-size: 100% auto;*/
+    /*}*/
     body.mobile_stages_slider_nav_open .mobile_stages_slider_nav:before {
         background-image: url(../images/mobile/mobile_stages_slider_nav_open.png);
     }
     .mobile_stages_slider_nav,
     .mobile_stages_slider_nav a {
-        color: #141414;
+        color: #ab081a;
         font-size: 15px;
         text-shadow: none;
         font-family: 'avenir_lt_55_romanheavy';   
         line-height: 29px;
         text-transform: uppercase;
+        text-align: center;
     }
     .mobile_stages_slider_nav a {
+        position: relative;
+        display: inline-block;
+        padding: 8px 8px 8px 8px;
+    }
+    .mobile_stages_slider_nav  .active a:after{
         display: block;
-        padding: 8px 39px 8px 14px;
+        content: '';
+        color: #ccc;
+        position: absolute;
+        background-position: 0 -28px;
+        top: 50%;
+        right: -20px;
+        background: url("../images/mobile/tab-nav-small-arrow.png") no-repeat;
+        width: 16px;
+        height: 8px;
+        margin-top: -5px;
+        transform: none;
     }
     .mobile_stages_slider_nav .grey {
         color: #787878;
@@ -8766,6 +8779,7 @@ body.the_studios2_page .home_screen h2 {
     body.mobile_stages_slider_nav_open .mobile_stages_slider_nav ul {
         position: relative;
         padding-top: 45px;
+        background: #fff;
     } 
     body.mobile_stages_slider_nav_open .mobile_stages_slider_nav ul li.active {
         position: absolute;
@@ -8834,7 +8848,7 @@ body.the_studios2_page .home_screen h2 {
     .btn_medium,
     a.btn_medium {
         border-width: 1px;
-        padding: 3px 30px;
+        padding: 8px 30px;
     }    
     .landing_grids h2 {
         font-size: 30px;
@@ -9632,13 +9646,14 @@ body.the_studios2_page .home_screen h2 {
     .red_cols {
         font-size: 11px;
         line-height: 15px;
-        padding: 0;
+        padding: 50px 0 0;
     }
     .red_cols ul li {
         width: auto;
         float: none;
         padding: 0 77px 21px;
         position: relative;
+        margin-bottom: 21px;
     }
     .red_cols ul li:before,
     .fl_specs .img h2:before {
@@ -9856,6 +9871,7 @@ body > #Validform_msg {
 .red_header_fixed .four_grids{
     padding-top: 100px;
 }
-.main_nav_list h3 span.menu-expand{
+.main_nav_list h3 span.menu-expand,
+.mobile_stages_slider_nav{
     display: none;
 }

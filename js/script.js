@@ -606,6 +606,7 @@ jQuery(document).ready(function ($) {
                     preventDefaultEvents: false
                 });
             } else {
+
                 if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')) {
                     $body.swipe({
                         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
@@ -1206,6 +1207,8 @@ jQuery(document).ready(function ($) {
         var window_height = $(window).height(),
             top = $(document).scrollTop();
         if (!$('.full_screen').length) window_height = 0;
+        console.log(top);
+        console.log(window_height);
         if (top > window_height) {
             $('body').addClass('red_header_fixed');
         } else {
