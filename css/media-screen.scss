@@ -102,6 +102,28 @@
 		top: 10px;
 		width: 50px;
 	}
+	.stage_box .text_box h2{
+		font-size: 37px;
+	}
+	.stage_box .text_box .stage-desc strong{
+		font-size: 15px;
+	}
+	.stage_box .text_box h3{
+		padding-bottom: 28px;
+		font-size: 22px;
+	}
+	.stage_box .text_box{
+		padding: 393px 0 0 5.0%;
+	}
+	.stage_box .text_box .stage-desc {
+		max-width: 376px;
+	}
+	.group_property_ul ul li.group_property_1 img,
+	.group_property_ul ul li.group_property_2 img,
+	.group_property_ul ul li.group_property_5 img,
+	.group_property_ul ul li.group_property_6 img{
+		margin: 3px auto 0;
+	}
 	.header .menu_btn {
 		top: 25px;
 	}
@@ -827,6 +849,18 @@
 	}
 }
 @media only screen and (max-width: 1024px){
+	body.stage_page .stage_box .text_box{
+		padding: 50px 0;
+		text-align: center;
+		position: relative;
+	}
+	.stage_box .text_box .stage-desc{
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.stage_box{
+		height: auto;
+	}
 	.red_header{
 		.menu_btn{
 			top: 28px;
@@ -1402,7 +1436,7 @@
 			transform: rotate3d(0, 0, 1, -77deg) translate3d(0, -3em, 0);
 		}
 		.fl_specs .img {
-			padding: 15% 0;
+			padding: 20% 0;
 			position: relative;
 			&:before{
 				content: '';
@@ -1647,11 +1681,11 @@
 			display: none;
 		}
 	}
-	.post_production_page{
-		.stage_screen_btns{
-			display: none;
-		}
-	}
+	//.post_production_page{
+	//	.stage_screen_btns{
+	//		display: none;
+	//	}
+	//}
 	.press_detail_inner{
 		padding-left: 20px;
 		padding-right: 20px;
@@ -1747,6 +1781,17 @@
 		width: 30%;
 		margin: 0 auto;
 	}
+	.post_production_page{
+		.stage_screen_btns span.animate_up, .stage_screen_btns span.animate_up{
+			width: 49%;
+			margin: 0;
+		}
+
+	}
+	body.facilities_list_pages.post_production_page .stage_screen_btns a.tab_nav_small {
+		font-size: 10px;
+		line-height: 18px;
+	}
 	/* Stages */
 	.stages_page_html{
 		overflow: auto;
@@ -1776,6 +1821,67 @@
 	.mobile_stages_slider_nav{
 		display: block;
 	}
+
+	.block_box_title_wrapper {
+		padding-left: 0;
+	}
+	.block_box_title_wrapper h2.block_box_title{
+		text-align: center;
+		&:before{
+			left: 50%;
+			margin-left: -10px;
+		}
+	}
+	.vendors_tenants ul li{
+		width: 46%;
+	}
+	.vendors_tenants ul li img {
+		max-width: 100%;
+	}
+	.header.mobile_white{
+		background: #fff;
+		.logo,
+		.menu_btn{
+			position: absolute;
+		}
+		.menu_btn{
+			background-image: url(../images/menu_btn_red.png);
+		}
+		img{
+			display: none !important;
+		}
+		.logo_red{
+			display: block !important;
+		}
+	}
+	.group_property_ul ul li{
+		width: 44%;
+	}
+	.it_service_page{
+		.full_screen .header{
+			position: fixed;
+		}
+		.header.red_header{
+			display: none;
+		}
+	}
+	body.facilities_list_pages.press_center_page .stage_screen_btns {
+		padding-top: 50px;
+	}
+	.tab_nav ul li.news_a:before{
+		top: 48px;
+	}
+	.stages_page .stage_screen_btns a:hover .stage_btn_hover{
+		display: none;
+	}
+	.post_production_page{
+		.sec_rounds{
+			display: none;
+		}
+		.full_screen{
+			padding: 20% 0 10%;
+		}
+	}
 }
 @media only screen and (max-width: 992px){
 	.ss_cols{
@@ -1804,6 +1910,27 @@
 		width: auto;
 		margin-right: 24px;
 		font-size: 18px;
+	}
+	.press_center_page{
+		.td_bottom{
+			vertical-align: middle;
+		}
+	}
+	.round_share:hover{
+		right: 0;
+	}
+	.round_share:hover a.round_wechat,
+	.round_share:hover a.round_weibo,
+	.round_share:hover a.round_twitter,
+	.round_share:hover a.round_facebook{
+		top: 0;
+		left: 0;
+	}
+	.specs_list ul li {
+		padding-left: 0 !important;
+	}
+	.group_property_ul ul li{
+		padding-bottom: 60px;
 	}
 	body.stages_page .home_screen .light_stxt{
 		font-size: 16px;
@@ -2093,6 +2220,7 @@
 	}
 	.group_property_ul ul li {
 		margin: 0 10px 20px;
+		width: 40%;
 	}
 	.specs{
 		font-size: 12px;
@@ -2100,9 +2228,6 @@
 	}
 	.specs_list ul li{
 		padding: 6px 0 6px 15px;
-		ul{
-			margin-top: 0;
-		}
 	}
 	.specs_list .dot{
 		top: 11px;
@@ -2320,6 +2445,14 @@
 	}
 	.detail_meta{
 		padding: 0 0 26px;
+	}
+	.group_properties{
+		font-size: 15px;
+		line-height: 23px;
+	}
+	.group_property_ul ul li .ico {
+		height: 127px;
+		background-size: cover !important;
 	}
 }
 @media only screen and (max-width: 480px){

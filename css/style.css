@@ -2267,7 +2267,7 @@ body.not_full_screen_page {
     left: 0;
     height: 100%;
     width: 100%;
-    padding: 510px 0 0 5.67%;
+    padding: 483px 0 0 5.0%;
     z-index: 11;
 }
 .stage_box .stage_screen_tile {
@@ -2285,7 +2285,24 @@ body.stage_page .stage_box .stage_screen_tile {
     font-size: 72px;
     line-height: 82px;
     text-transform: none;
-    padding: 0 0 34px;
+    padding: 0 0 1px;
+}
+.stage_box .text_box h3{
+    padding-bottom: 50px;
+    font-size: 30px;
+    line-height: 32px;
+}
+.stage_box .text_box .stage-desc{
+    max-width: 567px;
+}
+.stage_box .text_box .stage-desc p{
+    margin-top: 10px;
+    font-family: 'avenir_lt_55_romanroman';
+    line-height: 26px;
+}
+.stage_box .text_box .stage-desc strong{
+    text-transform: uppercase;
+    font-size: 20px;
 }
 .stage_box .text_box h2 sup {
     font-size: 36px;
@@ -2312,7 +2329,9 @@ body.stage_page .stage_box .text_box:before {
     opacity: .5;
     z-index: 111;
 }
-body.stage_page .stage_box .text_box h2 {
+body.stage_page .stage_box .text_box h2,
+body.stage_page .stage_box .text_box h3,
+body.stage_page .stage_box .text_box .stage-desc{
     position: relative;
 }
 body.stage_page .stage_box .text_box .btn,
@@ -4654,8 +4673,21 @@ body.main_nav_visible .main_nav {
 .group_property_ul ul {
     padding: 70px 0 0 0;
 }
+.group_property_ul img{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.group_property_ul li span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 .group_property_ul ul li {
-    vertical-align: top;
+    position: relative;
+    padding-bottom: 80px;
+    vertical-align: middle;
     display: inline-block;
     width: 168px;
     margin: 0 41px;
@@ -4664,24 +4696,30 @@ body.main_nav_visible .main_nav {
     height: 168px;
     margin: 0 0 15px;
 }
-.group_property_ul ul li.group_property_1 .ico {
-    background: url(../images/group_property_1.png) no-repeat 50% 50%;
+.group_property_ul ul li.group_property_1 img,
+.group_property_ul ul li.group_property_2 img,
+.group_property_ul ul li.group_property_5 img,
+.group_property_ul ul li.group_property_6 img{
+    margin: 28px auto 0;
 }
-.group_property_ul ul li.group_property_2 .ico {
-    background: url(../images/group_property_2.png) no-repeat 50% 50%;
-}
-.group_property_ul ul li.group_property_3 .ico {
-    background: url(../images/group_property_3.png) no-repeat 50% 50%;
-}
-.group_property_ul ul li.group_property_4 .ico {
-    background: url(../images/group_property_4.png) no-repeat 50% 50%;
-}
-.group_property_ul ul li.group_property_5 .ico {
-    background: url(../images/group_property_5.png) no-repeat 50% 50%;
-}
-.group_property_ul ul li.group_property_6 .ico {
-    background: url(../images/group_property_6.png) no-repeat 50% 50%;
-}
+/*.group_property_ul ul li.group_property_1 .ico {*/
+    /*background: url(../images/group_property_1.png) no-repeat 50% 50%;*/
+/*}*/
+/*.group_property_ul ul li.group_property_2 .ico {*/
+    /*background: url(../images/group_property_2.png) no-repeat 50% 50%;*/
+/*}*/
+/*.group_property_ul ul li.group_property_3 .ico {*/
+    /*background: url(../images/group_property_3.png) no-repeat 50% 50%;*/
+/*}*/
+/*.group_property_ul ul li.group_property_4 .ico {*/
+    /*background: url(../images/group_property_4.png) no-repeat 50% 50%;*/
+/*}*/
+/*.group_property_ul ul li.group_property_5 .ico {*/
+    /*background: url(../images/group_property_5.png) no-repeat 50% 50%;*/
+/*}*/
+/*.group_property_ul ul li.group_property_6 .ico {*/
+    /*background: url(../images/group_property_6.png) no-repeat 50% 50%;*/
+/*}*/
 .chairman_dream {
     color: #333;
     font-size: 18px;
@@ -5715,7 +5753,8 @@ a.back_btn {
     width: 58px;    
     height: 58px;    
     position: relative;  
-    border-radius: 100%;  
+    border-radius: 100%;
+    z-index: 100;
 }
 .round_share a:before,
 .round_share a:after {
@@ -5767,7 +5806,8 @@ a.back_btn {
     opacity: 0;
     -webkit-transition: all .4s cubic-bezier(.19,1,.22,1);
     transition: all .4s cubic-bezier(.19,1,.22,1);   
-    margin-top: 64px;    
+    margin-top: 64px;
+    z-index: 1;
 }
 .round_share:hover a.round_wechat,
 .round_share:hover a.round_weibo,
@@ -6287,7 +6327,7 @@ body.red_header_fixed .red_header_static {
     border-radius: 100%;
     margin: 0 auto 19px;
 }
-.sv_icons ul li.active .icon {
+.sv_icons ul .active .icon {
     border-color: #ab081a;
     background-color: #ab081a;
 }
@@ -6932,7 +6972,7 @@ body.the_studios2_page .home_screen h2 {
         width: 400px;
         height: 400px;
         left: -120px;
-        top: 40%;
+        top: 32%;
     }
     .specs {
         width: 820px;
@@ -8477,16 +8517,42 @@ body.the_studios2_page .home_screen h2 {
     .specs_list ul li {
         padding: 6px 0 6px 15px;
         padding-left: 15px !important;
-        border-bottom: 1px solid #acacac;
     }
-    .specs_list ul li:first-child {
-        border-top: 1px solid #acacac;
+    .specs_list .dot{
+        display: none;
+    }
+    .prod_office .specs_list .dot{
+        display: block;
+    }
+    .prod_office .specs_list ul li {
+        padding: 6px 0 6px 15px;
+        padding-left: 17px !important;
+    }
+    .prod_office .specs_list .dot {
+        top: 9px;
+    }
+    .specs.mobile_specs+.specs.mobile_specs{
+        display: none;
     }
     .specs_list .dot {
         width: 6px;
         height: 6px;
         top: 17px;
         left: 0 !important;
+    }
+    .specs_list ul li ul {
+        margin-top: -9px;
+        margin-bottom: -6px;
+    }
+    .specs_list ul li ul li{
+        margin-left: 0 !important;
+        padding-bottom: 0;
+        padding-top: 9px;
+    }
+    .specs_list ul li strong{
+        color: #ab081a;
+        display: block;
+        margin-bottom: 13px;
     }
     .specs_list .label {
         width: 111px;
@@ -8511,11 +8577,16 @@ body.the_studios2_page .home_screen h2 {
     .stage_box .text_box {
         text-align: center;
     }
-    .stage_box .text_box h2 {
+    .stage_box .text_box h2{
         font-size: 24px;
         line-height: 28px;
         padding: 0 0 20px;
-    }    
+    }
+    .stage_box .text_box h3{
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 20px;
+    }
     .stage_box .text_box h2 sup {
         font-size: 16px;
         line-height: 22px;
