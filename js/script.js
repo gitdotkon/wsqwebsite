@@ -579,7 +579,7 @@ jQuery(document).ready(function ($) {
             slide_count = $('.slide').size();
         $('.wrapper').data({'swipe-index': 0});
 
-        if($(window).width()>1024){
+        //if($(window).width()>1024){
             if ($body.hasClass('stages_page')) {
                 $body.swipe({
                     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
@@ -651,7 +651,7 @@ jQuery(document).ready(function ($) {
                     });
                 }
             }
-        }
+        //}
 
 
         $('.social_btns').bind('click touchstart', function () {
@@ -875,9 +875,9 @@ jQuery(document).ready(function ($) {
                             $(parent).removeClass('open');
                             $('.stage_screen_btns_trigger').find('.active').removeClass('active');
                             $('.stage_screen_btns_trigger').find('.animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
-
+                            console.log('sfksldkfj');
                             $('html, body').animate({
-                                scrollTop: $('.tabs').offset().top
+                                scrollTop: $('.tabs').offset().top-$('.header.red_header').height()
                             }, 360);
                             return false;
                         }
@@ -933,12 +933,17 @@ jQuery(document).ready(function ($) {
                 return false;
             });
         }
-        $('.work_shops .flexslider').flexslider({
+        var work_shops_slider = $('.work_shops .flexslider').flexslider({
             animation: 'slide',
             slideshow: false,
             slideshowSpeed: 8000,
             animationSpeed: 800,
             start: function($slider){
+                $('.tab_nav_trigger').click(function(){
+                    var index = $(this).closest('.animate_up').index();
+                    $slider.flexAnimate(index);
+                    console.log(index);
+                });
                 $('.tab_nav a').click(function(){
                     var index = $(this).parent('li').index();
                     if($(window).width()>1024){
@@ -961,7 +966,9 @@ jQuery(document).ready(function ($) {
                             $(parent).removeClass('open');
                             $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
                             $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
-
+                            $('html, body').animate({
+                                scrollTop: $('.tabs').offset().top
+                            }, 360);
                             if($('.tab.tab_tile.tab_active').length>0){
                                 $('.tab.tab_tile.tab_active').removeClass('tab_active');
                                 $('.tab.tab_slider').addClass('tab_active');
@@ -974,6 +981,7 @@ jQuery(document).ready(function ($) {
                             $(parent).addClass('open');
 
                         }
+
                         $slider.flexAnimate(index);
                         return false;
                         // if($(parent).hasClass('open')){
@@ -1245,9 +1253,12 @@ jQuery(document).ready(function ($) {
         }else{
             $('.tab_nav ul li.active').removeClass('active');
             $('.tab_nav ul li').eq(index).addClass('active');
-            if($('body').hasClass('incentive_page')){
+            if($('body').hasClass('incentive_page') || $('body').hasClass('prod_office') || $('body').hasClass('marine_page')){
                 $('.tabs .tab.tab_active').removeClass('tab_active');
                 $('.tabs .tab').eq(index).addClass('tab_active');
+            }else if($('body').hasClass('workshops_page')){
+                $('.tabs .tab.tab_active').removeClass('tab_active');
+                $('.tabs .tab').eq(1).addClass('tab_active');
             }
 
             $('.sv_icons').find('.active').removeClass('active');

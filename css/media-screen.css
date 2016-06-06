@@ -976,6 +976,20 @@
   }
 }
 @media only screen and (max-width: 1024px) {
+  .news_nav ul li {
+    display: block;
+    padding: 10px;
+  }
+
+  .travel_times {
+    background-image: url("../images/mobile/map-1024.jpg");
+    background-position: center 22%;
+  }
+
+  .travel_times h2 {
+    margin: 0 0 429px;
+  }
+
   body.stage_page .stage_box .text_box {
     padding: 50px 0;
     text-align: center;
@@ -2037,7 +2051,7 @@
   }
 
   .block_box_title_wrapper {
-    padding-left: 0;
+    padding: 50px 0;
   }
 
   .block_box_title_wrapper h2.block_box_title {
@@ -2133,6 +2147,14 @@
     width: auto;
     margin-right: 24px;
     font-size: 18px;
+  }
+
+  .travel_times {
+    background-image: url("../images/mobile/map-640.jpg");
+  }
+
+  .travel_times h2 {
+    margin: 0 0 246px;
   }
 
   .press_center_page .td_bottom {
@@ -2271,12 +2293,14 @@
     font-size: 12px;
   }
 
-  .main_nav_list .left li.has-submenu span.menu-expand {
-    top: 21px;
-    right: 4px;
-    width: 15px;
-    height: 8px;
-    background-size: 100%;
+  .main_nav_list .left li.has-submenu span.menu-expand,
+  .main_nav_list h3 span.menu-expand {
+    top: 9px;
+    right: -5px;
+    width: 33px;
+    height: 26px;
+    background-size: auto;
+    background-position: center;
   }
 
   .lang_switcher {
@@ -2732,6 +2756,11 @@
   .group_property_ul ul li .ico {
     height: 127px;
     background-size: cover !important;
+  }
+
+  .stage_screen_btns span.animate_up, .stage_screen_btns span.animate_up {
+    width: 25%;
+    margin: 0 10px;
   }
 }
 @media only screen and (max-width: 480px) {

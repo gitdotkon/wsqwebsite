@@ -9966,3 +9966,6 @@ body > #Validform_msg {
 .hide-for-html{
     display: none;
 }
+.travel_times{
+    background-image: url('../images/t/travel_map.jpg');
+}
