@@ -1384,6 +1384,7 @@
     margin-top: -10px;
     top: 50%;
     right: -20px;
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
   .tab_nav ul li.active:after {
@@ -1638,6 +1639,7 @@
   }
 
   .three_cols .three_cols_subtitle {
+    -webkit-transform: none;
     transform: none;
     left: 0;
     position: relative;
@@ -1831,6 +1833,7 @@
   }
   .main_nav_list .middle.open h3 span.menu-expand,
   .main_nav_list .right.open h3 span.menu-expand {
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
 
@@ -2397,6 +2400,7 @@
     width: 16px;
     height: 8px;
     margin-top: -5px;
+    -webkit-transform: none;
     transform: none;
   }
 

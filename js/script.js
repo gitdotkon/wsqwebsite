@@ -1103,7 +1103,9 @@ jQuery(document).ready(function ($) {
         } else {
             $(this).parent('li').removeClass('active');
         }
-
+        $('html, body').animate({
+            scrollTop: $(this).parent('li.active').offset().top-90
+        }, 360);
         return false;
     });
 
