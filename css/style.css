@@ -9875,3 +9875,7 @@ body > #Validform_msg {
 .mobile_stages_slider_nav{
     display: none;
 }
+
+.hide-for-html{
+    display: none;
+}
