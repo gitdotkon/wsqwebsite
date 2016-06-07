@@ -3785,9 +3785,9 @@ body.facilities_list_pages.press_center_page .stage_screen_btns {
     height: 100%;
     background: #f3f3f3;
     z-index: 9999;
-    -webkit-transition: opacity 1s cubic-bezier(.19,1,.22,1);
-    transition: opacity 1s cubic-bezier(.19,1,.22,1); 
-    opacity: 0;       
+    -webkit-transition: opacity 0.5s cubic-bezier(.19,1,.22,1);
+    transition: opacity 0.5s cubic-bezier(.19,1,.22,1);
+    opacity: 0;
 }
 body.main_nav_visible .main_nav {
     left: 0;
@@ -8177,7 +8177,7 @@ body.the_studios2_page .home_screen h2 {
     }
     .social_btns {
         position: fixed;
-        bottom: 28px;
+        bottom: 38px;
         left: 20px;
         height: 18px;
         min-width: 30px;
@@ -8188,9 +8188,9 @@ body.the_studios2_page .home_screen h2 {
         color: #fff;
         display: block;
         float: left;
-        width: 18px;
-        height: 18px;
-        margin-left: 6px;
+        width: 38px;
+        height: 38px;
+        margin-left: 13px;
         border: 1px solid #fff;
         border-radius: 100%;
         background-size: auto 60% !important;
@@ -8198,6 +8198,10 @@ body.the_studios2_page .home_screen h2 {
         transition: all .5s ease-in-out;
         opacity: 0; 
         display: none;     
+    }
+    .home .social_btns [class^="icon-"], .home .social_btns [class*=" icon-"]{
+        font-size: 18px;
+        line-height: 37px;
     }
     .social_btns_open {
         background-image: none;
@@ -8213,21 +8217,21 @@ body.the_studios2_page .home_screen h2 {
     .social_btns a:first-child {
         margin-left: 0;
     }
-    .social_btns .wechat {
-        background: url(../images/wechat.png) no-repeat 50% 50%; 
-    }
-    .social_btns .weibo {
-        background: url(../images/weibo.png) no-repeat 50% 50%; 
-    }
-    .social_btns .linked_in {
-        background: url(../images/linked_in.png) no-repeat 50% 50%; 
-    }     
-    .social_btns .twitter {
-        background: url(../images/twitter.png) no-repeat 50% 50%; 
-    }
-    .social_btns .facebook {
-        background: url(../images/facebook.png) no-repeat 50% 50%; 
-    }    
+    /*.social_btns .wechat {*/
+        /*background: url(../images/wechat.png) no-repeat 50% 50%; */
+    /*}*/
+    /*.social_btns .weibo {*/
+        /*background: url(../images/weibo.png) no-repeat 50% 50%; */
+    /*}*/
+    /*.social_btns .linked_in {*/
+        /*background: url(../images/linked_in.png) no-repeat 50% 50%; */
+    /*}     */
+    /*.social_btns .twitter {*/
+        /*background: url(../images/twitter.png) no-repeat 50% 50%; */
+    /*}*/
+    /*.social_btns .facebook {*/
+        /*background: url(../images/facebook.png) no-repeat 50% 50%; */
+    /*}    */
     .mobile_text {
         position: absolute;
         top: 0;
@@ -9965,6 +9969,12 @@ body > #Validform_msg {
 }
 .red_header_fixed .four_grids{
     padding-top: 100px;
+}
+.service_page .red_header_fixed .four_grids {
+    padding-top: 168px;
+}
+body.red_header_fixed.service_page  .tabs{
+    padding-top: 0;
 }
 .service_page .red_header_fixed .four_grids{
     padding-top: 0;

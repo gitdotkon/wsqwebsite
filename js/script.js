@@ -23,8 +23,9 @@ jQuery(document).ready(function ($) {
     }
 
     /* Studios page */
-    if($('body').hasClass('the_studios2_page')){
+    if($('body').hasClass('the_studios2_page') || $('body').hasClass('about_page') || $('body').hasClass('facilities_list_pages')){
         $(window).mousewheel(function(e){
+            console.log('Yii');
             if($(window).scrollTop() == 0 && e.deltaY<0){
                 $('html, body').animate({
                     scrollTop: $(window).height()
@@ -39,7 +40,7 @@ jQuery(document).ready(function ($) {
                 $('.news_a.open').removeClass('open');
                 $('.news_nav').removeClass('is_open').slideUp();
                 $('.news_a.active').removeClass('active').removeClass('open');
-                console.log('Scroll');
+
             }
         })
     }
@@ -593,6 +594,9 @@ jQuery(document).ready(function ($) {
             if ($body.hasClass('stages_page')) {
                 $body.swipe({
                     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                        if($(event.target).hasClass('menu-expand')){
+                            $(event.target).trigger('click');
+                        }
                         if ('up' == direction && !$('.wrapper').hasClass('wrapper_1')) {
                             var index = $wrapper.data('swipe-index');
                             if (index != slide_count) {
@@ -628,6 +632,15 @@ jQuery(document).ready(function ($) {
                 if ($body.hasClass('home')) {//!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')
                     $body.swipe({
                         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                            if($(event.target).hasClass('menu-expand')){
+                                $(event.target).trigger('click');
+                            }
+                            if(!$(event.target).hasClass('social_btns')){
+                                $('.social_btns_open').removeClass('social_btns_open');
+                            }
+                            // if($('body').hasClass('home') && $('.social_btns_open').length){
+                            //     $('.social_btns_open').removeClass('social_btns_open');
+                            // }
                             if ('up' == direction) {
                                 var index = $wrapper.data('swipe-index');
                                 if (index != slide_count) {
@@ -948,6 +961,7 @@ jQuery(document).ready(function ($) {
             slideshow: false,
             slideshowSpeed: 8000,
             animationSpeed: 800,
+            smoothHeight: true,
             start: function($slider){
                 $('.tab_nav_trigger').click(function(){
                     var index = $(this).closest('.animate_up').index();
@@ -1021,6 +1035,12 @@ jQuery(document).ready(function ($) {
                     var index = $(this).index();
                     $('.tabs').find('.tab_active').removeClass('tab_active');
                     $('.tabs').find('.tab').eq(1).addClass('tab_active');
+
+                    $('.stage_screen_btns_trigger .animate_up .active').removeClass('active');
+                    $('.stage_screen_btns_trigger .animate_up').eq(index).find('.tab_nav_trigger').addClass('active');
+
+                    $('.tab_nav').find('.active').removeClass('active');
+                    $('.tab_nav').find('li').eq($slider.animatingTo).addClass('active');
                     $('html, body').animate({
                         scrollTop: $(window).height()
                     }, 360);
@@ -1377,12 +1397,14 @@ jQuery(document).ready(function ($) {
     $('.menu_btn').click(function () {
         $('body').addClass('main_nav_visible');
         $('html').toggleClass('menu_is_open');
+        // $('.main_nav').fadeIn();
         return false;
     });
 
     $('.main_nav_close').click(function () {
         $('body').removeClass('main_nav_visible');
         $('html').toggleClass('menu_is_open');
+        // $('.main_nav').fadeOut();
         return false;
     });
 

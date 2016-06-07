@@ -2799,8 +2799,16 @@
     margin: 0 1%;
   }
 
+  .press_center_page .stage_screen_btns span.animate_up, .stage_screen_btns span.animate_up {
+    width: 40%;
+  }
+
   body.facilities_list_pages.workshops_page .home_screen h2 {
     margin-top: 81px;
+  }
+
+  .news {
+    padding: 0 20px 60px;
   }
 }
 @media only screen and (max-width: 480px) {
