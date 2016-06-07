@@ -91,6 +91,11 @@
   }
 }
 @media only screen and (max-width: 1440px) and (min-width: 1024px) {
+  .press_detail_inner,
+  .incentive_inner {
+    max-width: 925px;
+  }
+
   .logo {
     width: 50px;
   }
@@ -118,7 +123,7 @@
   }
 
   .stage_box .text_box {
-    padding: 393px 0 0 5.0%;
+    padding: 427px 0 0 5.0%;
   }
 
   .stage_box .text_box .stage-desc {
@@ -981,6 +986,10 @@
     padding: 10px;
   }
 
+  .news {
+    padding: 0 50px 60px;
+  }
+
   .travel_times {
     background-image: url("../images/mobile/map-1024.jpg");
     background-position: center 22%;
@@ -1006,13 +1015,13 @@
   }
 
   .red_header .menu_btn {
-    top: 28px;
+    top: 19px;
     position: absolute;
     background-image: url(../images/menu_btn_red.png);
   }
   .red_header .logo {
     position: absolute;
-    top: 23px;
+    top: 15px;
     left: 20px;
   }
 
@@ -1412,7 +1421,7 @@
   .tab_nav ul {
     margin: 18px 0 0;
     background: #fff;
-    padding-top: 45px;
+    padding-top: 40px;
   }
   .tab_nav ul li {
     display: none;
@@ -1422,7 +1431,7 @@
   .tab_nav ul li.active {
     display: block;
     position: absolute;
-    top: 17px;
+    top: 9px;
     left: 0;
     right: 0;
   }
@@ -2116,6 +2125,10 @@
   .post_production_page .full_screen {
     padding: 20% 0 10%;
   }
+
+  html, body {
+    overflow: visible !important;
+  }
 }
 @media only screen and (max-width: 992px) {
   .ss_cols {
@@ -2143,6 +2156,22 @@
   }
 }
 @media only screen and (max-width: 640px) {
+  .tab_nav ul li.news_a:before {
+    top: 36px;
+  }
+
+  .contact h2.block_box_title {
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  body.facilities_list_pages.service_page .home_screen h2 {
+    margin-top: 56px;
+  }
+  body.facilities_list_pages.service_page .sv_icons {
+    padding-top: 15px;
+  }
+
   .stage_index {
     width: auto;
     margin-right: 24px;
@@ -2761,6 +2790,17 @@
   .stage_screen_btns span.animate_up, .stage_screen_btns span.animate_up {
     width: 25%;
     margin: 0 10px;
+  }
+
+  .prod_office .stage_screen_btns span.animate_up, .prod_office .stage_screen_btns span.animate_up,
+  body.facilities_list_pages.workshops_page .stage_screen_btns span.animate_up,
+  body.facilities_list_pages.workshops_page .stage_screen_btns span.animate_up {
+    width: 41%;
+    margin: 0 1%;
+  }
+
+  body.facilities_list_pages.workshops_page .home_screen h2 {
+    margin-top: 81px;
   }
 }
 @media only screen and (max-width: 480px) {

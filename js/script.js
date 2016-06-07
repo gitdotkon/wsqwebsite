@@ -33,6 +33,16 @@ jQuery(document).ready(function ($) {
             }
         })
     }
+    if($('body').hasClass('press_center_page')){
+        $(window).scroll(function(e){
+            if($('.news_nav').hasClass('is_open').length<=0){
+                $('.news_a.open').removeClass('open');
+                $('.news_nav').removeClass('is_open').slideUp();
+                $('.news_a.active').removeClass('active').removeClass('open');
+                console.log('Scroll');
+            }
+        })
+    }
     if($(window).width()<1024){
         setHeightforFullScreen();
     }
@@ -65,7 +75,7 @@ jQuery(document).ready(function ($) {
         /* Mouse over */
         $('.tab_nav .news_a').hover(function(){
             $(this).addClass('open')
-            $('.news_nav').slideDown();
+            $('.news_nav').addClass('is_open').slideDown();
         }, function(){
 
         });
@@ -579,7 +589,7 @@ jQuery(document).ready(function ($) {
             slide_count = $('.slide').size();
         $('.wrapper').data({'swipe-index': 0});
 
-        //if($(window).width()>1024){
+       // if($(window).width()>1024){
             if ($body.hasClass('stages_page')) {
                 $body.swipe({
                     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
@@ -615,7 +625,7 @@ jQuery(document).ready(function ($) {
                 });
             } else {
 
-                if (!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')) {
+                if ($body.hasClass('home')) {//!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')
                     $body.swipe({
                         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
                             if ('up' == direction) {
@@ -651,7 +661,7 @@ jQuery(document).ready(function ($) {
                     });
                 }
             }
-        //}
+       // }
 
 
         $('.social_btns').bind('click touchstart', function () {
@@ -1247,7 +1257,6 @@ jQuery(document).ready(function ($) {
 
     $('.tab_nav_trigger').click(function () {
         var index = $('.tab_nav_trigger').index($(this));
-
         if($(window).width()>1024){
             $('.tab_nav ul li').eq(index).find('a').trigger('click');
         }else{

@@ -2267,7 +2267,7 @@ body.not_full_screen_page {
     left: 0;
     height: 100%;
     width: 100%;
-    padding: 483px 0 0 5.0%;
+    padding: 408px 0 0 5.0%;
     z-index: 11;
 }
 .stage_box .stage_screen_tile {
@@ -7079,11 +7079,19 @@ body.the_studios2_page .home_screen h2 {
     .incentive,
     .block,
     .gallery,
-    .news,
+
     .press_detail,
     .seasons_climate {
         padding-left: 30px;
         padding-right: 30px;
+    }
+    .news{
+        padding-left: 94px;
+        padding-right: 94px;
+    }
+    .news_inner{
+        max-width: 1220px;
+        margin: 0 auto;
     }
     .film_with_us h3 {
         font-size: 21px;
@@ -9515,7 +9523,7 @@ body.the_studios2_page .home_screen h2 {
         position: fixed;
     }
     .red_header {
-        height: 80px;
+        height: 58px;
         /*height: 47px;*/
         /*height: 0px;*/
     }
@@ -9958,6 +9966,9 @@ body > #Validform_msg {
 .red_header_fixed .four_grids{
     padding-top: 100px;
 }
+.service_page .red_header_fixed .four_grids{
+    padding-top: 0;
+}
 .main_nav_list h3 span.menu-expand,
 .mobile_stages_slider_nav{
     display: none;
@@ -9968,4 +9979,10 @@ body > #Validform_msg {
 }
 .travel_times{
     background-image: url('../images/t/travel_map.jpg');
+}
+.post_production_page .stage_screen_btns_trigger a{
+    cursor: default;
+}
+.news{
+    padding: 0 100px 60px;
 }
