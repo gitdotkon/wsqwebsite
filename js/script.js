@@ -23,16 +23,32 @@ jQuery(document).ready(function ($) {
     }
 
     /* Studios page */
-    if($('body').hasClass('the_studios2_page') || $('body').hasClass('about_page') || $('body').hasClass('facilities_list_pages')){
+    if(($('body').hasClass('the_studios2_page') || $('body').hasClass('about_page') || $('body').hasClass('facilities_list_pages')) && $('.press_detail').length<=0){
         $(window).mousewheel(function(e){
-            console.log('Yii');
             if($(window).scrollTop() == 0 && e.deltaY<0){
                 $('html, body').animate({
                     scrollTop: $(window).height()
                 }, 360);
                 return false;
             }
+        });
+        $('body').swipe({
+            swipe: function(event, direction, distance, duration, fingerCount){
+                if(direction == 'up'){
+                    console.log(direction);
+                    $('html, body').animate({
+                        scrollTop: $(window).height()
+                    }, 360);
+                    $('body').swipe('disable');
+                }
+            }
+        });
+        $(window).scroll(function(){
+            if($(window).scrollTop() == 0){
+                $('body').swipe('enable');
+            }
         })
+
     }
     if($('body').hasClass('press_center_page')){
         $(window).scroll(function(e){
@@ -106,8 +122,15 @@ jQuery(document).ready(function ($) {
     }
     /* parse location params on service page*/
     /* Sub menu */
-    $('.main_nav_list .left li .menu-expand').click(function(){
+    $('.main_nav_list .left li .menu-expand').click(function(e){
         var parent = $(this).closest('li');
+        //$('.main_nav_list .open').removeClass('open').find('ul').hide();
+        $('.main_nav_list .open').each(function(){
+            if($(this)[0] !== parent[0]){
+                $(this).removeClass('open').find('ul').slideUp();
+            }
+
+        });
         $(parent).find('ul').slideToggle();
         $(parent).toggleClass('open');
     });
@@ -143,7 +166,15 @@ jQuery(document).ready(function ($) {
     });
 
     $('.main_nav_list h3 span.menu-expand, .main_nav_list h3 span.menu-expand').click(function(){
+
         var parent = $(this).closest('div');
+        $('.main_nav_list .open').each(function(){
+            if($(this)[0] !== parent[0]){
+                $(this).removeClass('open').find('ul').slideUp();
+            }
+
+        });
+        //$('.main_nav_list .open').removeClass('open').find('ul').hide();
         $(parent).find('ul').slideToggle();
         $(parent).toggleClass('open');
     });
