@@ -17,6 +17,19 @@
 }(jQuery));
 
 jQuery(document).ready(function ($) {
+
+    /* Stages page */
+    if($('body').hasClass('stages_page')){
+        var $stages_link = $('.stage_item_trigger');
+        $stages_link.each(function(){
+            var url = $(this).attr('href');
+            if(url == '#'){
+                $(this).addClass('no_follow');
+            }
+        });
+
+
+    }
     /* match height */
     if($('.group_property_ul li').length>0){
         $('.group_property_ul li').matchHeight();
@@ -181,8 +194,38 @@ jQuery(document).ready(function ($) {
 
     /* Sub menu */
     $(window).load(function () {
+
+
         var $body = $('body'),
             $stage_nav_container = $('.stage_nav_container');
+
+        if($body.hasClass('stages_page')){
+            /* Go to hash */
+            var hash = window.location.hash;
+
+            if(hash){
+                animate_home_screen(1);
+                setTimeout(function(){
+                    hash = hash.replace('#', '');
+                    var $destination = $('.screen_slide[data-hash="'+hash+'"]');
+                    var id = $destination.attr('data-id');
+                    var $destination2 = $('.slide[data-hash="'+hash+'"]');
+                    $('.stage_screen_btns a[data-hash="'+hash+'"]').closest('span').addClass('active');
+                    $('.slide').removeClass('slide_active');
+                    $('.slide_bg_ed').removeClass('slide_bg_ed');
+                    $('.big_pic').removeClass('up');
+                    $destination2.addClass('slide_active');
+                    $destination.addClass('screen_slide_active').find('.side_pic').addClass('side_pic_ed');
+                    $body.addClass('home_screen_invisible');
+                    $body.attr('id', 'screen_visible_'+id);
+                    $('.stage_nav_container').attr('id', 'stage_nav_container_'+id);
+                }, 1500);
+            }else{
+                animate_home_screen(1);
+            }
+        }else{
+            animate_home_screen(1);
+        }
 
         $('.next_screen').hover(function () {
             $('.next_screen_mousewheel').addClass('next_screen_mousewheel_ed');
@@ -246,6 +289,7 @@ jQuery(document).ready(function ($) {
 
         function animate(current_index) {
             if (!$('.slide_animating').length && !$('.screen_slide_animating').length && !$body.hasClass('footer_animating') && !$('.lightbox_visible').length) {
+                console.log(current_index);
                 if (0 == current_index) {
                     $('.nav_container').removeClass('nav_container_visible');
                 } else {
@@ -534,7 +578,7 @@ jQuery(document).ready(function ($) {
             return false;
         });
 
-        animate_home_screen(1);
+
 
         $('.next_screen_footer').click(function () {
             if ($('body').hasClass('footer_visible')) {
@@ -625,13 +669,14 @@ jQuery(document).ready(function ($) {
             if ($body.hasClass('stages_page')) {
                 $body.swipe({
                     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+
                         if($(event.target).hasClass('menu-expand')){
                             $(event.target).trigger('click');
                         }
                         if ('up' == direction && !$('.wrapper').hasClass('wrapper_1')) {
                             var index = $wrapper.data('swipe-index');
                             if (index != slide_count) {
-                                var index = $wrapper.data('swipe-index');
+                                //var index = $wrapper.data('swipe-index');
                                 $wrapper.data({'swipe-index': Number(index) + 1});
                                 $wrapper.removeAttr('class');
                                 $wrapper.addClass('wrapper').addClass('wrapper_' + $wrapper.data('swipe-index'));
@@ -895,6 +940,7 @@ jQuery(document).ready(function ($) {
                 $('.landing_grids_inner ul li').hover(function(){
                     var index = $(this).attr('data-id');
                     slider.flexAnimate(parseInt(index));
+                    console.log(index);
                 }, function(){
                     //slider.flexAnimate(1);
                 });

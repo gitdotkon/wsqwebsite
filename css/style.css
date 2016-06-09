@@ -1964,6 +1964,12 @@ body.home_screen_invisible .stage_nav_container {
     top: 12px;
     right: 14px;
 }
+.stage_list a.no_follow{
+    cursor: default;
+}
+.stage_list a.no_follow .icon-5{
+    display: none;
+}
 .stage_list a:hover .icon-5 {
     color: #fff;
 }
@@ -6565,6 +6571,10 @@ body.incentive_page .stage_screen_btns a.hover_btn:before,
 }
 .news_item_fr {
     float: right;
+}
+.btn_hide,
+.stage_detail_slider{
+    display: none !important;
 }
 .news_item .img {
     background-size: cover;
