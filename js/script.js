@@ -515,17 +515,38 @@ jQuery(document).ready(function ($) {
 
                     $('.mobile_stages_slider_nav').trigger('click');
                     $('.mobile_stages_slider_nav ul li').eq($(this).parent('span').index() - 1).find('a').addClass('sa').trigger('click');
+
                 } else {
                     if (!$span.hasClass('active')) {
                         $span.siblings('.active').removeClass('active');
                         $span.addClass('active');
                         animate(index);
                     }
+
                 }
+
                 if($(window).width()<1024){
-                    $('html, body').animate({
-                        scrollTop: 0
-                    }, 360);
+
+                    if($('body').hasClass('stages_page')){
+                        index = $(this).closest('span').index();
+                        console.log($('.mobile_stages_slider_nav').find('li').eq(index));
+                        $('.mobile_stages_slider_nav').each(function(){
+                            $(this).find('.active').removeClass('active');
+                            $(this).find('li').eq(index).addClass('active')
+                        })
+
+                       
+
+                        $('html, body').animate({
+                            scrollTop: $('.red_header_static').offset().top
+                        }, 360);
+                    }else{
+                        $('html, body').animate({
+                            scrollTop: 0
+                        }, 360);
+                    }
+
+
                 }
                 return false;
             }
@@ -907,6 +928,9 @@ jQuery(document).ready(function ($) {
             smoothHeight: true,
             touch: true,
             start: function (slider) {
+                $('.stage_screen_btns').unbind().click(function(){
+                    console.log('Lll');
+                });
                 $('.mobile_stages_slider_nav a').click(function (e) {
                     var $li = $(this).parent('li'),
                         index = $li.index();

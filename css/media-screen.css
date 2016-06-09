@@ -752,7 +752,7 @@
 
   /* Workshop */
   .work_shop {
-    height: 630px;
+    height: 850px;
     font-size: 15px;
     line-height: 28px;
   }
@@ -2105,23 +2105,6 @@
     max-width: 100%;
   }
 
-  .header.mobile_white {
-    background: #fff;
-  }
-  .header.mobile_white .logo,
-  .header.mobile_white .menu_btn {
-    position: absolute;
-  }
-  .header.mobile_white .menu_btn {
-    background-image: url(../images/menu_btn_red.png);
-  }
-  .header.mobile_white img {
-    display: none !important;
-  }
-  .header.mobile_white .logo_red {
-    display: block !important;
-  }
-
   .group_property_ul ul li {
     width: 44%;
   }
@@ -2182,6 +2165,17 @@
   }
 }
 @media only screen and (max-width: 640px) {
+  .stage_screen_btns_wrapper .stage_screen_btns {
+    display: none;
+  }
+
+  .red_header .mobile_stages_slider_nav {
+    display: none;
+  }
+  .red_header.red_header .mobile_stages_slider_nav {
+    display: block;
+  }
+
   .tab_nav ul li.news_a:before {
     top: 36px;
   }
@@ -2339,8 +2333,8 @@
   .main_nav_inner h3 a,
   .main_nav_list .middle ul li a, .main_nav_list .right ul li a {
     display: block;
-    padding: 4px 0;
-    font-size: 12px;
+    padding: 5px 0;
+    font-size: 14px;
     font-family: 'avenir_lt_55_romanroman';
   }
 
@@ -2886,6 +2880,29 @@
   .vendors_tenants ul li {
     vertical-align: middle;
     display: table-cell;
+  }
+}
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .header.mobile_white {
+    background: #fff;
+  }
+  .header.mobile_white .logo,
+  .header.mobile_white .menu_btn {
+    position: absolute;
+  }
+  .header.mobile_white .menu_btn {
+    background-image: url(../images/menu_btn_red.png);
+  }
+  .header.mobile_white img {
+    display: none !important;
+  }
+  .header.mobile_white .logo_red {
+    display: block !important;
+  }
+}
+@media only screen and (max-height: 768px) {
+  .stages_page_html body.stages_page .wrapper .slide.slide_active {
+    min-height: 768px;
   }
 }
 
