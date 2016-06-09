@@ -1814,6 +1814,10 @@
 		height: 100px;
 		padding: 41px 10px 19px;
 		margin-bottom: 26px;
+		&.active{
+			border-color: #de302f;
+			color: #de302f;
+		}
 	}
 	.stage_screen_btns span.animate_up, .stage_screen_btns span.animate_up{
 		width: 30%;
@@ -1941,7 +1945,7 @@
 		.mobile_stages_slider_nav{
 			display: none;
 		}
-		&.red_header{
+		&.red_header_static{
 			.mobile_stages_slider_nav{
 				display: block;
 			}

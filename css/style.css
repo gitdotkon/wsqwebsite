@@ -5962,13 +5962,14 @@ h1.detail_title {
     padding: 17px 0 0 0;
 }
 .load_more a.load_more_btn {
+
     color: #ab081a;
     font-size: 20px;
     font-family: 'avenir_lt_55_romanheavy';
     line-height: 27px;
     text-align: center; 
-    text-transform: uppercase; 
-    display: inline-block;   
+    text-transform: uppercase;
+    display: none;
     border: 1px solid #ab081a;
     border-radius: 40px;
     padding: 28px 129px;
@@ -6135,6 +6136,7 @@ h1.detail_title {
     display: none;
 }
 .tab_nav ul li.news_a.active:before {
+    display: none !important;
     visibility: visible;
 }
 /*.tab_nav ul li:first-child:before {*/
@@ -6711,6 +6713,9 @@ body.incentive_page .stage_screen_btns a.hover_btn:before,
 }
 .news_nav{
     display: none;
+}
+.news_nav.is_open{
+    display: none !important;
 }
 .news_nav ul li {
     display: inline-block;
