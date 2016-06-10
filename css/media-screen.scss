@@ -92,6 +92,7 @@
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1024px){
+
 	.group_property_ul ul li {
 		width: 120px;
 	}
@@ -873,6 +874,22 @@
 	}
 }
 @media only screen and (max-width: 1024px){
+	.wrong{
+		font-size: 10px;
+		top: auto;
+		right: 0;
+		bottom: 0;
+	}
+	.thank-you .close{
+		top: 15px;
+		right: 15px;
+	}
+	.thank-you strong{
+		font-size: 24px;
+	}
+	.thank-you{
+		font-size: 12px;
+	}
 	.news_nav ul li{
 		display: block;
 		padding: 10px;
@@ -2611,8 +2628,27 @@
 		}
 	}
 }
-@media only screen and (max-height: 768px){
-	.stages_page_html body.stages_page .wrapper .slide.slide_active{
+@media only screen and (max-height: 768px) {
+	.stages_page_html body.stages_page .wrapper .slide.slide_active {
 		min-height: 768px;
 	}
 }
+
+	//@media screen and (orientation:landscape) and (max-device-width: 900px) {
+	//	html{
+	//		-webkit-transform: rotate(-90deg);
+	//		-moz-transform: rotate(-90deg);
+	//		-ms-transform: rotate(-90deg);
+	//		-o-transform: rotate(-90deg);
+	//		transform: rotate(-90deg);
+	//		-webkit-transform-origin: left top;
+	//		-moz-transform-origin: left top;
+	//		-ms-transform-origin: left top;
+	//		-o-transform-origin: left top;
+	//		transform-origin: left top;
+	//		width: 320px; /*Разрешение экрана iPhone*/
+	//		position: absolute;
+	//		top: 100%;
+	//		left: 0
+	//	}
+	//}

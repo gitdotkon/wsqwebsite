@@ -40,25 +40,31 @@ www.wandastudios.com/contact.html">
                     <div class="text">We look forward to hearing from you.</div>
                     <div class="contact_box">
                         <div class="contact_form">
-                            <form>
+                            <form action="contact.php" id="contact_form">
                                 <div class="field field_name">
                                     <label class="placeholder">Name<span class="red_required">*</span></label>
-                                    <input type="text"/>
+                                    <input type="text" name="name" class="required name"/>
+                                    <span class="wrong">
+                                        Please enter the correct format text
+                                    </span>
                                 </div>
                                 <div class="field field_email">
                                     <label class="placeholder">Email<span class="red_required">*</span></label>
-                                    <input type="text"/>
+                                    <input type="text" name="email" class="required email" />
+                                    <span class="wrong">
+                                        Please enter the correct format text
+                                    </span>
                                 </div>
                                 <div class="field">
                                     <label class="placeholder">Company Name</label>
-                                    <input type="text"/>
+                                    <input type="text" name="company"/>
                                 </div>
                                 <div class="field">
                                     <label class="placeholder">Subject</label>
-                                    <input type="text"/>
+                                    <input type="text" name="subject"/>
                                 </div>
                                 <div class="field">
-                                    <textarea placeholder="Drop a line...."></textarea>
+                                    <textarea name="message" placeholder="Drop a line...."></textarea>
                                 </div>
                                 <div class="field field_captcha">
                                     <input type="text" placeholder="Captcha"/>
@@ -66,6 +72,15 @@ www.wandastudios.com/contact.html">
                                 </div>
                                 <input type="submit" value="Send"/>
                             </form>
+                            <div class="thank-you">
+                                <a href="#" class="close"></a>
+                                <div class="table">
+                                    <div class="td">
+                                        <strong>Thank You!</strong>
+                                        <p>Thank you for interest in Wanda Studios Qingdao. A representative <br> will be in touch with you as soon as possible.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="contact_info">
                             <h3>For General Inquiries</h3>
@@ -137,26 +152,31 @@ www.wandastudios.com/contact.html">
 </div>
 <div class="mobile_contact_form">
     <div class="contact_form">
-        <form action="mail.php">
-            <input type="hidden" name="page" value="contact">
+        <form action="contact.php" id="contact_form_2">
             <div class="field field_name">
                 <label class="placeholder">Name<span class="red_required">*</span></label>
-                <input type="text" required/>
+                <input type="text" name="name" class="required name"/>
+                                    <span class="wrong">
+                                        Please enter the correct format text
+                                    </span>
             </div>
             <div class="field field_email">
                 <label class="placeholder">Email<span class="red_required">*</span></label>
-                <input type="text" required/>
+                <input type="text" name="email" class="required email"/>
+                                    <span class="wrong">
+                                        Please enter the correct format text
+                                    </span>
             </div>
             <div class="field">
                 <label class="placeholder">Company Name</label>
-                <input type="text"/>
+                <input type="text" name="company"/>
             </div>
             <div class="field">
                 <label class="placeholder">Subject</label>
-                <input type="text"/>
+                <input type="text" name="subject"/>
             </div>
             <div class="field">
-                <textarea placeholder="Drop a line...."></textarea>
+                <textarea name="message" placeholder="Drop a line...."></textarea>
             </div>
             <div class="field field_captcha">
                 <input type="text" placeholder="Captcha"/>
@@ -164,6 +184,15 @@ www.wandastudios.com/contact.html">
             </div>
             <input type="submit" value="Send"/>
         </form>
+        <div class="thank-you">
+            <a href="#" class="close"></a>
+            <div class="table">
+                <div class="td">
+                    <strong>Thank You!</strong>
+                    <p>Thank you for interest in Wanda Studios Qingdao. A representative <br> will be in touch with you as soon as possible.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

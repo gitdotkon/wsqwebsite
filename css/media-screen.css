@@ -1007,6 +1007,26 @@
   }
 }
 @media only screen and (max-width: 1024px) {
+  .wrong {
+    font-size: 10px;
+    top: auto;
+    right: 0;
+    bottom: 0;
+  }
+
+  .thank-you .close {
+    top: 15px;
+    right: 15px;
+  }
+
+  .thank-you strong {
+    font-size: 24px;
+  }
+
+  .thank-you {
+    font-size: 12px;
+  }
+
   .news_nav ul li {
     display: block;
     padding: 10px;

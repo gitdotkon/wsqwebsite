@@ -16,7 +16,68 @@
     }
 }(jQuery));
 
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+    return pattern.test(emailAddress);
+}
 jQuery(document).ready(function ($) {
+
+    /* Contact form */
+    var $contact_form;
+    if($(window).width()<1024){
+        $contact_form = $('#contact_form_2');
+    }else{
+        $contact_form = $('#contact_form');
+    }
+    console.log($contact_form);
+
+    $(document).on('click', '.error input', function(){
+        $(this).closest('.field').removeClass('error');
+        console.log($(this));
+        console.log('sss');
+    });
+    if($contact_form.length>0){
+        $('.thank-you .close').click(function(){
+            $('.thank-you').hide();
+            $contact_form.find('.field input, .field textarea').val('');
+            $contact_form.find('.placeholder').show();
+            return false;
+        });
+        $contact_form.submit(function(e){
+            /* Validate form */
+            var self = $(this);
+            var name = self.find('input.name').val().trim();
+            var email = self.find('input.email').val().trim();
+            var valid = true;
+            if(name.length == 0){
+                self.find('input.name').closest('.field').addClass('error');
+                valid = false;
+            }
+            if(email.length == 0 || !isValidEmailAddress(email)){
+                self.find('.email').closest('.field').addClass('error');
+                valid = false;
+            }
+            if(!valid){
+                return false;
+            }else{
+                var data = $(this).serialize();
+                console.log(data);
+                var url = $(this).attr('action');
+                var lastI = window.location.href.lastIndexOf('/');
+                url = window.location.href.substr(0, lastI) + '/'+url;
+                $(this).addClass('wait');
+                $.post(url, data, function(res){
+                    console.log(res);
+                   $('.thank-you').show();
+                    $(self).removeClass('wait');
+                }).error(function(){
+                        console.log('Erorr');
+                    });
+            }
+            return false;
+        });
+    }
+    /* Contact form end */
 
     /* Stages page */
     if($('body').hasClass('stages_page')){
