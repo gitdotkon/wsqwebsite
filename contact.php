@@ -11,14 +11,15 @@ $body = '
 
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
-//$mail->isSMTP();
-//$mail->Host = 'outlook.wanda.cn';
-//$mail->Port = '25';
-//$mail->Username = 'fc_0209';
-//$mail->Password = 'vfxcve21';
+$mail->isSMTP();
+$mail->Host = 'outlook.wanda.cn';
+$mail->Port = '25';
+$mail->Username = 'fc_0209';
+$mail->Password = 'vfxcve21';
 $mail->setFrom($_POST['email'], $_POST['username']);
-//$mail->addAddress('edouard@flow.asia', 'Edouard');
-$mail->addAddress('dimonpdaa@gmail.com', 'Chris');
+$mail->addAddress('edouard@flow.asia', 'Edouard');
+$mail->addAddress('dylan@flow.asia', 'Dylan');
+//$mail->addAddress('dimonpdaa@gmail.com', 'Chris');
 $mail->Subject = 'Contact from Wanda Studios';
 $mail->msgHTML($body);
 
