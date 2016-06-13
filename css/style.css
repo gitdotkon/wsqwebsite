@@ -10109,3 +10109,6 @@ body.red_header_fixed.service_page  .tabs{
     background: #fff;
     opacity: 0.2;
 }
+body.footer_visible .stage_list_slider{
+    display: none !important;
+}
