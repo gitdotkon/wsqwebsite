@@ -3716,6 +3716,9 @@ body.facilities_list_pages.press_center_page .stage_screen_btns {
     text-shadow: none;
     background: #f3f3f3;
 }
+.pre_production.block{
+    background: none;
+}
 .block h2.block_title {
     color: #000;
     font-size: 70px;
