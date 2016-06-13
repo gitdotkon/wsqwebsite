@@ -90,7 +90,7 @@
     display: none;
   }
 }
-@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+@media only screen and (max-width: 1440px) and (min-width: 1025px) {
   .wrong {
     font-size: 11px;
     line-height: 22px;
@@ -2122,11 +2122,18 @@
     height: 100%;
   }
 
-  body.stages_page .header .logo img {
+  body.stages_page.red_header_fixed .header .logo img {
     display: none;
   }
-  body.stages_page .header .logo img.logo_red {
+  body.stages_page.red_header_fixed .header .logo img.logo_red {
     display: block;
+  }
+
+  body.stages_page.red_header_fixed .wrapper > .header {
+    display: none;
+  }
+  body.stages_page.red_header_fixed .mobile_stages_slider_nav {
+    top: 9px;
   }
 
   .red_header .mobile_stages_slider_nav {

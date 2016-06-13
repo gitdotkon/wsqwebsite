@@ -4464,7 +4464,7 @@ body.main_nav_visible .main_nav {
 }
 .seasons_climate .text img {
     display: block;
-    margin: 34px 0 0 0;
+    margin: 34px auto 0;
 }
 .travel_times {
     height: 960px;
@@ -6171,10 +6171,10 @@ h1.detail_title {
 .tab_nav ul li a:hover {
     color: #ab081a;
 }
-.red_header_static {
-    display: none;
-    position: static !important;
-}
+/*.red_header_static {*/
+    /*display: none;*/
+    /*position: static !important;*/
+/*}*/
 .red_header_static.stiky{
     position: fixed !important;
 }

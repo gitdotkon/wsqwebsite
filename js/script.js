@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
     });
     /* Contact form */
     var $contact_form;
-    if($(window).width()<1024){
+    if($(window).width()<=1024){
         $contact_form = $('#contact_form_2');
     }else{
         $contact_form = $('#contact_form');
@@ -100,6 +100,7 @@ jQuery(document).ready(function ($) {
 
     /* Studios page */
     if(($('body').hasClass('the_studios2_page') || $('body').hasClass('about_page') || $('body').hasClass('facilities_list_pages')) && $('.press_detail').length<=0){
+
         $(window).mousewheel(function(e){
             if($(window).scrollTop() == 0 && e.deltaY<0){
                 $('html, body').animate({
@@ -107,13 +108,13 @@ jQuery(document).ready(function ($) {
                 }, 360);
                 return false;
             }
-            
-            if($(window).height() >= $(window).scrollTop() && e.deltaY>0){
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 360);
-                return false;
-            }
+
+            // if($(window).height() >= $(window).scrollTop() && e.deltaY>0){
+            //     $('html, body').animate({
+            //         scrollTop: 0
+            //     }, 360);
+            //     return false;
+            // }
         });
         $('body').swipe({
             swipe: function(event, direction, distance, duration, fingerCount){
@@ -133,6 +134,16 @@ jQuery(document).ready(function ($) {
         })
 
     }
+    // if($(window).width() <= 1024 && $('body').hasClass('stages_page')){
+    //     $(window).mousewheel(function(e){
+    //         if($(window).scrollTop() == 0 && e.deltaY<0){
+    //             $('html, body').animate({
+    //                 scrollTop: $(window).height()
+    //             }, 360);
+    //             return false;
+    //         }
+    //     });
+    // }
     if($('body').hasClass('press_center_page')){
         $(window).scroll(function(e){
             if($('.news_nav').hasClass('is_open').length<=0){
@@ -154,7 +165,7 @@ jQuery(document).ready(function ($) {
     //         }
     //     })
     // }
-    if($(window).width()<1024){
+    if($(window).width()<=1024){
         setHeightforFullScreen();
     }
     init_sslider();
@@ -311,7 +322,7 @@ jQuery(document).ready(function ($) {
 
             if(hash){
                 hash = hash.replace('#', '');
-                if($(window).width()<1024){
+                if($(window).width()<=1024){
                     $('.home_screen .stage_screen_btns a[data-hash="'+hash+'"]').addClass('active');
                 }else{
                     animate_home_screen(1);
@@ -637,7 +648,7 @@ jQuery(document).ready(function ($) {
 
                 }
 
-                if($(window).width()<1024){
+                if($(window).width()<=1024){
 
                     if($('body').hasClass('stages_page')){
                         index = $(this).closest('span').index();
@@ -846,7 +857,7 @@ jQuery(document).ready(function ($) {
                 if ($body.hasClass('home')) {//!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')
                     $body.swipe({
                         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                            if($(event.target).hasClass('menu-expand') && $(window).width()<1024){
+                            if($(event.target).hasClass('menu-expand') && $(window).width()<=1024){
                                 $(event.target).trigger('click');
                             }
                             if(!$(event.target).hasClass('social_btns')){
@@ -1055,16 +1066,17 @@ jQuery(document).ready(function ($) {
             smoothHeight: true,
             touch: true,
             start: function (slider) {
-                if($(window).width()<1024){
+                if($(window).width()<=1024){
                     var hash = window.location.hash;
                     hash = hash.replace('#', '');
-                    console.log(hash);
-                    var i = $('.home_screen .stage_screen_btns a.active').closest('span').index();
-                    slider.flexAnimate(i);
-                    $('html, body').animate({
-                        scrollTop: $('.red_header_static').offset().top + $('.header').height()
-                    }, 360);
+                    if(hash){
+                        var i = $('.home_screen .stage_screen_btns a.active').closest('span').index();
 
+                        slider.flexAnimate(i);
+                        $('html, body').animate({
+                            scrollTop: $('.red_header_static').offset().top + $('.header').height()
+                        }, 360);
+                    }
                 }
                 $('.stage_screen_btns').unbind().click(function(){
 
@@ -1082,6 +1094,10 @@ jQuery(document).ready(function ($) {
                         $('.stage_screen_btns span').eq(index).find('a').addClass('active');
 
                         $('body').removeClass('mobile_stages_slider_nav_open');
+
+                        $('html, body').animate({
+                            scrollTop: $('.mobile_stages_slider').offset().top - $('.header.red_header_static').height()
+                        }, 360);
                     }else{
                         $('body').addClass('mobile_stages_slider_nav_open');
                     }
@@ -1131,7 +1147,7 @@ jQuery(document).ready(function ($) {
 
         if(!$('body').hasClass('workshops_page') && !$('body').hasClass('press_center_page')){
             $('.tab_nav a').click(function() {
-                if($(window).width()<1024){
+                if($(window).width()<=1024){
                     var parent = $(this).closest('.tab_nav');
 
                     if($(parent).hasClass('open')){
@@ -1508,7 +1524,7 @@ jQuery(document).ready(function ($) {
     if (!$('body').hasClass('facilities_list_pages')){
         $('.red_header').clone().addClass('red_header_static').insertAfter($('.red_header'));
 
-        if($(window).width()<1024){
+        if($(window).width()<=1024){
             $('.slide .red_header:not(.red_header_static) .mobile_stages_slider_nav').remove();
         }
 
@@ -1518,6 +1534,7 @@ jQuery(document).ready(function ($) {
         var window_height = $(window).height(),
             top = $(document).scrollTop();
         if (!$('.full_screen').length) window_height = 0;
+        if($(window).width()<=1024)
         if (top > window_height) {
             $('body').addClass('red_header_fixed');
         } else {
@@ -1627,7 +1644,7 @@ jQuery(document).ready(function ($) {
         setSecScreenHeight();
 
         setHeightforFullScreen();
-        if($(window).width()<1024){
+        if($(window).width()<=1024){
             setHeightforFullScreen();
         }
     });

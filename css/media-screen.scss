@@ -91,7 +91,7 @@
 	}
 }
 
-@media only screen and (max-width: 1440px) and (min-width: 1024px){
+@media only screen and (max-width: 1440px) and (min-width: 1025px){
 	.wrong{
 		font-size: 11px;
 		line-height: 22px;
@@ -1888,7 +1888,7 @@
 			height: 100%;
 		}
 	}
-	body.stages_page .header .logo {
+	body.stages_page.red_header_fixed .header .logo {
 		img{
 			display: none;
 			&.logo_red{
@@ -1896,6 +1896,14 @@
 			}
 		}
 
+	}
+	body.stages_page.red_header_fixed{
+		.wrapper>.header{
+			display: none;
+		}
+		.mobile_stages_slider_nav{
+			top: 9px;
+		}
 	}
 	.red_header{
 		.mobile_stages_slider_nav{
