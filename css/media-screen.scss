@@ -1070,12 +1070,13 @@
 	}
 	.main_nav_list .left li.has-submenu span.menu-expand{
 		position: absolute;
-		top: 21px;
-		right: 4px;
+		top: 9px;
+		right: 0;
 		z-index: 100;
-		width: 13px;
-		height: 7px;
-		background-size: cover;
+		width: 24px;
+		height: 27px;
+		background-size: auto;
+		background-position: center;
 	}
 	.main_nav_logo{
 		width: 36px;
@@ -1671,12 +1672,13 @@
 			cursor: pointer;
 			display: block;
 			position: absolute;
-			top: 21px;
-			right: 4px;
+			top: 9px;
+			right: 0;
 			z-index: 100;
-			width: 13px;
-			height: 7px;
-			background-size: cover;
+			width: 24px;
+			height: 27px;
+			background-size: auto;
+			background-position: center;
 		}
 	}
 	.main_nav_list{

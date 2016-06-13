@@ -1225,7 +1225,7 @@ a.back_top,
     height: 100%;
     text-align: center;
     z-index: 1;
-    display: none;
+    display: block;
 }
 .foot_share a {
     display: block;
