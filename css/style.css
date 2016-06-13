@@ -8824,24 +8824,24 @@ body.the_studios2_page .home_screen h2 {
         padding: 0px 20px 40px;
         position: relative;
     }
-    .mobile_stages_slider:after {
-        display: block;
-        content: ' ';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #fff;
-        -webkit-transition: all .5s cubic-bezier(.19,1,.22,1);
-        transition: all .5s cubic-bezier(.19,1,.22,1);     
-        opacity: 0;
-        z-index: -1;        
-    }
-    body.mobile_stages_slider_nav_open .mobile_stages_slider:after {
-        opacity: .9;
-        z-index: 1111;
-    }
+    /*.mobile_stages_slider:after {*/
+        /*display: block;*/
+        /*content: ' ';*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        /*background: #fff;*/
+        /*-webkit-transition: all .5s cubic-bezier(.19,1,.22,1);*/
+        /*transition: all .5s cubic-bezier(.19,1,.22,1);     */
+        /*opacity: 0;*/
+        /*z-index: -1;        */
+    /*}*/
+    /*body.mobile_stages_slider_nav_open .mobile_stages_slider:after {*/
+        /*opacity: .9;*/
+        /*z-index: 1111;*/
+    /*}*/
     .mobile_stages_slider h3 {
         color: #141414;
         font-size: 12px;
