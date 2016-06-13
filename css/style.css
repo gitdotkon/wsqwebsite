@@ -6175,6 +6175,9 @@ h1.detail_title {
     display: none;
     position: static !important;
 }
+.red_header_static.stiky{
+    position: fixed;
+}
 body.red_header_fixed .tabs{
     padding-top: 100px;
 }

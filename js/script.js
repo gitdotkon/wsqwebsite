@@ -136,6 +136,17 @@ jQuery(document).ready(function ($) {
             }
         })
     }
+    if($('body').hasClass('stages_page') && $(window).width()<1024){
+        $(window).scroll(function(e){
+            var scrolltop = $(window).scrollTop();
+            var header_offset = $('.red_header_static').offset().top;
+            if(scrolltop>header_offset){
+                $('.red_header_static').addClass('stiky')
+            }else{
+                $('.red_header_static').removeClass('stiky')
+            }
+        })
+    }
     if($(window).width()<1024){
         setHeightforFullScreen();
     }
@@ -975,7 +986,7 @@ jQuery(document).ready(function ($) {
                 }, function(){
                     timer = setTimeout(function () {
                         $(slider).parent('.stage_list_slider').stop().css({opacity: 0}).css({marginLeft: '-9999px'});
-                    }, 200);
+                    }, 100);
                 });
 
                 // $('.stage_list_trigger[data-target="' + $(slider).parent('.stage_list_slider').attr('id') + '"]').mouseover(function () {
