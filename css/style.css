@@ -5641,6 +5641,9 @@ a.apply_btn:hover {
     top: 5px;
     left: 0;
 }
+.o7{
+    opacity: 0.7;
+}
 /*
 .contact_info ul li.contact_phone {
     background: url(../images/contact_phone.png) no-repeat 8px 50%;
