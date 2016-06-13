@@ -765,7 +765,7 @@ jQuery(document).ready(function ($) {
                     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
 
                         if($(event.target).hasClass('menu-expand')){
-                            $(event.target).trigger('click');
+                            //$(event.target).trigger('click');
                         }
                         if ('up' == direction && !$('.wrapper').hasClass('wrapper_1')) {
                             var index = $wrapper.data('swipe-index');
