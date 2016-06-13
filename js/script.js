@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
                 }, 360);
                 return false;
             }
-            console.log($(window).scrollTop());
+            
             if($(window).height() >= $(window).scrollTop() && e.deltaY>0){
                 $('html, body').animate({
                     scrollTop: 0
