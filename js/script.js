@@ -21,7 +21,9 @@ function isValidEmailAddress(emailAddress) {
     return pattern.test(emailAddress);
 }
 jQuery(document).ready(function ($) {
-
+    $('a.return-false').click(function(){
+       return false;
+    });
     /* Contact form */
     var $contact_form;
     if($(window).width()<1024){
