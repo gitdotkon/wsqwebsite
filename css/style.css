@@ -5631,6 +5631,9 @@ a.apply_btn:hover {
     margin: 0 0 15px;
     position: relative;
 }
+.contact_info ul li.contact_phone{
+    display: none;
+}
 .contact_info ul li [class^="icon-"], 
 .contact_info ul li [class*=" icon-"] {
     font-size: 50px;
