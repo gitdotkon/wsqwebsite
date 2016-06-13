@@ -216,16 +216,40 @@ jQuery(document).ready(function ($) {
     /* parse location params on service page*/
     /* Sub menu */
     $('.main_nav_list .left li .menu-expand').click(function(e){
+        e.preventDefault();
         var parent = $(this).closest('li');
-        //$('.main_nav_list .open').removeClass('open').find('ul').hide();
-        $('.main_nav_list .open').each(function(){
-            if($(this)[0] !== parent[0]){
-                $(this).removeClass('open').find('ul').slideUp();
+        if($('body').hasClass('home')){
+            console.log('Stages');
+            if($(window).width()>1024 || e.originalEvent == undefined){
+                $('.main_nav_list .open').each(function(){
+                    if($(this)[0] !== parent[0]){
+                        $(this).removeClass('open').find('ul').slideUp();
+                    }
+                });
+                $(parent).find('ul').slideToggle();
+                $(parent).toggleClass('open');
             }
-
-        });
-        $(parent).find('ul').slideToggle();
-        $(parent).toggleClass('open');
+        }else if($('body').hasClass('stages_page')){
+            if(e.originalEvent == undefined){
+                $('.main_nav_list .open').each(function(){
+                    if($(this)[0] !== parent[0]){
+                        $(this).removeClass('open').find('ul').slideUp();
+                    }
+                });
+                $(parent).find('ul').slideToggle();
+                $(parent).toggleClass('open');
+            }
+        }
+        else{
+            $('.main_nav_list .open').each(function(){
+                if($(this)[0] !== parent[0]){
+                    $(this).removeClass('open').find('ul').slideUp();
+                }
+            });
+            $(parent).find('ul').slideToggle();
+            $(parent).toggleClass('open');
+        }
+        console.log(e.originalEvent);
     });
     $('.main_nav_list .left li a').click(function(){
         var hash      = window.location.hash;
@@ -258,18 +282,20 @@ jQuery(document).ready(function ($) {
 
     });
 
-    $('.main_nav_list h3 span.menu-expand, .main_nav_list h3 span.menu-expand').click(function(){
+    $('.main_nav_list h3 span.menu-expand, .main_nav_list h3 span.menu-expand').click(function(e){
+        if(e.originalEvent == undefined){
+            var parent = $(this).closest('div');
+            $('.main_nav_list .open').each(function(){
+                if($(this)[0] !== parent[0]){
+                    $(this).removeClass('open').find('ul').slideUp();
+                }
+            });
+            //$('.main_nav_list .open').removeClass('open').find('ul').hide();
+            $(parent).find('ul').slideToggle();
+            $(parent).toggleClass('open');
+        }
 
-        var parent = $(this).closest('div');
-        $('.main_nav_list .open').each(function(){
-            if($(this)[0] !== parent[0]){
-                $(this).removeClass('open').find('ul').slideUp();
-            }
-
-        });
-        //$('.main_nav_list .open').removeClass('open').find('ul').hide();
-        $(parent).find('ul').slideToggle();
-        $(parent).toggleClass('open');
+        console.log(e.originalEvent);
     });
 
     /* Sub menu */
@@ -785,7 +811,7 @@ jQuery(document).ready(function ($) {
                     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
 
                         if($(event.target).hasClass('menu-expand')){
-                            //$(event.target).trigger('click');
+                            $(event.target).trigger('click');
                         }
                         if ('up' == direction && !$('.wrapper').hasClass('wrapper_1')) {
                             var index = $wrapper.data('swipe-index');
@@ -822,7 +848,7 @@ jQuery(document).ready(function ($) {
                 if ($body.hasClass('home')) {//!$body.hasClass('facilities_landing_page') && !$body.hasClass('about_us_page')
                     $body.swipe({
                         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                            if($(event.target).hasClass('menu-expand')){
+                            if($(event.target).hasClass('menu-expand') && $(window).width()<1024){
                                 $(event.target).trigger('click');
                             }
                             if(!$(event.target).hasClass('social_btns')){
