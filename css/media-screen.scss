@@ -92,7 +92,12 @@
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1024px){
-
+	.footer{
+		bottom: -495px;
+	}
+	body.footer_visible .wrapper{
+		top: -495px;
+	}
 	.group_property_ul ul li {
 		width: 120px;
 	}
