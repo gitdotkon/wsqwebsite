@@ -1461,7 +1461,9 @@ jQuery(document).ready(function ($) {
         start: function (slider) {
             $('.our_team_list_ul ul li').click(function () {
                 var $this = $(this),
-                    index = $this.index();
+                    index = parseInt($(this).attr('data-index'));
+                    //index = $this.index();
+                console.log(index);
                 if (!$this.hasClass('active')) {
                     $('.our_team_list_ul .active').removeClass('active');
                     $this.addClass('active');
@@ -1541,10 +1543,10 @@ jQuery(document).ready(function ($) {
 
     $(window).unbind('.infscr');
 
-    $('.photo_gallery .load_more_btn').click(function () {
-        $('.photo_gallery ul').infinitescroll('retrieve');
-        return false;
-    });
+    // $('.photo_gallery .load_more_btn').click(function () {
+    //     $('.photo_gallery ul').infinitescroll('retrieve');
+    //     return false;
+    // });
 
     $('.photo_gallery ul').infinitescroll({
         navSelector: ".photo_gallery .page_navi",
@@ -1561,10 +1563,10 @@ jQuery(document).ready(function ($) {
 
     $(window).unbind('.infscr');
 
-    $('.gallery_videos .load_more_btn').click(function () {
-        $('.gallery_videos ul').infinitescroll('retrieve');
-        return false;
-    });
+    // $('.gallery_videos .load_more_btn').click(function () {
+    //     $('.gallery_videos ul').infinitescroll('retrieve');
+    //     return false;
+    // });
 
     $('.gallery_videos ul').infinitescroll({
         navSelector: ".gallery_videos .page_navi",
@@ -1581,10 +1583,10 @@ jQuery(document).ready(function ($) {
 
     $(window).unbind('.infscr');
 
-    $('.news .load_more_btn').click(function () {
-        $('.news_inner').infinitescroll('retrieve');
-        return false;
-    });
+    // $('.news .load_more_btn').click(function () {
+    //     $('.news_inner').infinitescroll('retrieve');
+    //     return false;
+    // });
 
     $('.news_inner').infinitescroll({
         navSelector: ".news .page_navi",
@@ -1768,3 +1770,4 @@ jQuery(document).ready(function ($) {
         }
     }
 });
+

@@ -6005,7 +6005,7 @@ h1.detail_title {
     line-height: 27px;
     text-align: center; 
     text-transform: uppercase;
-    display: none;
+    display: inline-block;
     border: 1px solid #ab081a;
     border-radius: 40px;
     padding: 28px 129px;
