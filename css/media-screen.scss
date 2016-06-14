@@ -884,6 +884,9 @@
 	}
 }
 @media only screen and (max-width: 1024px){
+	body.stage_page .header:before{
+		display: none;
+	}
 	.stage_pic{
 		margin-left: auto;
 		margin-right: auto;
@@ -1898,11 +1901,32 @@
 
 	}
 	body.stages_page.red_header_fixed{
-		.wrapper>.header{
+		.wrapper .header.s{
 			display: none;
+		}
+		.header.red_header_static{
+			position: fixed;
 		}
 		.mobile_stages_slider_nav{
 			top: 9px;
+		}
+		.mobile_stages_slider{
+			padding-top: 10px;
+		}
+	}
+	body.stages_page{
+
+		.header.red_header{
+			display: none;
+			&.red_header_static{
+				display: block;
+				img{
+					display: none;
+					&.logo_red{
+						display: block;
+					}
+				}
+			}
 		}
 	}
 	.red_header{
@@ -2692,3 +2716,9 @@
 	//		left: 0
 	//	}
 	//}
+
+@media screen and (min-width: 1024px){
+	.red_header_static{
+		display: none;
+	}
+}

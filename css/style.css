@@ -2161,6 +2161,7 @@ body.facilities_list_pages#screen_visible_1 .header:before {
     display: block;
     opacity: 1;
 }
+
 body.stage_page .livechat_btn_up,
 body.facilities_list_pages#screen_visible_1 .livechat_btn_up {
     background-image: url(../images/livechat_btn_red.png);
@@ -6051,11 +6052,17 @@ h1.detail_title {
     position: relative;
     background: #fff;
 }
+.red_header_fixed .red_header{
+    position: fixed;
+}
 .red_header .logo img {
     display: none;
 }
 .red_header .logo img.logo_red {
     display: block;
+}
+.stages_page .slick-arrow{
+    display: none !important;
 }
 .red_header .menu_btn {
     color: #ab081a;
@@ -6181,9 +6188,9 @@ h1.detail_title {
 body.red_header_fixed .tabs{
     padding-top: 100px;
 }
-body.red_header_fixed .red_header {
-    position: fixed;
-}
+/*body.red_header_fixed .red_header {*/
+    /*position: fixed;*/
+/*}*/
 body.red_header_fixed .red_header_static {
     display: block;
 }
@@ -8019,7 +8026,7 @@ body.the_studios2_page .home_screen h2 {
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
     .mobile_br {
         display: block;
     }
@@ -8853,10 +8860,10 @@ body.the_studios2_page .home_screen h2 {
     body.stages_page .header:before {
         display: none !important;
     }
-    body.stages_header_bg .header:before {
-        display: block !important;
-        opacity: 1 !important;
-    }  
+    /*body.stages_header_bg .header:before {*/
+        /*display: block !important;*/
+        /*opacity: 1 !important;*/
+    /*}  */
     .mobile_stages_slider_inner {
         position: relative;
         padding: 17px 0 0 0;
