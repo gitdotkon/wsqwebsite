@@ -1473,8 +1473,8 @@ a.hover_btn.active:before{
     height: 100%;
     background: #37474f;
     z-index: -1;
-    -webkit-transform: rotate3d(0, 0, 1, -49deg) translate3d(0, -3em, 0);
-    transform: rotate3d(0, 0, 1, -49deg) translate3d(0, -3em, 0);
+    -webkit-transform: rotate3d(0, 0, 1, -69deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -69deg) translate3d(0, -3em, 0);
     -webkit-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
     -webkit-transition: -webkit-transform 0.5s, opacity 0.5s, background-color 0.5s;
@@ -1661,7 +1661,11 @@ a.hover_btn.active{
     width: 138px;
     height: 138px;
     border: 2px solid #fff;
+    -webkit-border-radius: 100%;
     border-radius: 100%;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 .stage_screen_btns_wrapper {
     position: absolute;
@@ -4854,6 +4858,12 @@ h2.block_box_title {
     padding: 0 0 21px;
     margin: 0 auto 24px;
     max-width: 788px;
+}
+.red_header h2.block_box_title{
+    margin: -35px auto 0;
+}
+.red_header h2.block_box_title:before{
+    display: none;
 }
 h2.block_box_title:before {
     display: block;
@@ -9156,6 +9166,10 @@ body.the_studios2_page .home_screen h2 {
         padding-bottom: 13px;
         margin-bottom: 12px;
     }
+    .red_header h2.block_box_title {
+        margin: 0 auto 0;
+        padding-top: 16px;
+    }
     .block_box {
         font-size: 16px;
         line-height: 20px;
@@ -9250,8 +9264,8 @@ body.the_studios2_page .home_screen h2 {
     .team_detail .text {
         background: url(../images/mobile/team_detail.jpg) no-repeat 50% 50%;
         background-size: cover;
-        font-size: 11px;
-        line-height: 17px;   
+        font-size: 14px;
+        line-height: 19px;
         padding: 23px 20px 26px 20px; 
         position: relative;  
         height: auto;  
@@ -9803,8 +9817,8 @@ body.the_studios2_page .home_screen h2 {
         margin-left: -10px;
     }
     .red_cols {
-        font-size: 11px;
-        line-height: 15px;
+        font-size: 14px;
+        line-height: 18px;
         padding: 50px 0 0;
     }
     .red_cols ul li {
