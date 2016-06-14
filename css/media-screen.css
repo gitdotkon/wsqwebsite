@@ -2250,6 +2250,11 @@
     display: none;
   }
 
+  .block_2 ul li {
+    width: 100%;
+    float: auto;
+  }
+
   .tab_nav ul li.news_a:before {
     top: 36px;
   }

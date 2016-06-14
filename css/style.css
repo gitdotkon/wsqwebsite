@@ -8520,6 +8520,9 @@ body.the_studios2_page .home_screen h2 {
     .header {
         height: 58px;
     }
+    .stage_page .header{
+        background: #fff;
+    }
     .header .logo {
         top: 14px;
         left: 20px;
@@ -9921,8 +9924,8 @@ body.the_studios2_page .home_screen h2 {
     }
 
     .block_2 ul li {
-        width: auto;
-        float: none;
+        width: 50%;
+        float: left;
     }
     .block_box_title_wrapper {
         position: relative;
