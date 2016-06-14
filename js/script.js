@@ -109,12 +109,12 @@ jQuery(document).ready(function ($) {
                 return false;
             }
 
-            // if($(window).height() >= $(window).scrollTop() && e.deltaY>0){
-            //     $('html, body').animate({
-            //         scrollTop: 0
-            //     }, 360);
-            //     return false;
-            // }
+            if($(window).height() >= $(window).scrollTop() && e.deltaY>0){
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 360);
+                return false;
+            }
         });
         $('body').swipe({
             swipe: function(event, direction, distance, duration, fingerCount){
