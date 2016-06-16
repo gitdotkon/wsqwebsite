@@ -2498,6 +2498,13 @@
     display: none;
   }
 
+  .prod_office .stage_screen_btns span {
+    line-height: 1.5;
+  }
+  .prod_office .stage_screen_btns span br {
+    display: block;
+  }
+
   .red_cols ul li {
     padding-left: 20px;
     padding-right: 20px;
