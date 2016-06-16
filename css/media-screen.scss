@@ -1868,6 +1868,11 @@
 		width: 30%;
 		margin: 0 auto;
 	}
+	.prod_office{
+		.stage_screen_btns span.animate_up, .stage_screen_btns span.animate_up{
+			width: auto;
+		}
+	}
 	.post_production_page{
 		.stage_screen_btns span.animate_up, .stage_screen_btns span.animate_up{
 			width: 49%;
@@ -2717,7 +2722,12 @@
 		min-height: 768px;
 	}
 }
-
+@media only screen and (max-width: 767px){
+	.hws ul li {
+		width: auto;
+		float: none;
+	}
+}
 	//@media screen and (orientation:landscape) and (max-device-width: 900px) {
 	//	html{
 	//		-webkit-transform: rotate(-90deg);
@@ -2770,5 +2780,33 @@
 	.three_cols .text{
 		font-size: 18px;
 		line-height: 24px;
+	}
+	.hws .text{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.landing_grids ul, .btn_medium, a.btn_medium {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.landing_grids_inner{
+		.btn_medium, a.btn_medium {
+			border-width: 1px;
+			padding: 11px 50px;
+			margin-top: 12px;
+		}
+	}
+	.landing_grids h2 {
+		font-size: 35px;
+		line-height: 44px;
+		padding-bottom: 7px;
+	}
+	.mobile_foot_widgets h3{
+		font-size: 24px;
+		line-height: 32px;
+	}
+	body.facilities_list_pages .stage_screen_btns a {
+		font-size: 15px;
+		line-height: 18px;
 	}
 }

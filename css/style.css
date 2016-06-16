@@ -8463,9 +8463,9 @@ body.the_studios2_page .home_screen h2 {
     .mobile_foot_widgets,
     .mobile_foot_widgets a {
         color: #fff;
-        font-size: 11px;
-        font-family: 'avenir_lt_55_romanroman';        
-        line-height: 20px;
+        font-size: 16px;
+        font-family: 'avenir_lt_55_romanroman';
+        line-height: 24px;
         text-align: center;
     }
     .mobile_foot_widgets h3 {
@@ -8748,13 +8748,13 @@ body.the_studios2_page .home_screen h2 {
         /*display: none;*/
     /*}*/
     .button_box a {
-        height: 120px;
+        height: 160px;
     }
     .button_box, 
     .button_box a {
         color: #141414;
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 22px;
+        line-height: 28px;
         text-shadow: none;
     }
     .button_box .text {
@@ -9279,8 +9279,8 @@ body.the_studios2_page .home_screen h2 {
     .team_detail .text {
         background: url(../images/mobile/team_detail.jpg) no-repeat 50% 50%;
         background-size: cover;
-        font-size: 14px;
-        line-height: 19px;
+        font-size: 16px;
+        line-height: 22px;
         padding: 23px 20px 26px 20px; 
         position: relative;  
         height: auto;  
@@ -9823,10 +9823,7 @@ body.the_studios2_page .home_screen h2 {
         padding-bottom: 16px;
         margin-bottom: 10px;
     }
-    .hws ul li {
-        width: auto;
-        float: none;
-    }
+
     .hws .desc {
         padding: 0 23px;
     }
@@ -10170,6 +10167,7 @@ body.footer_visible .stage_list_slider{
     visibility: hidden;
 }
 .main_nav_list .middle ul li:last-child,
+.mobile_foot_widget:first-child,
 .foot_widget:nth-child(2) ul li:last-child{
-    display: none;
+    display: none !important;
 }
