@@ -2031,6 +2031,11 @@
 	}
 }
 @media only screen and (max-width: 640px){
+	body,
+	body.facilities_list_pages .home_screen{
+		font-size: 16px;
+		line-height: 1.4;
+	}
 	.stage_screen_btns_wrapper{
 		.stage_screen_btns{
 			display: none;
@@ -2183,12 +2188,16 @@
 	.main_nav_inner h3 a,
 	.main_nav_list .middle ul li a, .main_nav_list .right ul li a{
 		display: block;
-		padding: 5px 0;
-		font-size: 14px;
+		padding: 6px 0;
+		font-size: 16px;
 		font-family: 'avenir_lt_55_romanroman';
 	}
 	.main_nav_list .left ul ul li a{
-		font-size: 12px;
+		font-size: 14px;
+	}
+	.team_detail .text{
+		font-size: 14px;
+		line-height: 20px;
 	}
 	.main_nav_list .left li.has-submenu span.menu-expand,
 	.main_nav_list h3 span.menu-expand{
@@ -2208,8 +2217,8 @@
 	}
 	/**/
 	.about_qd .text{
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 18px;
 	}
 	.about_cols h3{
 		font-size: 15px;
@@ -2219,9 +2228,36 @@
 		margin-bottom: 20px;
 	}
 	.about_cols ul li{
-		font-size: 12px;
+		font-size: 14px;
 		padding-left: 15px;
-		line-height: 18px;
+		line-height: 20px;
+	}
+	.incentive_page{
+		.text_box{
+			br{
+				display: none;
+			}
+		}
+	}
+	.backlots_page,
+	.marine_page,
+	.prod_office{
+		.stages_home_screen{
+			br{
+				display: none;
+			}
+		}
+	}
+	.red_cols ul li{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.red_cols_inner {
+		width: auto;
+		float: none;
+	}
+	body.facilities_list_pages.incentive_page .stage_screen_btns {
+		padding-top: 5px;
 	}
 	.surroundings{
 		h2{
@@ -2234,8 +2270,8 @@
 			padding-top: 40px;
 			padding-bottom: 20px;
 			.txt{
-				font-size: 12px;
-				line-height: 16px;
+				font-size: 14px;
+				line-height: 18px;
 				padding: 0 15px;
 			}
 		}
@@ -2257,12 +2293,12 @@
 			margin: 0 0 16px;
 		}
 		strong{
-			font-size: 12px;
-			line-height: 16px;
+			font-size: 14px;
+			line-height: 18px;
 		}
 		.hbg_slider{
-			font-size: 12px;
-			line-height: 16px;
+			font-size: 14px;
+			line-height: 18px;
 		}
 		p{
 			padding-bottom: 20px;
@@ -2276,8 +2312,8 @@
 	}
 	.seasons_climate{
 		padding: 40px 20px 40px 20px;
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 18px;
 		h2{
 			padding: 0 0 16px;
 			margin: 0 0 16px;
@@ -2295,7 +2331,7 @@
 		}
 	}
 	.travel_col{
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.travel_cols .red_arr{
 		background-size: cover;
@@ -2316,17 +2352,13 @@
 			margin: 0 0 16px;
 		}
 		.txt{
-			font-size: 12px;
-			line-height: 16px;
+			font-size: 14px;
+			line-height: 18px;
 		}
 	}
 	.button_box, .button_box a{
 		font-size: 12px;
 		line-height: 18px;
-	}
-	body.facilities_list_pages .home_screen {
-		font-size: 12px;
-		line-height: 14px;
 	}
 
 	body.the_studios2_page{
@@ -2344,7 +2376,7 @@
 	.team_detail .position,
 	.film_with_us,
 	.block_box{
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 18px;
 	}
 	.team_detail .name{
@@ -2385,8 +2417,8 @@
 		width: 40%;
 	}
 	.specs{
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 14px;
+		line-height: 18px;
 	}
 	.specs_list ul li{
 		padding: 6px 0 6px 15px;
@@ -2418,17 +2450,18 @@
 		line-height: 28px;
 	}
 	.incentive{
-		padding-top: 40px;
+		padding-top: 70px;
 	}
 	.content{
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: left;
 		p{
 			padding-bottom: 20px;
 		}
 		h3{
-			font-size: 18px;
-			line-height: 22px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 	}
 	.incentive_page{
@@ -2460,8 +2493,8 @@
 	}
 	.contact,
 	.contact_info{
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 18px;
+		line-height: 1.6;
 	}
 	.mobile_contact_form,
 	.field input[type="text"],
@@ -2497,12 +2530,12 @@
 		}
 	}
 	.block {
-		font-size: 12px;
-		line-height: 18px;
+		font-size: 14px;
+		line-height: 20px;
 	}
 	.block_2 {
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 14px;
+		line-height: 18px;
 		padding: 0 20px;
 	}
 	.marine_page{
@@ -2636,6 +2669,11 @@
 	.news {
 		padding: 0 20px 60px;
 	}
+
+	.mobile_text{
+		font-size: 14px;
+		line-height: 1.2;
+	}
 }
 @media only screen and (max-width: 480px){
 	.stage_pic{
@@ -2672,6 +2710,14 @@
 @media only screen and (max-height: 500px) and (orientation: landscape){
 	.full_screen{
 		min-height: 600px;
+	}
+	.landing_grids ul li{
+		height: 300px;
+	}
+}
+@media only screen and (max-height: 600px){
+	.full_screen{
+		min-height: 700px;
 	}
 }
 @media only screen and (max-width: 480px){

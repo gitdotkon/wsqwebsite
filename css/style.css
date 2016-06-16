@@ -9023,12 +9023,6 @@ body.the_studios2_page .home_screen h2 {
     .landing_grid_bg_slider {
         display: none;
     }
-    .landing_grids ul,
-    .btn_medium,
-    a.btn_medium {
-        font-size: 12px;
-        line-height: 16px;
-    }
     .btn_medium,
     a.btn_medium {
         border-width: 1px;
@@ -9386,8 +9380,8 @@ body.the_studios2_page .home_screen h2 {
         top: auto;
     }
     body.facilities_list_pages .home_screen {
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 24px;
     }
     .full_screen .td .home_screen, .press_center_page .td_bottom .home_screen {
         padding-bottom: 0;
@@ -9814,8 +9808,8 @@ body.the_studios2_page .home_screen h2 {
         padding-top: 31px;
     }
     .hws {
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 14px;
+        line-height: 18px;
     }
     .hws h3 {
         font-size: 24px;

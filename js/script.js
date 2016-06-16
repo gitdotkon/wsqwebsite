@@ -1177,8 +1177,8 @@ jQuery(document).ready(function ($) {
                         $('.stage_screen_btns span').eq(index).find('a').addClass('active');
 
                         $('body').removeClass('mobile_stages_slider_nav_open');
-
-                        $('html, body').animate({
+                        console.log($('.mobile_stages_slider').offset().top);
+                        $('html, body, .wrapper').animate({
                             scrollTop: $('.mobile_stages_slider').offset().top - $('.header.red_header_static').height()
                         }, 360);
                     }else{
@@ -1626,6 +1626,7 @@ jQuery(document).ready(function ($) {
                 $('body').removeClass('red_header_fixed');
 
             }
+            console.log('ssss');
         }
     }
 
