@@ -767,7 +767,7 @@ p {
     font-size: 18px;
     font-family: 'avenir_lt_55_romanroman';    
     line-height: 30px;
-    text-align: left;
+    text-align: justify;
     text-shadow: none;
 }
 .content .img-wrapper{
@@ -6782,7 +6782,7 @@ body.incentive_page .stage_screen_btns a.hover_btn:before,
 .news_nav ul li.active a {
     font-family: 'avenir_lt_65_mediumblack';    
 }
-body{
+*{
     -webkit-overflow-scrolling: touch;
 }
 body.the_studios2_page .home_screen h2 {
@@ -9839,6 +9839,15 @@ body.the_studios2_page .home_screen h2 {
         line-height: 18px;
         padding: 50px 0 0;
     }
+    .red_cols:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .red_cols_inner{
+        width: 50%;
+        float: left;
+    }
     .red_cols ul li {
         width: auto;
         float: none;
@@ -10156,4 +10165,11 @@ body.red_header_fixed.service_page  .tabs{
 }
 body.footer_visible .stage_list_slider{
     display: none !important;
+}
+.lang_switcher{
+    visibility: hidden;
+}
+.main_nav_list .middle ul li:last-child,
+.foot_widget:nth-child(2) ul li:last-child{
+    display: none;
 }

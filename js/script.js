@@ -96,7 +96,7 @@ jQuery(document).ready(function ($) {
     }
 
     /* Studios page */
-    if(($('body').hasClass('the_studios2_page') || $('body').hasClass('about_page') || $('body').hasClass('facilities_list_pages')) && $('.press_detail').length<=0){
+    if(($('body').hasClass('the_studios2_page') || $('body').hasClass('about_page') || $('body').hasClass('facilities_list_pages')) && $('.press_detail').length<=0 && !$('body').hasClass('terms')){
 
         $(window).mousewheel(function(e){
 
@@ -1614,16 +1614,18 @@ jQuery(document).ready(function ($) {
     }
 
     function set_red_header_fixed() {
-        var window_height = $(window).height(),
-            top = $(window).scrollTop();
-        if (!$('.full_screen').length) {
-            window_height = 0;
-        }
-        if (top > window_height) {
-            $('body').addClass('red_header_fixed');
-        } else {
-            $('body').removeClass('red_header_fixed');
+        if(!$('body').hasClass('terms')){
+            var window_height = $(window).height(),
+                top = $(window).scrollTop();
+            if (!$('.full_screen').length) {
+                window_height = 0;
+            }
+            if (top > window_height) {
+                $('body').addClass('red_header_fixed');
+            } else {
+                $('body').removeClass('red_header_fixed');
 
+            }
         }
     }
 
