@@ -2510,7 +2510,8 @@
     line-height: 20px;
   }
 
-  .incentive_page .text_box br {
+  .incentive_page .text_box br,
+  .service_page .text_box br {
     display: none;
   }
 
@@ -2518,6 +2519,13 @@
   .marine_page .stages_home_screen br,
   .prod_office .stages_home_screen br {
     display: none;
+  }
+
+  .service_page .sv_icons .icon {
+    margin: 0 auto 7px;
+  }
+  .service_page .sv_icons ul li {
+    margin-bottom: 8px;
   }
 
   .marine_page .hover_btn br {

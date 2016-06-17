@@ -2262,7 +2262,8 @@
 		padding-left: 15px;
 		line-height: 20px;
 	}
-	.incentive_page{
+	.incentive_page,
+	.service_page{
 		.text_box{
 			br{
 				display: none;
@@ -2278,6 +2279,15 @@
 			}
 		}
 	}
+	.service_page{
+		.sv_icons .icon{
+			margin: 0 auto 7px;
+		}
+		.sv_icons ul li{
+			margin-bottom: 8px;
+		}
+	}
+
 	.marine_page .hover_btn{
 		br{
 			display: block;
