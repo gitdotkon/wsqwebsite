@@ -300,24 +300,39 @@ jQuery(document).ready(function ($) {
 
     $('.main_nav_list h3 span.menu-expand, .main_nav_list h3 span.menu-expand').click(function(e){
         var parent = $(this).closest('div');
-        if(e.originalEvent == undefined){
-            $('.main_nav_list .open').each(function(){
-                if($(this)[0] !== parent[0]){
-                    $(this).removeClass('open').find('ul').slideUp();
-                }
-            });
-            $(parent).find('ul').slideToggle();
-            $(parent).toggleClass('open');
+        console.log('Click!');
+        console.log(e);
+        if($(window).width>1024){
+            if(e.originalEvent == undefined){
+                $('.main_nav_list .open').each(function(){
+                    if($(this)[0] !== parent[0]){
+                        $(this).removeClass('open').find('ul').slideUp();
+                    }
+                });
+                $(parent).find('ul').slideToggle();
+                $(parent).toggleClass('open');
+            }
+            else{
+                $('.main_nav_list .open').each(function(){
+                    if($(this)[0] !== parent[0]){
+                        $(this).removeClass('open').find('ul').slideUp();
+                    }
+                });
+                $(parent).find('ul').slideToggle();
+                $(parent).toggleClass('open');
+            }
+        }else{
+            if(e.originalEvent == undefined){
+                $('.main_nav_list .open').each(function(){
+                    if($(this)[0] !== parent[0]){
+                        $(this).removeClass('open').find('ul').slideUp();
+                    }
+                });
+                $(parent).find('ul').slideToggle();
+                $(parent).toggleClass('open');
+            }
         }
-        else{
-            $('.main_nav_list .open').each(function(){
-                if($(this)[0] !== parent[0]){
-                    $(this).removeClass('open').find('ul').slideUp();
-                }
-            });
-            $(parent).find('ul').slideToggle();
-            $(parent).toggleClass('open');
-        }
+
     });
 
     /* Sub menu */
@@ -1307,6 +1322,7 @@ jQuery(document).ready(function ($) {
             slideshow: false,
             slideshowSpeed: 8000,
             animationSpeed: 800,
+            touch: false,
             smoothHeight: true,
             start: function($slider){
                 $('.tab_nav_trigger').click(function(){
@@ -1639,12 +1655,13 @@ jQuery(document).ready(function ($) {
 
     $('.tab_nav_trigger').click(function () {
         var index = $('.tab_nav_trigger').index($(this));
+
         if($(window).width()>1024){
             $('.tab_nav ul li').eq(index).find('a').trigger('click');
         }else{
             $('.tab_nav ul li.active').removeClass('active');
             $('.tab_nav ul li').eq(index).addClass('active');
-            if($('body').hasClass('incentive_page') || $('body').hasClass('prod_office') || $('body').hasClass('marine_page')){
+            if($('body').hasClass('incentive_page') || $('body').hasClass('prod_office') || $('body').hasClass('marine_page') || $('body').hasClass('service_page')){
                 $('.tabs .tab.tab_active').removeClass('tab_active');
                 $('.tabs .tab').eq(index).addClass('tab_active');
             }else if($('body').hasClass('workshops_page')){
