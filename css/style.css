@@ -8488,6 +8488,12 @@ body.the_studios2_page .home_screen h2 {
     .mobile_footer_visible .livechat_btn {
         display: none;
     }
+    .stages_page .mobile_footer_visible .logo,
+    .stages_page .mobile_footer_visible .menu_btn,
+    .stages_page .mobile_footer_visible .social_btns,
+    .stages_page .mobile_footer_visible .livechat_btn {
+        display: block;
+    }
     .logo,
     .menu_btn,
     .social_btns,

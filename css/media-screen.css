@@ -2133,7 +2133,6 @@
   .stages_page_html body {
     position: static;
     overflow: auto;
-    height: 100%;
   }
 
   body.stages_page.red_header_fixed .header .logo img {
@@ -2143,17 +2142,32 @@
     display: block;
   }
 
+  body.stages_page .header.red_header_static {
+    position: fixed;
+  }
+  body.stages_page .header.red_header_static img {
+    display: none;
+  }
+  body.stages_page .header.red_header_static img.logo_red {
+    display: block;
+  }
+
+  body.stages_page .wrapper .header.s {
+    display: none;
+  }
+
   body.stages_page.red_header_fixed .wrapper .header.s {
     display: none;
   }
   body.stages_page.red_header_fixed .header.red_header_static {
     position: fixed;
   }
-  body.stages_page.red_header_fixed .mobile_stages_slider_nav {
-    top: 9px;
-  }
   body.stages_page.red_header_fixed .mobile_stages_slider {
     padding-top: 10px;
+  }
+
+  body.stages_page .mobile_stages_slider_nav {
+    top: 9px;
   }
 
   body.stages_page .header.red_header {
@@ -2232,6 +2246,10 @@
   .chairman_dream .chairman_dream_mobile_bg img {
     width: 100%;
   }
+
+  .stages_page .wrapper .slide > .table {
+    padding: 200px 0;
+  }
 }
 @media only screen and (max-width: 992px) {
   .ss_cols {
@@ -2259,6 +2277,10 @@
   }
 }
 @media only screen and (max-width: 640px) {
+  .stages_page .wrapper .slide > .table {
+    padding: 100px 0;
+  }
+
   body,
   body.facilities_list_pages .home_screen {
     font-size: 16px;
@@ -2496,6 +2518,10 @@
   .marine_page .stages_home_screen br,
   .prod_office .stages_home_screen br {
     display: none;
+  }
+
+  .marine_page .hover_btn br {
+    display: block;
   }
 
   body.facilities_list_pages.service_page .home_screen h2 {
@@ -2974,6 +3000,10 @@
     font-size: 14px;
     line-height: 1.2;
   }
+
+  .red_header_fixed .four_grids {
+    padding-top: 0;
+  }
 }
 @media only screen and (max-width: 480px) {
   .stage_pic {
@@ -3018,10 +3048,18 @@
   .landing_grids ul li {
     height: 300px;
   }
+
+  .four_grids .landing_grids ul li {
+    padding-bottom: 50%;
+  }
 }
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 600px) and (orientation: landscape) {
   .full_screen {
     min-height: 700px;
+  }
+
+  body.red_header_fixed .tabs {
+    padding-top: 0;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -3068,7 +3106,7 @@
     display: block !important;
   }
 }
-@media only screen and (max-height: 768px) {
+@media only screen and (max-height: 768px) and (orientation: landscape) {
   .stages_page_html body.stages_page .wrapper .slide.slide_active {
     min-height: 768px;
   }
@@ -3150,6 +3188,46 @@
     font-size: 15px;
     line-height: 18px;
   }
+}
+@media only screen and (max-width: 360px) {
+  .marine_page .stages_home_screen {
+    margin-top: 50px;
+  }
+
+  .home .mobile_text p {
+    padding-bottom: 10px;
+  }
+  .home .btn, .home a.btn {
+    font-size: 12px;
+  }
+  .home .mobile_more {
+    padding-top: 10px;
+  }
+
+  .press_center_page .home_screen {
+    margin-top: 57px;
+  }
+
+  .news .category {
+    margin: 0 0 7px;
+  }
+
+  .stages_page .wrapper .slide > .table {
+    padding: 70px 0 50px;
+  }
+  .stages_page .wrapper .slide > .table .stage_screen_btns a {
+    width: 70px;
+    height: 70px;
+    padding: 26px 10px 19px;
+    margin-bottom: 26px;
+  }
+
+  .stages_page .wrapper .slide > .table .stage_screen_btns a {
+    margin-bottom: 14px;
+  }
+}
+.incentive_page .full_screen .td .home_screen {
+  margin-top: 62px;
 }
 
 /*# sourceMappingURL=media-screen.css.map */

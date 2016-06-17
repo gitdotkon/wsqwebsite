@@ -1898,7 +1898,7 @@
 		body{
 			position: static;
 			overflow: auto;
-			height: 100%;
+			//height: 100%;
 		}
 	}
 	body.stages_page.red_header_fixed .header .logo {
@@ -1910,6 +1910,20 @@
 		}
 
 	}
+	body.stages_page{
+		.header.red_header_static{
+			position: fixed;
+			img{
+				display: none;
+				&.logo_red{
+					display: block;
+				}
+			}
+		}
+	}
+	body.stages_page .wrapper .header.s {
+		 display: none;
+	 }
 	body.stages_page.red_header_fixed{
 		.wrapper .header.s{
 			display: none;
@@ -1917,12 +1931,15 @@
 		.header.red_header_static{
 			position: fixed;
 		}
-		.mobile_stages_slider_nav{
-			top: 9px;
-		}
+		//.mobile_stages_slider_nav{
+		//	top: 9px;
+		//}
 		.mobile_stages_slider{
 			padding-top: 10px;
 		}
+	}
+	body.stages_page .mobile_stages_slider_nav{
+		top: 9px;
 	}
 	body.stages_page{
 
@@ -2006,7 +2023,13 @@
 			}
 		}
 	}
-
+	.stages_page{
+		.wrapper{
+			.slide>.table{
+				padding: 200px 0;
+			}
+		}
+	}
 }
 @media only screen and (max-width: 992px){
 	.ss_cols{
@@ -2031,6 +2054,13 @@
 	}
 }
 @media only screen and (max-width: 640px){
+	.stages_page{
+		.wrapper{
+			.slide>.table{
+				padding: 100px 0;
+			}
+		}
+	}
 	body,
 	body.facilities_list_pages .home_screen{
 		font-size: 16px;
@@ -2246,6 +2276,11 @@
 			br{
 				display: none;
 			}
+		}
+	}
+	.marine_page .hover_btn{
+		br{
+			display: block;
 		}
 	}
 	body.facilities_list_pages.service_page .home_screen h2 {
@@ -2688,6 +2723,9 @@
 		font-size: 14px;
 		line-height: 1.2;
 	}
+	.red_header_fixed .four_grids{
+		padding-top: 0;
+	}
 }
 @media only screen and (max-width: 480px){
 	.stage_pic{
@@ -2728,10 +2766,16 @@
 	.landing_grids ul li{
 		height: 300px;
 	}
+	.four_grids .landing_grids ul li{
+		padding-bottom: 50%;
+	}
 }
-@media only screen and (max-height: 600px){
+@media only screen and (max-height: 600px) and (orientation: landscape){
 	.full_screen{
 		min-height: 700px;
+	}
+	body.red_header_fixed .tabs {
+		padding-top: 0;
 	}
 }
 @media only screen and (max-width: 480px){
@@ -2760,6 +2804,7 @@
 	}
 }
 @media only screen and (max-width: 1025px){
+
 	.header.mobile_white{
 		background: #fff;
 		.logo,
@@ -2777,7 +2822,7 @@
 		}
 	}
 }
-@media only screen and (max-height: 768px) {
+@media only screen and (max-height: 768px) and (orientation: landscape) {
 	.stages_page_html body.stages_page .wrapper .slide.slide_active {
 		min-height: 768px;
 	}
@@ -2868,5 +2913,58 @@
 	body.facilities_list_pages .stage_screen_btns a {
 		font-size: 15px;
 		line-height: 18px;
+	}
+}
+@media only screen and (max-width: 360px){
+	.marine_page{
+		.stages_home_screen{
+			margin-top: 50px;
+		}
+	}
+	.home{
+		.mobile_text{
+			p{
+				padding-bottom: 10px;
+			}
+		}
+		.btn, a.btn{
+			font-size: 12px;
+		}
+		.mobile_more {
+			padding-top: 10px;
+		}
+	}
+	.press_center_page{
+		.home_screen{
+			margin-top: 57px;
+		}
+	}
+	.news .category{
+		margin: 0 0 7px;
+	}
+	//.mobile_stages_slider_nav a {
+	//	padding: 6px 8px 8px 8px;
+	//}
+	.stages_page{
+		.wrapper{
+			.slide>.table{
+				padding: 70px 0 50px;
+				.stage_screen_btns a {
+					width: 70px;
+					height: 70px;
+					padding: 26px 10px 19px;
+					margin-bottom: 26px;
+				}
+			}
+
+		}
+	}
+	.stages_page .wrapper .slide > .table .stage_screen_btns a{
+		margin-bottom: 14px;
+	}
+}
+.incentive_page{
+	.full_screen .td .home_screen{
+		margin-top: 62px;
 	}
 }
