@@ -198,22 +198,63 @@ www.wandastudios.com/contact.html">
 
 <div id="map"></div>
 
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=xQmNansY0TwKyaUbfdIGVpBM"></script>
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=xQmNansY0TwKyaUbfdIGVpBM"></script>-->
 <script type="text/javascript">
-    // 百度地图API功能
-    var map = new BMap.Map("map");    // 创建Map实例
-    map.centerAndZoom(new BMap.Point(120.381916, 36.067874), 18);  // 初始化地图,设置中心点坐标和地图级别
-    window.onresize = function () {
-        map.centerAndZoom(new BMap.Point(120.381916, 36.067874), 18);
+    var lat = 120.381916;
+    var lng = 36.067874;
+    var map;
+    function include(url) {
+        var script = document.createElement('script');
+        script.src = url;
+        document.getElementsByTagName('head')[0].appendChild(script);
     }
-    //map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-    map.setCurrentCity("青岛");          // 设置地图显示的城市 此项是必须设置的
-    map.setMapStyle({style: 'grayscale'});
-    //map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-    var pt = new BMap.Point(120.381916, 36.067874);
-    var icon = new BMap.Icon("images/marker.png", new BMap.Size(88, 96));
-    var marker = new BMap.Marker(pt, {icon: icon});  // 创建标注
-    map.addOverlay(marker);              // 将标注添加到地图中
+    function baidumap() {
+
+            // 百度地图API功能
+            var map = new BMap.Map("map");    // 创建Map实例
+            map.centerAndZoom(new BMap.Point(lat, lng), 18);  // 初始化地图,设置中心点坐标和地图级别
+            window.onresize = function () {
+                map.centerAndZoom(new BMap.Point(lat, lng), 18);
+            }
+            //map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("青岛");          // 设置地图显示的城市 此项是必须设置的
+            map.setMapStyle({style: 'grayscale'});
+            //map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+            var pt = new BMap.Point(lat, lng);
+            var icon = new BMap.Icon("images/marker.png", new BMap.Size(88, 96));
+            var marker = new BMap.Marker(pt, {icon: icon});  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+
+
+    }
+    function startGoogle(){
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: lng, lng: lat},
+                zoom: 14,
+                disableDefaultUI: true
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: lng, lng: lat},
+                map: map,
+                icon: "images/marker.png"
+            });
+
+    }
+
+    (function($){
+        $(document).ready(function(){
+            var lastI = window.location.href.lastIndexOf('/');
+            var url = window.location.href.substr(0, lastI) + '/';
+            $.post(url+'map-handler.php', {}, function(response){
+
+                if(response == '"CN"'){
+                    include("http://api.map.baidu.com/api?v=2.0&ak=xQmNansY0TwKyaUbfdIGVpBM&callback=baidumap");
+                }else{
+                    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyCDmCazLvO0xY8eFPd_6uOPYqCEm8090Xg&callback=startGoogle");
+                }
+            });
+        });
+    })(jQuery);
 </script>
 
 <div class="footer">

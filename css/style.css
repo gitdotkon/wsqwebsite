@@ -10175,3 +10175,10 @@ body.footer_visible .stage_list_slider{
 .visibility-hidden{
     visibility: hidden;
 }
+.gm-style img{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
