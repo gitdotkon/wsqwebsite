@@ -31,6 +31,7 @@ www.wandastudios.com/contact.html">
 </head>
 <body class="facilities_list_pages">
 <div class="full_screen">
+    <!--<img src="captcha.php" style="display: none" alt="">-->
     <div class="contact fixed_full_bg" style="background-image: url(images/t/contact.jpg);">
         <div class="contact_mobile_bg" style="background-image: url(images/mobile/contact.jpg);"></div>
         <div class="table">
@@ -67,8 +68,9 @@ www.wandastudios.com/contact.html">
                                     <textarea name="message" placeholder="Drop a line...."></textarea>
                                 </div>
                                 <div class="field field_captcha">
-                                    <input type="text" placeholder="Captcha"/>
-                                    <img src="images/t/captcha.jpg" alt=""/>
+                                    <input type="text" name="captcha" placeholder="Captcha"/>
+                                    <img src="captcha.php" class="reload_image" alt=""/>
+                                    <!--<span class="wrong">Wrong Captcha</span>-->
                                 </div>
                                 <input type="submit" value="Send"/>
                             </form>
@@ -179,8 +181,9 @@ www.wandastudios.com/contact.html">
                 <textarea name="message" placeholder="Drop a line...."></textarea>
             </div>
             <div class="field field_captcha">
-                <input type="text" placeholder="Captcha"/>
-                <img src="images/t/captcha.jpg" alt=""/>
+                <input type="text" name="captcha" placeholder="Captcha"/>
+                <img src="captcha.php" class="reload_image" alt=""/>
+                <!--<span class="wrong">Wrong Captcha</span>-->
             </div>
             <input type="submit" value="Send"/>
         </form>
