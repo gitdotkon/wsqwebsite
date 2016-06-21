@@ -1220,7 +1220,7 @@ jQuery(document).ready(function ($) {
             animation: 'fade',
             slideshow: false,
             slideshowSpeed: 8000,
-            animationSpeed: 800,
+            animationSpeed: 200,
             start: function (slider) {
                 $('.landing_grids_inner ul li').hover(function(){
                     var index = $(this).attr('data-id');
