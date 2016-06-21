@@ -2630,6 +2630,9 @@
   .travel_col {
     font-size: 14px;
   }
+  .travel_col .b {
+    font-size: 16px;
+  }
 
   .travel_cols .red_arr {
     background-size: cover;

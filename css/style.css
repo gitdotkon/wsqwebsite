@@ -10171,3 +10171,7 @@ body.footer_visible .stage_list_slider{
 .foot_widget:nth-child(2) ul li:last-child{
     display: none !important;
 }
+
+.visibility-hidden{
+    visibility: hidden;
+}
