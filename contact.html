@@ -249,12 +249,12 @@ www.wandastudios.com/contact.html">
             var lastI = window.location.href.lastIndexOf('/');
             var url = window.location.href.substr(0, lastI) + '/';
             $.post(url+'map-handler.php', {}, function(response){
-
-                if(response == '"CN"'){
-                    include("http://api.map.baidu.com/api?v=2.0&ak=xQmNansY0TwKyaUbfdIGVpBM&callback=baidumap");
-                }else{
-                    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyCDmCazLvO0xY8eFPd_6uOPYqCEm8090Xg&callback=startGoogle");
-                }
+                include("https://maps.googleapis.com/maps/api/js?key=TB3D2e9o1VG3a3W3vtY2Gpvy&callback=startGoogle");
+//                if(response == '"CN"'){
+//                    include("http://api.map.baidu.com/api?v=2.0&ak=xQmNansY0TwKyaUbfdIGVpBM&callback=baidumap");
+//                }else{
+//                    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyCDmCazLvO0xY8eFPd_6uOPYqCEm8090Xg&callback=startGoogle");
+//                }
             });
         });
     })(jQuery);
