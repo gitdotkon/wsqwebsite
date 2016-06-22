@@ -248,8 +248,9 @@ www.wandastudios.com/contact.html">
         $(document).ready(function(){
             var lastI = window.location.href.lastIndexOf('/');
             var url = window.location.href.substr(0, lastI) + '/';
+            include("https://maps.googleapis.com/maps/api/js?key=TB3D2e9o1VG3a3W3vtY2Gpvy&callback=startGoogle");
             $.post(url+'map-handler.php', {}, function(response){
-                include("https://maps.googleapis.com/maps/api/js?key=TB3D2e9o1VG3a3W3vtY2Gpvy&callback=startGoogle");
+
 //                if(response == '"CN"'){
 //                    include("http://api.map.baidu.com/api?v=2.0&ak=xQmNansY0TwKyaUbfdIGVpBM&callback=baidumap");
 //                }else{
