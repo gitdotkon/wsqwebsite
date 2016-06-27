@@ -5146,6 +5146,16 @@ body.facilities_list_pages.footer_visible .wrapper {
     background-size: cover;
     padding: 92px 100px 130px 100px;
 }
+.team_detail .flexslider,
+.team_detail .flexslider ul,
+.team_detail .flexslider ul li{
+    height: 100% !important;
+}
+.scroll-wrapper > .scroll-content,
+.team_detail .text{
+    height: auto !important;
+    max-height: 583px;
+}
 .mobile_team_detail {
     display: none;
 }
